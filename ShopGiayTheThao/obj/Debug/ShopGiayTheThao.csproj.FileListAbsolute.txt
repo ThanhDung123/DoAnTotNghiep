@@ -1,0 +1,81 @@
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.exe.config
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.exe
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.pdb
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csprojResolveAssemblyReference.cache
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form1.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Properties.Resources.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csproj.GenerateResource.Cache
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.pdb
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe.licenses
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmNhanVien.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmHoaDon.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmKhachHang.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmMENU.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmSanPham.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmDangNhap.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmTimKiemHD.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThongTinCaNhan.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csproj.ResolveComReference.cache
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\RdlCompile.cache
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\RdlCompile.compiled
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThemTaiKhoan.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThemKH.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaocao_SP.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmMenu_LoaiBaoCao.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaoCao_KH.resources
+D:\HOC KI 5\DOAN\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaoCao_NV.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.exe.config
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csproj.ResolveComReference.cache
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.pdb
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.exe
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.pdb
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csprojResolveAssemblyReference.cache
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmDangNhap.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmHoaDon.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmKhachHang.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmMENU.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmNhanVien.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmSanPham.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThemKH.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThemTaiKhoan.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThongTinCaNhan.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form1.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmTimKiemHD.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Properties.Resources.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaoCao_KH.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaoCao_NV.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaocao_SP.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmMenu_LoaiBaoCao.resources
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csproj.GenerateResource.Cache
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe.licenses
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\RdlCompile.cache
+D:\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\RdlCompile.compiled
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.exe.config
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csproj.ResolveComReference.cache
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.pdb
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.exe
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.pdb
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csprojResolveAssemblyReference.cache
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmDangNhap.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmHoaDon.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmKhachHang.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmMENU.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmNhanVien.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmSanPham.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThemKH.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThemTaiKhoan.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThongTinCaNhan.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form1.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmTimKiemHD.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Properties.Resources.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaoCao_KH.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaoCao_NV.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaocao_SP.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmMenu_LoaiBaoCao.resources
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csproj.GenerateResource.Cache
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe.licenses
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\RdlCompile.cache
+D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\RdlCompile.compiled
