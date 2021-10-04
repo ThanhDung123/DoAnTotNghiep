@@ -189,7 +189,7 @@ namespace ShopGiayTheThao.Form
                 }
                 if (dtp_NgaySinh.Value > DateTime.Now)
                 {
-                    MessageBox.Show("Ngày sinh không được lớn hơn ngày hiện tại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ngày sinh không được lớn hơn ngày hiện tại ! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             
