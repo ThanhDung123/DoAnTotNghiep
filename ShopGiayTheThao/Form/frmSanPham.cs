@@ -89,7 +89,7 @@ namespace ShopGiayTheThao.Form
                 string ID = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "MaSanPham").ToString();
                 sql = "EXEC dbo.sp_XoaSP @maSP =" + ID;
                 Class.Functions.RunSQL(sql);
-                MessageBox.Show("Xóa Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa Thành Công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 txt_TenSP.ReadOnly = true;
                 txt_SL.ReadOnly = true;
