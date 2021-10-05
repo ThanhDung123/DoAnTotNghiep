@@ -81,7 +81,7 @@ namespace ShopGiayTheThao.Form
                 string ID = gv_KhachHang.GetRowCellValue(gv_KhachHang.FocusedRowHandle, "MaKhachHang").ToString();
                 sql = "EXEC dbo.sp_XoaKH @maKH =" + ID;
                 Class.Functions.RunSQL(sql);
-                MessageBox.Show("Xóa Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa Thành Công !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadKH();
             }
             catch (Exception s)
