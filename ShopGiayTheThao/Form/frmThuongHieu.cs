@@ -16,16 +16,16 @@ namespace ShopGiayTheThao
     {
         #region --VARIABLES--
 
-              DataTable dt;
-              string sql;
-              string tmp;
+        DataTable dt;
+        string sql;
+        string tmp;
 
-              List<ThuongHieu> l_thuonghieu = new List<ThuongHieu>();
-              public class ThuongHieu
-              {
-                  public string MaThuongHieu { get; set; }
-                  public string TenThuongHieu { get; set; }
-              }
+        List<ThuongHieu> l_thuonghieu = new List<ThuongHieu>();
+        public class ThuongHieu
+        {
+            public string MaThuongHieu { get; set; }
+            public string TenThuongHieu { get; set; }
+        }
 
         #endregion
 
@@ -56,7 +56,7 @@ namespace ShopGiayTheThao
             btn_Luu.Enabled = false;
 
             tmp = txt_TenTH.Text;
-            
+
 
         }
 
@@ -155,24 +155,32 @@ namespace ShopGiayTheThao
                     txt_TenTH.Focus();
                     return;
                 }
-
                 txt_TenTH.Focus();
+                sql = "EXEC dbo.CheckTrungTen @type = 1,@ten = N'" + txt_TenTH.Text + "'";
+                dt = Class.Functions.GetDataToTable(sql);
 
-                sql = "EXEC dbo.sp_ThemThuongHieu @tenTH = N'" + txt_TenTH.Text + "'";
-                Class.Functions.RunSQL(sql);
-                MessageBox.Show("Lưu Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_TenTH.Text = "";
-                txt_TenTH.ReadOnly = true;
-                LoadData();
+                if (dt.Rows[0]["SL"].ToString().Equals("0"))
+                {
+                    sql = "EXEC dbo.sp_ThemThuongHieu @tenTH = N'" + txt_TenTH.Text + "'";
+                    Class.Functions.RunSQL(sql);
+                    MessageBox.Show("Lưu Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_TenTH.Text = "";
+                    txt_TenTH.ReadOnly = true;
+                    LoadData();
+                }
+                else
+                {
+                    MessageBox.Show("Thương Hiệu này đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception s)
             {
 
-                MessageBox.Show("Lỗi lưu : "+ s.ToString());
+                MessageBox.Show("Lỗi lưu : " + s.ToString(), "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
-          
+
         }
 
         private void btn_CN_Click(object sender, EventArgs e)
@@ -205,7 +213,7 @@ namespace ShopGiayTheThao
                 MessageBox.Show("Lỗi Cập Nhật: " + s.ToString());
             }
 
-         
+
 
         }
 
@@ -226,14 +234,14 @@ namespace ShopGiayTheThao
                     {
                         MaThuongHieu = item["MaThuongHieu"].ToString(),
                         TenThuongHieu = item["TenThuongHieu"].ToString(),
-                     
+
                     });
                 }
                 gc_thuonghieu.DataSource = l_thuonghieu;
                 gc_thuonghieu.RefreshDataSource();
-            }    
-           
-          
+            }
+
+
         }
 
         #endregion
