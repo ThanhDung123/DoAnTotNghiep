@@ -62,25 +62,25 @@ namespace ShopGiayTheThao.Form
             {
                 if (string.IsNullOrEmpty(txt_MK.Text))
                 {
-                    MessageBox.Show("Nhập mật khẩu cũ ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nhập mật khẩu cũ !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
                 if (string.IsNullOrEmpty(txt_MK_moi.Text))
                 {
-                    MessageBox.Show("Nhập mật khẩu mới ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nhập mật khẩu mới !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
                 if (string.IsNullOrEmpty(txt_nhap_lai_MK.Text))
                 {
-                    MessageBox.Show("Nhập lại mật khẩu ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Nhập lại mật khẩu !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
                 if (!txt_nhap_lai_MK.Text.Equals(txt_MK_moi.Text))
                 {
-                    MessageBox.Show("Mật khẩu nhập lại không trùng khớp với mật khẩu mới ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Mật khẩu nhập lại không trùng khớp với mật khẩu mới !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
@@ -113,14 +113,14 @@ namespace ShopGiayTheThao.Form
 
                 if (dt.Rows.Count > 0 && dt.Rows[0]["result"].ToString().Equals("1"))
                 {
-                    MessageBox.Show("Đổi mật khẩu thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Đổi mật khẩu thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_MK.Text = "";
                     txt_nhap_lai_MK.Text = "";
                     txt_MK_moi.Text = "";
                 }
                 else
                 {
-                    MessageBox.Show("Mật khẩu cũ không trùng khớp ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Mật khẩu cũ không trùng khớp !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             }
