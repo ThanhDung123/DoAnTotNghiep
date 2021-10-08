@@ -21,7 +21,7 @@ namespace ShopGiayTheThao.Form
         DataTable dt;
         int Loai_TK;
 
-        #endregion       
+        #endregion
 
         #region --EVENTS--
 
@@ -36,7 +36,7 @@ namespace ShopGiayTheThao.Form
             xtraTabControl1.SelectedTabPage = xtraTabPage4;
         }
 
-        #endregion   
+        #endregion
 
         #region --BUTTONS--
 
@@ -80,7 +80,7 @@ namespace ShopGiayTheThao.Form
             f.ShowDialog();
             this.Show();
         }
-  
+
         private void btn_DangXuat_Click(object sender, EventArgs e)
         {
             frmDangNhap f = new frmDangNhap();
@@ -100,9 +100,7 @@ namespace ShopGiayTheThao.Form
         private void btn_ThongTinCN_Click(object sender, EventArgs e)
         {
             frmThongTinCaNhan f = new frmThongTinCaNhan(MaNV, taikhoan);
-            this.Hide();
             f.ShowDialog();
-            this.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -115,17 +113,14 @@ namespace ShopGiayTheThao.Form
         private void btn_BaoCao_Click(object sender, EventArgs e)
         {
             frmMenu_LoaiBaoCao f = new frmMenu_LoaiBaoCao();
-            this.Hide();
             f.ShowDialog();
-            this.Show();
         }
 
         private void btn_taikhoan_Click(object sender, EventArgs e)
         {
             frmThemTaiKhoan f = new frmThemTaiKhoan();
-            this.Hide();
             f.ShowDialog();
-            this.Show();
+
         }
 
         #endregion
@@ -133,21 +128,21 @@ namespace ShopGiayTheThao.Form
         #region --FUNCTIONS--
 
         public void funData(TextBox txtForm1)
-        {      
+        {
             taikhoan = txtForm1.Text;
         }
 
         void check_loai_tk()
         {
-            sql = "EXEC dbo.Check_Loai_TK @tenTK = '"+taikhoan+"'";
+            sql = "EXEC dbo.Check_Loai_TK @tenTK = '" + taikhoan + "'";
             dt = Class.Functions.GetDataToTable(sql);
 
             if (dt.Rows.Count > 0)
             {
                 foreach (DataRow item in dt.Rows)
                 {
-                     Loai_TK =int.Parse(item["LoaiTaiKhoan"].ToString());
-                     MaNV = item["MaNhanVien"].ToString();
+                    Loai_TK = int.Parse(item["LoaiTaiKhoan"].ToString());
+                    MaNV = item["MaNhanVien"].ToString();
 
                 }
             }
