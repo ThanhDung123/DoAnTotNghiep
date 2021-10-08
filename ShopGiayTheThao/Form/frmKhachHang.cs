@@ -48,7 +48,7 @@ namespace ShopGiayTheThao.Form
             btn_Luu.Enabled = false;
             btn_CN.Enabled = false;
 
-            txt_MaKH.ReadOnly = true; 
+            txt_MaKH.ReadOnly = true;
             txt_TenKH.ReadOnly = true;
             txt_DiaChi.ReadOnly = true;
             txt_DT.ReadOnly = true;
@@ -81,7 +81,7 @@ namespace ShopGiayTheThao.Form
                 string ID = gv_KhachHang.GetRowCellValue(gv_KhachHang.FocusedRowHandle, "MaKhachHang").ToString();
                 sql = "EXEC dbo.sp_XoaKH @maKH =" + ID;
                 Class.Functions.RunSQL(sql);
-                MessageBox.Show("Xóa Thành Công !!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadKH();
             }
             catch (Exception s)
@@ -94,25 +94,25 @@ namespace ShopGiayTheThao.Form
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
 
-            if (keyData == Keys.F1 && btn_Them.Enabled) 
+            if (keyData == Keys.F1 && btn_Them.Enabled)
             {
                 btn_Them_Click(btn_Them, EventArgs.Empty);
                 return true;
             }
 
-            if (keyData == Keys.F2 && btn_Luu.Enabled) 
+            if (keyData == Keys.F2 && btn_Luu.Enabled)
             {
                 btn_Luu_Click(btn_Luu, EventArgs.Empty);
                 return true;
             }
 
-            if (keyData == Keys.F3 && btn_Sua.Enabled) 
+            if (keyData == Keys.F3 && btn_Sua.Enabled)
             {
                 btn_Sua_Click(btn_Sua, EventArgs.Empty);
                 return true;
             }
 
-            if (keyData == Keys.F4 && btn_CN.Enabled )
+            if (keyData == Keys.F4 && btn_CN.Enabled)
             {
                 btn_CN_Click(btn_CN, EventArgs.Empty);
                 return true;
@@ -167,7 +167,7 @@ namespace ShopGiayTheThao.Form
                     MessageBox.Show("Chọn dòng dữ liệu để cập nhật", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                if (string.IsNullOrEmpty(txt_TenKH.Text)) 
+                if (string.IsNullOrEmpty(txt_TenKH.Text))
                 {
                     MessageBox.Show("Tên Khách Hàng không được để trống", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_TenKH.Text = tenkh_tmp;
@@ -182,7 +182,7 @@ namespace ShopGiayTheThao.Form
                     return;
                 }
 
-                sql = "EXEC dbo.sp_CapNhatKH @makh ="+txt_MaKH.Text+ ",@tenkh = N'" + txt_TenKH.Text + "',@diachi = N'" + txt_DiaChi.Text + "',@dienthoai = '" + txt_DT.Text + "'";
+                sql = "EXEC dbo.sp_CapNhatKH @makh =" + txt_MaKH.Text + ",@tenkh = N'" + txt_TenKH.Text + "',@diachi = N'" + txt_DiaChi.Text + "',@dienthoai = '" + txt_DT.Text + "'";
                 Class.Functions.RunSQL(sql);
                 MessageBox.Show("Cập Nhật Thành Công", "Thông Báo");
 
@@ -203,49 +203,57 @@ namespace ShopGiayTheThao.Form
             catch (Exception s)
             {
 
-                MessageBox.Show("Lỗi cập nhật :"+ s.ToString());
+                MessageBox.Show("Lỗi cập nhật :" + s.ToString());
             }
-          
+
         }
 
         private void btn_Luu_Click(object sender, EventArgs e)
         {
             try
             {
-                if (string.IsNullOrEmpty(txt_TenKH.Text)) 
+                if (string.IsNullOrEmpty(txt_TenKH.Text))
                 {
                     MessageBox.Show("Bạn phải nhập tên khách hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_TenKH.Focus();
                     return;
                 }
 
-                if (string.IsNullOrEmpty(txt_DT.Text)) 
+                if (string.IsNullOrEmpty(txt_DT.Text))
                 {
                     MessageBox.Show("Bạn phải nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_DT.Focus(); 
+                    txt_DT.Focus();
                     return;
                 }
 
-                if (string.IsNullOrEmpty(txt_DiaChi.Text)) 
+                if (string.IsNullOrEmpty(txt_DiaChi.Text))
                 {
                     MessageBox.Show("Bạn phải nhập địa chỉ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_DT.Focus();
                     return;
                 }
+                sql = "EXEC dbo.CheckTrungTen @type = 4,@ten = N'" + txt_DT.Text + "'";
+                dt = Class.Functions.GetDataToTable(sql);
 
-                sql = "EXEC dbo.sp_ThemKhachHang @tenkh = N'" + txt_TenKH.Text + "',@diachi = N'" + txt_DiaChi.Text + "',@dienthoai = '" + txt_DT.Text + "'";
-                Class.Functions.RunSQL(sql);
-                MessageBox.Show("Lưu Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dt.Rows[0]["SL"].ToString().Equals("0"))
+                {
+                    sql = "EXEC dbo.sp_ThemKhachHang @tenkh = N'" + txt_TenKH.Text + "',@diachi = N'" + txt_DiaChi.Text + "',@dienthoai = '" + txt_DT.Text + "'";
+                    Class.Functions.RunSQL(sql);
+                    MessageBox.Show("Lưu Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                txt_MaKH.Text = "";
-                txt_TenKH.Text = "";
-                txt_DiaChi.Text = "";
-                txt_DT.Text = "";
-              
+                    txt_MaKH.Text = "";
+                    txt_TenKH.Text = "";
+                    txt_DiaChi.Text = "";
+                    txt_DT.Text = "";
 
-                LoadKH();
-               
 
+                    LoadKH();
+
+                }
+                else
+                {
+                    MessageBox.Show("Khách hàng này đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception s)
             {
