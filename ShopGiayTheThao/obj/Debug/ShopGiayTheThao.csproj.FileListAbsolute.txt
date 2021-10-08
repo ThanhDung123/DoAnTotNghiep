@@ -79,3 +79,30 @@ D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\
 D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe.licenses
 D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\RdlCompile.cache
 D:\HỌC TẬP\ĐỒ ÁN - BÁO CÁO - TỐT NGHIỆP\Shop giay\ShopGiayTheThao\ShopGiayTheThao\obj\Debug\RdlCompile.compiled
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.exe.config
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csproj.ResolveComReference.cache
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.pdb
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.exe
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\bin\Debug\ShopGiayTheThao.pdb
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csprojResolveAssemblyReference.cache
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmDangNhap.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmHoaDon.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmKhachHang.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmMENU.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmNhanVien.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmSanPham.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThemKH.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThemTaiKhoan.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThongTinCaNhan.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form1.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmTimKiemHD.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Properties.Resources.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaoCao_KH.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaoCao_NV.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmBaocao_SP.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Report.frmMenu_LoaiBaoCao.resources
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.csproj.GenerateResource.Cache
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe.licenses
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\RdlCompile.cache
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\RdlCompile.compiled
