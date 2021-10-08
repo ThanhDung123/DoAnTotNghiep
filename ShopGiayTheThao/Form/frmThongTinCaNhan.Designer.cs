@@ -376,6 +376,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmThongTinCaNhan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin cá nhân";
             this.Load += new System.EventHandler(this.frmThongTinCaNhan_Load);
             this.panel1.ResumeLayout(false);
