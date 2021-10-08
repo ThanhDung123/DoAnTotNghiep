@@ -43,8 +43,8 @@ namespace ShopGiayTheThao.Form
         {
             loadDataNV();
             btn_Luu.Enabled = false;
-            btn_CN.Enabled =false;
-           
+            btn_CN.Enabled = false;
+
         }
 
         private void gv_NhanVien_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -189,21 +189,35 @@ namespace ShopGiayTheThao.Form
                 }
                 if (dtp_NgaySinh.Value > DateTime.Now)
                 {
-                    MessageBox.Show("Ngày sinh không được lớn hơn ngày hiện tại ! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ngày sinh không được lớn hơn ngày hiện tại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-            
-                sql = "EXEC dbo.sp_ThemNhanVien @tenNV = N'" + txt_TenNV.Text + "',@DiaChi = N'" + txt_DiaChi.Text + "',@DT = '" + txt_DT.Text + "', @GioiTinh = N'" + gt + "',@NgaySinh = '" + dtp_NgaySinh.Value.ToString("yyyy/MM/dd") + "'";
-                Class.Functions.RunSQL(sql);
-                MessageBox.Show("Lưu Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (string.IsNullOrEmpty(txt_DT.Text))
+                {
+                    MessageBox.Show("Bạn phải nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_TenNV.Focus();
+                    return;
+                }
+                sql = "EXEC dbo.CheckTrungTen @type = 3,@ten = N'" + txt_DT.Text + "'";
+                dt = Class.Functions.GetDataToTable(sql);
+                if (dt.Rows[0]["SL"].ToString().Equals("0"))
+                {
+                    sql = "EXEC dbo.sp_ThemNhanVien @tenNV = N'" + txt_TenNV.Text + "',@DiaChi = N'" + txt_DiaChi.Text + "',@DT = '" + txt_DT.Text + "', @GioiTinh = N'" + gt + "',@NgaySinh = '" + dtp_NgaySinh.Value.ToString("yyyy/MM/dd") + "'";
+                    Class.Functions.RunSQL(sql);
+                    MessageBox.Show("Lưu Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                txt_TenNV.Text = "";
-                txt_DiaChi.Text = "";
-                txt_DT.Text = "";
-                txt_MaNV.Text = "";
-                ReadOnly();
+                    txt_TenNV.Text = "";
+                    txt_DiaChi.Text = "";
+                    txt_DT.Text = "";
+                    txt_MaNV.Text = "";
+                    ReadOnly();
 
-                loadDataNV();
+                    loadDataNV();
+                }
+                else
+                {
+                    MessageBox.Show("Nhân Viên  này đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
             }
             catch (Exception s)
@@ -235,7 +249,7 @@ namespace ShopGiayTheThao.Form
                 txt_TenNV.Focus();
                 return;
             }
-            if (string.IsNullOrEmpty(txt_DT.Text) || (txt_DT.Text.Length <10 || txt_DT.Text.Length > 11 )) 
+            if (string.IsNullOrEmpty(txt_DT.Text) || (txt_DT.Text.Length < 10 || txt_DT.Text.Length > 11))
             {
                 MessageBox.Show("SDT không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txt_DT.Text = sdt_tmp;
