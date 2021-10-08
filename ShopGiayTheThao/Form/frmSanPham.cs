@@ -11,7 +11,7 @@ namespace ShopGiayTheThao.Form
 {
     public partial class frmSanPham : DevExpress.XtraEditors.XtraForm
     {
-      
+
 
         #region --VARIABLES--
 
@@ -89,7 +89,7 @@ namespace ShopGiayTheThao.Form
                 string ID = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "MaSanPham").ToString();
                 sql = "EXEC dbo.sp_XoaSP @maSP =" + ID;
                 Class.Functions.RunSQL(sql);
-                MessageBox.Show("Xóa Thành Công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Xóa Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 txt_TenSP.ReadOnly = true;
                 txt_SL.ReadOnly = true;
@@ -170,7 +170,7 @@ namespace ShopGiayTheThao.Form
             dt = Class.Functions.GetDataToTable(sql);
             if (dt.Rows.Count > 0)
             {
-                l_sanpham.Clear(); 
+                l_sanpham.Clear();
                 foreach (DataRow item in dt.Rows)
                 {
                     l_sanpham.Add(new SanPham()
@@ -188,12 +188,12 @@ namespace ShopGiayTheThao.Form
                 }
                 gc_SanPham.DataSource = l_sanpham;
                 gc_SanPham.RefreshDataSource();
-            }    
+            }
         }
 
         void loadTH()
         {
-             sql = "EXEC dbo.sp_LoadThuongHieu";
+            sql = "EXEC dbo.sp_LoadThuongHieu";
             dt = Class.Functions.GetDataToTable(sql);
             if (dt.Rows.Count > 0)
             {
@@ -328,59 +328,67 @@ namespace ShopGiayTheThao.Form
         {
             try
             {
-                 if (string.IsNullOrEmpty(txt_TenSP.Text)) 
+                if (string.IsNullOrEmpty(txt_TenSP.Text))
                 {
                     MessageBox.Show("Bạn phải nhập tên sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_TenSP.Focus();
                     return;
                 }
-                 if (string.IsNullOrEmpty(txt_SL.Text) || txt_SL.Text.Equals("0"))
-                 {
-                     MessageBox.Show("Số Lượng phải lớn hơn 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                     txt_SL.Focus();
-                     return;
-                 }
-                 if (string.IsNullOrEmpty(txt_DonGiaNhap.Text) || txt_DonGiaNhap.Text.Equals("0")) 
-                 {
-                     MessageBox.Show("Đơn giá nhập phải lớn hơn 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                     txt_DonGiaNhap.Focus();
-                     return;
-                 }
-                 if (string.IsNullOrEmpty(txt_DonGiaBan.Text) || txt_DonGiaBan.Text.Equals("0")) 
-                 {
-                     MessageBox.Show("Đơn giá bán phải lớn hơn 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                     txt_DonGiaBan.Focus();
-                     return;
-                 }
+                if (string.IsNullOrEmpty(txt_SL.Text) || txt_SL.Text.Equals("0"))
+                {
+                    MessageBox.Show("Số Lượng phải lớn hơn 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_SL.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(txt_DonGiaNhap.Text) || txt_DonGiaNhap.Text.Equals("0"))
+                {
+                    MessageBox.Show("Đơn giá nhập phải lớn hơn 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_DonGiaNhap.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(txt_DonGiaBan.Text) || txt_DonGiaBan.Text.Equals("0"))
+                {
+                    MessageBox.Show("Đơn giá bán phải lớn hơn 0", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_DonGiaBan.Focus();
+                    return;
+                }
+                sql = "EXEC dbo.CheckTrungTen @type = 2,@ten = N'" + txt_TenSP.Text + "'";
+                dt = Class.Functions.GetDataToTable(sql);
 
-                 sql = "EXEC dbo.sp_ThemSP @tenSP = N'" + txt_TenSP.Text + "',@thuonghieu = N'" + cbo_MaTH.SelectedValue.ToString() + "', @SL =" + txt_SL.Text + ",@DonGiaNhap =" + txt_DonGiaNhap.Text + ", @DonGiaBan =" + txt_DonGiaBan.Text + ", @Anh = '" + txt_Anh.Text + "', @GhiChu = N'" + txt_GhiChu.Text + "'";
-                Class.Functions.RunSQL(sql);
-                MessageBox.Show("Lưu Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (dt.Rows[0]["SL"].ToString().Equals("0"))
+                {
+                    sql = "EXEC dbo.sp_ThemSP @tenSP = N'" + txt_TenSP.Text + "',@thuonghieu = N'" + cbo_MaTH.SelectedValue.ToString() + "', @SL =" + txt_SL.Text + ",@DonGiaNhap =" + txt_DonGiaNhap.Text + ", @DonGiaBan =" + txt_DonGiaBan.Text + ", @Anh = '" + txt_Anh.Text + "', @GhiChu = N'" + txt_GhiChu.Text + "'";
+                    Class.Functions.RunSQL(sql);
+                    MessageBox.Show("Lưu Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_TenSP.ReadOnly = true;
+                    txt_SL.ReadOnly = true;
+                    txt_DonGiaBan.ReadOnly = true;
+                    txt_DonGiaNhap.ReadOnly = true;
+                    txt_GhiChu.ReadOnly = true;
+                    txt_MaSP.ReadOnly = true;
+                    txt_Anh.ReadOnly = true;
+                    cbo_MaTH.Enabled = false;
 
+                    txt_MaSP.Text = "";
+                    txt_TenSP.Text = "";
+                    txt_SL.Text = "";
+                    txt_DonGiaNhap.Text = "";
+                    txt_DonGiaBan.Text = "";
+                    txt_GhiChu.Text = "";
+                    txt_Anh.Text = "";
 
-                txt_TenSP.ReadOnly = true;
-                txt_SL.ReadOnly = true;
-                txt_DonGiaBan.ReadOnly = true;
-                txt_DonGiaNhap.ReadOnly = true;
-                txt_GhiChu.ReadOnly = true;
-                txt_MaSP.ReadOnly = true;
-                txt_Anh.ReadOnly = true;
-                cbo_MaTH.Enabled = false;
-
-                txt_MaSP.Text = "";
-                txt_TenSP.Text = "";
-                txt_SL.Text = "";
-                txt_DonGiaNhap.Text = "";
-                txt_DonGiaBan.Text = "";
-                txt_GhiChu.Text = "";
-                txt_Anh.Text = "";
-
-                loadSP();
+                    loadSP();
+                }
+                else
+                {
+                    MessageBox.Show("Sản Phẩm này đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+
             catch (Exception s)
             {
 
-                MessageBox.Show("Lỗi : "+ s.ToString());
+                MessageBox.Show("Lỗi : " + s.ToString());
             }
         }
         #endregion
