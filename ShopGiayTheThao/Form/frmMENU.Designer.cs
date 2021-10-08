@@ -80,7 +80,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(829, 286);
+            this.panelControl1.Size = new System.Drawing.Size(1123, 286);
             this.panelControl1.TabIndex = 0;
             // 
             // panel3
@@ -90,7 +90,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(2, 96);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(825, 188);
+            this.panel3.Size = new System.Drawing.Size(1119, 188);
             this.panel3.TabIndex = 76;
             // 
             // label1
@@ -98,7 +98,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe Script", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.SkyBlue;
-            this.label1.Location = new System.Drawing.Point(194, 12);
+            this.label1.Location = new System.Drawing.Point(349, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(407, 102);
             this.label1.TabIndex = 77;
@@ -110,7 +110,7 @@
             this.pictureBox1.Image = global::ShopGiayTheThao.Properties.Resources.Capture1;
             this.pictureBox1.Location = new System.Drawing.Point(2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(825, 94);
+            this.pictureBox1.Size = new System.Drawing.Size(1119, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 75;
             this.pictureBox1.TabStop = false;
@@ -121,7 +121,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(0, 286);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(829, 224);
+            this.panelControl2.Size = new System.Drawing.Size(1123, 297);
             this.panelControl2.TabIndex = 1;
             // 
             // xtraTabControl1
@@ -130,7 +130,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(2, 2);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(825, 220);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1119, 293);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage4,
@@ -142,7 +142,7 @@
             this.xtraTabPage1.Controls.Add(this.panel1);
             this.xtraTabPage1.Image = global::ShopGiayTheThao.Properties.Resources.Ribbon_AlignCenter_16x16;
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(819, 189);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1113, 262);
             this.xtraTabPage1.Text = "Cửa Hàng";
             // 
             // panel1
@@ -155,7 +155,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(819, 189);
+            this.panel1.Size = new System.Drawing.Size(1113, 262);
             this.panel1.TabIndex = 0;
             // 
             // btn_ThongTinCN
@@ -165,7 +165,7 @@
             this.btn_ThongTinCN.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThongTinCN.ForeColor = System.Drawing.Color.White;
             this.btn_ThongTinCN.Image = global::ShopGiayTheThao.Properties.Resources.Buddy;
-            this.btn_ThongTinCN.Location = new System.Drawing.Point(433, 39);
+            this.btn_ThongTinCN.Location = new System.Drawing.Point(581, 39);
             this.btn_ThongTinCN.Name = "btn_ThongTinCN";
             this.btn_ThongTinCN.Size = new System.Drawing.Size(108, 79);
             this.btn_ThongTinCN.TabIndex = 12;
@@ -181,7 +181,7 @@
             this.btn_DangXuat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
             this.btn_DangXuat.Image = global::ShopGiayTheThao.Properties.Resources.Login;
-            this.btn_DangXuat.Location = new System.Drawing.Point(601, 39);
+            this.btn_DangXuat.Location = new System.Drawing.Point(821, 39);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(111, 79);
             this.btn_DangXuat.TabIndex = 13;
@@ -197,7 +197,7 @@
             this.btn_BaoCao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BaoCao.ForeColor = System.Drawing.Color.White;
             this.btn_BaoCao.Image = global::ShopGiayTheThao.Properties.Resources.Align_justify;
-            this.btn_BaoCao.Location = new System.Drawing.Point(263, 39);
+            this.btn_BaoCao.Location = new System.Drawing.Point(326, 39);
             this.btn_BaoCao.Name = "btn_BaoCao";
             this.btn_BaoCao.Size = new System.Drawing.Size(109, 79);
             this.btn_BaoCao.TabIndex = 11;
@@ -229,7 +229,7 @@
             this.xtraTabPage4.Controls.Add(this.panel4);
             this.xtraTabPage4.Image = global::ShopGiayTheThao.Properties.Resources.Ribbon_Info_16x161;
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(819, 189);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1113, 205);
             this.xtraTabPage4.Text = "Trợ Giúp";
             // 
             // panel4
@@ -243,7 +243,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(819, 189);
+            this.panel4.Size = new System.Drawing.Size(1113, 205);
             this.panel4.TabIndex = 0;
             // 
             // pictureBox2
@@ -274,9 +274,9 @@
             this.label4.ForeColor = System.Drawing.Color.Teal;
             this.label4.Location = new System.Drawing.Point(95, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(251, 22);
+            this.label4.Size = new System.Drawing.Size(250, 22);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Email : DDshop8200@gmail.com";
+            this.label4.Text = "Email : DLshop8200@gmail.com";
             // 
             // label3
             // 
@@ -296,16 +296,16 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(38, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(378, 28);
+            this.label2.Size = new System.Drawing.Size(462, 28);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Phần Mềm Quản Lí Cửa Hàng Giày, Dép";
+            this.label2.Text = "Phần Mềm Quản Lý Cửa Hàng Dụng Cụ Thể Thao";
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.panel2);
             this.xtraTabPage2.Image = global::ShopGiayTheThao.Properties.Resources.Calendar_16x16;
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(819, 189);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1113, 262);
             this.xtraTabPage2.Text = "Quản lý";
             // 
             // panel2
@@ -321,7 +321,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(819, 189);
+            this.panel2.Size = new System.Drawing.Size(1113, 262);
             this.panel2.TabIndex = 2;
             // 
             // btn_taikhoan
@@ -331,7 +331,7 @@
             this.btn_taikhoan.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_taikhoan.ForeColor = System.Drawing.Color.White;
             this.btn_taikhoan.Image = global::ShopGiayTheThao.Properties.Resources.New;
-            this.btn_taikhoan.Location = new System.Drawing.Point(587, 40);
+            this.btn_taikhoan.Location = new System.Drawing.Point(764, 76);
             this.btn_taikhoan.Name = "btn_taikhoan";
             this.btn_taikhoan.Size = new System.Drawing.Size(101, 70);
             this.btn_taikhoan.TabIndex = 19;
@@ -347,7 +347,7 @@
             this.btn_timkiemHD.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_timkiemHD.ForeColor = System.Drawing.Color.White;
             this.btn_timkiemHD.Image = global::ShopGiayTheThao.Properties.Resources.Zoom;
-            this.btn_timkiemHD.Location = new System.Drawing.Point(8, 40);
+            this.btn_timkiemHD.Location = new System.Drawing.Point(69, 76);
             this.btn_timkiemHD.Name = "btn_timkiemHD";
             this.btn_timkiemHD.Size = new System.Drawing.Size(102, 70);
             this.btn_timkiemHD.TabIndex = 14;
@@ -363,7 +363,7 @@
             this.button3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::ShopGiayTheThao.Properties.Resources.Login;
-            this.button3.Location = new System.Drawing.Point(702, 40);
+            this.button3.Location = new System.Drawing.Point(908, 76);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(101, 70);
             this.button3.TabIndex = 20;
@@ -379,7 +379,7 @@
             this.btn_KhachHang.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_KhachHang.ForeColor = System.Drawing.Color.White;
             this.btn_KhachHang.Image = global::ShopGiayTheThao.Properties.Resources.Picture;
-            this.btn_KhachHang.Location = new System.Drawing.Point(353, 40);
+            this.btn_KhachHang.Location = new System.Drawing.Point(480, 76);
             this.btn_KhachHang.Name = "btn_KhachHang";
             this.btn_KhachHang.Size = new System.Drawing.Size(102, 70);
             this.btn_KhachHang.TabIndex = 17;
@@ -395,7 +395,7 @@
             this.btn_SanPham.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SanPham.ForeColor = System.Drawing.Color.White;
             this.btn_SanPham.Image = global::ShopGiayTheThao.Properties.Resources.Snowflake;
-            this.btn_SanPham.Location = new System.Drawing.Point(234, 40);
+            this.btn_SanPham.Location = new System.Drawing.Point(345, 76);
             this.btn_SanPham.Name = "btn_SanPham";
             this.btn_SanPham.Size = new System.Drawing.Size(102, 70);
             this.btn_SanPham.TabIndex = 16;
@@ -411,7 +411,7 @@
             this.btn_NhanVien.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_NhanVien.ForeColor = System.Drawing.Color.White;
             this.btn_NhanVien.Image = global::ShopGiayTheThao.Properties.Resources.Alien;
-            this.btn_NhanVien.Location = new System.Drawing.Point(470, 40);
+            this.btn_NhanVien.Location = new System.Drawing.Point(621, 76);
             this.btn_NhanVien.Name = "btn_NhanVien";
             this.btn_NhanVien.Size = new System.Drawing.Size(102, 70);
             this.btn_NhanVien.TabIndex = 18;
@@ -427,11 +427,11 @@
             this.btn_ThuongHieu.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThuongHieu.ForeColor = System.Drawing.Color.White;
             this.btn_ThuongHieu.Image = global::ShopGiayTheThao.Properties.Resources.Dice;
-            this.btn_ThuongHieu.Location = new System.Drawing.Point(122, 40);
+            this.btn_ThuongHieu.Location = new System.Drawing.Point(210, 76);
             this.btn_ThuongHieu.Name = "btn_ThuongHieu";
             this.btn_ThuongHieu.Size = new System.Drawing.Size(102, 70);
             this.btn_ThuongHieu.TabIndex = 15;
-            this.btn_ThuongHieu.Text = "Thương Hiệu";
+            this.btn_ThuongHieu.Text = "Danh Mục";
             this.btn_ThuongHieu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btn_ThuongHieu.UseVisualStyleBackColor = false;
             this.btn_ThuongHieu.Click += new System.EventHandler(this.btn_ThuongHieu_Click);
@@ -440,7 +440,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(829, 510);
+            this.ClientSize = new System.Drawing.Size(1123, 583);
             this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.panelControl1);
             this.MaximizeBox = false;
