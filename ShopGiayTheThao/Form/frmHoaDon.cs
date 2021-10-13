@@ -39,8 +39,18 @@ namespace ShopGiayTheThao.Form
             public string GiamGia { get; set; }
             public string ThanhTien { get; set; }
         }
-        
 
+        List<CTHD_add> l_CTHD_add = new List<CTHD_add>();
+        public class CTHD_add
+        {
+            public string MaHoaDon_ { get; set; }
+            public string MaSanPham_ { get; set; }
+            public string TenSanPham_ { get; set; }
+            public string SoLuong_ { get; set; }
+            public string DonGia_ { get; set; }
+            public string GiamGia_ { get; set; }
+            public string ThanhTien_ { get; set; }
+        }
         #endregion
 
         #region --EVENTS--
@@ -56,6 +66,7 @@ namespace ShopGiayTheThao.Form
             load_SLE_TH();
             load_SLE_SP();
             load_MaKH();
+            check_loai_tk();
         }
 
         private void SLE_ThuongHieu_EditValueChanged(object sender, EventArgs e)
@@ -329,6 +340,9 @@ namespace ShopGiayTheThao.Form
                 ThanhTien = txt_ThanhTien.Text
             });
 
+            
+
+
            
             gc_CTHoaDon.DataSource = l_CTHD;
             gc_CTHoaDon.RefreshDataSource();
@@ -512,9 +526,24 @@ namespace ShopGiayTheThao.Form
 
         }
 
-        public frmHoaDon(string giatri) : this()
+        public void funData(string txtForm1)
         {
-            taikhoan = giatri;
+            taikhoan = txtForm1;
+        }
+
+        void check_loai_tk()
+        {
+            sql = "EXEC dbo.Check_Loai_TK @tenTK = '" + taikhoan + "'";
+            dt = Class.Functions.GetDataToTable(sql);
+
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow item in dt.Rows)
+                {                 
+                    SLE_NhanVien.EditValue = item["MaNhanVien"].ToString();
+
+                }
+            }
         }
 
   
