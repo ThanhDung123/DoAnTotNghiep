@@ -36,6 +36,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Btn_ThongKe = new System.Windows.Forms.Button();
             this.btn_ThongTinCN = new System.Windows.Forms.Button();
             this.btn_DangXuat = new System.Windows.Forms.Button();
             this.btn_BaoCao = new System.Windows.Forms.Button();
@@ -148,6 +149,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.Controls.Add(this.Btn_ThongKe);
             this.panel1.Controls.Add(this.btn_ThongTinCN);
             this.panel1.Controls.Add(this.btn_DangXuat);
             this.panel1.Controls.Add(this.btn_BaoCao);
@@ -158,6 +160,22 @@
             this.panel1.Size = new System.Drawing.Size(1113, 262);
             this.panel1.TabIndex = 0;
             // 
+            // Btn_ThongKe
+            // 
+            this.Btn_ThongKe.BackColor = System.Drawing.Color.Blue;
+            this.Btn_ThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_ThongKe.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ThongKe.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Btn_ThongKe.Image = global::ShopGiayTheThao.Properties.Resources.Boxplot1;
+            this.Btn_ThongKe.Location = new System.Drawing.Point(603, 39);
+            this.Btn_ThongKe.Name = "Btn_ThongKe";
+            this.Btn_ThongKe.Size = new System.Drawing.Size(109, 79);
+            this.Btn_ThongKe.TabIndex = 14;
+            this.Btn_ThongKe.Text = "Thống Kê Doanh Thu";
+            this.Btn_ThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.Btn_ThongKe.UseVisualStyleBackColor = false;
+            this.Btn_ThongKe.Click += new System.EventHandler(this.Btn_ThongKe_Click);
+            // 
             // btn_ThongTinCN
             // 
             this.btn_ThongTinCN.BackColor = System.Drawing.Color.Olive;
@@ -165,7 +183,7 @@
             this.btn_ThongTinCN.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ThongTinCN.ForeColor = System.Drawing.Color.White;
             this.btn_ThongTinCN.Image = global::ShopGiayTheThao.Properties.Resources.Buddy;
-            this.btn_ThongTinCN.Location = new System.Drawing.Point(581, 39);
+            this.btn_ThongTinCN.Location = new System.Drawing.Point(253, 39);
             this.btn_ThongTinCN.Name = "btn_ThongTinCN";
             this.btn_ThongTinCN.Size = new System.Drawing.Size(108, 79);
             this.btn_ThongTinCN.TabIndex = 12;
@@ -181,7 +199,7 @@
             this.btn_DangXuat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
             this.btn_DangXuat.Image = global::ShopGiayTheThao.Properties.Resources.Login;
-            this.btn_DangXuat.Location = new System.Drawing.Point(821, 39);
+            this.btn_DangXuat.Location = new System.Drawing.Point(800, 39);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(111, 79);
             this.btn_DangXuat.TabIndex = 13;
@@ -197,7 +215,7 @@
             this.btn_BaoCao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BaoCao.ForeColor = System.Drawing.Color.White;
             this.btn_BaoCao.Image = global::ShopGiayTheThao.Properties.Resources.Align_justify;
-            this.btn_BaoCao.Location = new System.Drawing.Point(326, 39);
+            this.btn_BaoCao.Location = new System.Drawing.Point(414, 39);
             this.btn_BaoCao.Name = "btn_BaoCao";
             this.btn_BaoCao.Size = new System.Drawing.Size(109, 79);
             this.btn_BaoCao.TabIndex = 11;
@@ -229,7 +247,7 @@
             this.xtraTabPage4.Controls.Add(this.panel4);
             this.xtraTabPage4.Image = global::ShopGiayTheThao.Properties.Resources.Ribbon_Info_16x161;
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(1113, 205);
+            this.xtraTabPage4.Size = new System.Drawing.Size(1113, 262);
             this.xtraTabPage4.Text = "Trợ Giúp";
             // 
             // panel4
@@ -243,7 +261,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1113, 205);
+            this.panel4.Size = new System.Drawing.Size(1113, 262);
             this.panel4.TabIndex = 0;
             // 
             // pictureBox2
@@ -499,5 +517,6 @@
         private System.Windows.Forms.Button btn_NhanVien;
         private System.Windows.Forms.Button btn_ThuongHieu;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button Btn_ThongKe;
     }
 }
