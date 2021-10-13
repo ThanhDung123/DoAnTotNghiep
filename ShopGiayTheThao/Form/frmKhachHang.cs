@@ -80,9 +80,16 @@ namespace ShopGiayTheThao.Form
                 }
                 string ID = gv_KhachHang.GetRowCellValue(gv_KhachHang.FocusedRowHandle, "MaKhachHang").ToString();
                 sql = "EXEC dbo.sp_XoaKH @maKH =" + ID;
-                Class.Functions.RunSQL(sql);
-                MessageBox.Show("Xóa Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadKH();
+                dt = Class.Functions.GetDataToTable(sql);
+                if (dt.Rows[0]["result"].ToString().Equals("1"))
+                {
+                    MessageBox.Show("Xóa Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadKH();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn không thể xóa khách hàng này", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception s)
             {
