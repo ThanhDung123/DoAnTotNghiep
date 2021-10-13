@@ -14,7 +14,7 @@ namespace ShopGiayTheThao.Form
     {
 
         #region --VARIABLES--
-
+        public delegate void delPassData(string text);
         string taikhoan = "";
         string MaNV = "";
         string sql;
@@ -42,7 +42,10 @@ namespace ShopGiayTheThao.Form
 
         private void btn_BanHang_Click(object sender, EventArgs e)
         {
-            frmHoaDon f = new frmHoaDon(taikhoan);
+            frmHoaDon  f = new frmHoaDon();
+            delPassData del = new delPassData(f.funData);
+            del(this.taikhoan);
+
             this.Hide();
             f.ShowDialog();
             this.Show();
@@ -122,7 +125,13 @@ namespace ShopGiayTheThao.Form
             f.ShowDialog();
 
         }
-
+        private void Btn_ThongKe_Click(object sender, EventArgs e)
+        {
+            frmThongKeDoanhThu f = new frmThongKeDoanhThu();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
         #endregion
 
         #region --FUNCTIONS--
@@ -154,13 +163,7 @@ namespace ShopGiayTheThao.Form
 
         #endregion
 
-        private void Btn_ThongKe_Click(object sender, EventArgs e)
-        {
-            frmThongKeDoanhThu f = new frmThongKeDoanhThu();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
-        }
+       
 
     }
 }

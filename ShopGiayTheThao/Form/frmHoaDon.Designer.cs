@@ -59,6 +59,9 @@
             this.SLE_SanPham = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.SLE_ThuongHieu = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.btn_them_sp_HD = new System.Windows.Forms.Button();
@@ -103,9 +106,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.SLE_ThuongHieu = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -120,6 +120,8 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SLE_SanPham.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SLE_ThuongHieu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SLE_MaKH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView6)).BeginInit();
@@ -131,8 +133,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLE_ThuongHieu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -249,7 +249,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 22;
+            this.gridColumn1.Width = 21;
             // 
             // BE_del_Thuonghieu
             // 
@@ -273,7 +273,7 @@
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 1;
-            this.gridColumn20.Width = 37;
+            this.gridColumn20.Width = 36;
             // 
             // BE_edit_CTHD
             // 
@@ -296,7 +296,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 89;
+            this.gridColumn2.Width = 88;
             // 
             // gridColumn3
             // 
@@ -310,7 +310,7 @@
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 215;
+            this.gridColumn3.Width = 192;
             // 
             // gridColumn5
             // 
@@ -325,6 +325,7 @@
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 60;
             // 
             // gridColumn7
             // 
@@ -338,7 +339,7 @@
             this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 5;
-            this.gridColumn7.Width = 63;
+            this.gridColumn7.Width = 56;
             // 
             // gridColumn8
             // 
@@ -352,7 +353,7 @@
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 6;
-            this.gridColumn8.Width = 61;
+            this.gridColumn8.Width = 35;
             // 
             // gridColumn9
             // 
@@ -368,6 +369,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ThanhTien", "Tổng tiền = {0:} VND")});
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 7;
+            this.gridColumn9.Width = 142;
             // 
             // panel2
             // 
@@ -519,6 +521,42 @@
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 0;
+            // 
+            // SLE_ThuongHieu
+            // 
+            this.SLE_ThuongHieu.Location = new System.Drawing.Point(146, 10);
+            this.SLE_ThuongHieu.Name = "SLE_ThuongHieu";
+            this.SLE_ThuongHieu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SLE_ThuongHieu.Properties.Appearance.Options.UseFont = true;
+            this.SLE_ThuongHieu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SLE_ThuongHieu.Properties.View = this.gridView1;
+            this.SLE_ThuongHieu.Size = new System.Drawing.Size(228, 26);
+            this.SLE_ThuongHieu.TabIndex = 41;
+            this.SLE_ThuongHieu.EditValueChanged += new System.EventHandler(this.SLE_ThuongHieu_EditValueChanged);
+            // 
+            // gridView1
+            // 
+            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridView1.Appearance.Row.Options.UseFont = true;
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn16});
+            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn16
+            // 
+            this.gridColumn16.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridColumn16.AppearanceHeader.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.gridColumn16.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn16.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn16.Caption = "Tên Thương Hiệu";
+            this.gridColumn16.FieldName = "TenThuongHieu";
+            this.gridColumn16.Name = "gridColumn16";
+            this.gridColumn16.Visible = true;
+            this.gridColumn16.VisibleIndex = 0;
             // 
             // btn_Thoat
             // 
@@ -758,6 +796,7 @@
             // 
             // SLE_NhanVien
             // 
+            this.SLE_NhanVien.Enabled = false;
             this.SLE_NhanVien.Location = new System.Drawing.Point(171, 92);
             this.SLE_NhanVien.Name = "SLE_NhanVien";
             this.SLE_NhanVien.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -870,6 +909,7 @@
             // 
             // dtp_NgayBan
             // 
+            this.dtp_NgayBan.Enabled = false;
             this.dtp_NgayBan.Location = new System.Drawing.Point(171, 59);
             this.dtp_NgayBan.Name = "dtp_NgayBan";
             this.dtp_NgayBan.Size = new System.Drawing.Size(227, 26);
@@ -988,42 +1028,6 @@
             // 
             this.gridView7.Name = "gridView7";
             // 
-            // gridView1
-            // 
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn16});
-            this.gridView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridColumn16
-            // 
-            this.gridColumn16.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridColumn16.AppearanceHeader.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.gridColumn16.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn16.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn16.Caption = "Tên Thương Hiệu";
-            this.gridColumn16.FieldName = "TenThuongHieu";
-            this.gridColumn16.Name = "gridColumn16";
-            this.gridColumn16.Visible = true;
-            this.gridColumn16.VisibleIndex = 0;
-            // 
-            // SLE_ThuongHieu
-            // 
-            this.SLE_ThuongHieu.Location = new System.Drawing.Point(146, 10);
-            this.SLE_ThuongHieu.Name = "SLE_ThuongHieu";
-            this.SLE_ThuongHieu.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SLE_ThuongHieu.Properties.Appearance.Options.UseFont = true;
-            this.SLE_ThuongHieu.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.SLE_ThuongHieu.Properties.View = this.gridView1;
-            this.SLE_ThuongHieu.Size = new System.Drawing.Size(228, 26);
-            this.SLE_ThuongHieu.TabIndex = 41;
-            this.SLE_ThuongHieu.EditValueChanged += new System.EventHandler(this.SLE_ThuongHieu_EditValueChanged);
-            // 
             // frmHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1052,6 +1056,8 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SLE_SanPham.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SLE_ThuongHieu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SLE_MaKH.Properties)).EndInit();
@@ -1065,8 +1071,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SLE_ThuongHieu.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
