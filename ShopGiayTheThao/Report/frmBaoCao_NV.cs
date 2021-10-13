@@ -18,6 +18,8 @@ namespace ShopGiayTheThao.Report
 
         private void frmBaoCao_NV_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'sHOPGIAYDataSet1.sp_LoadNhanVien' table. You can move, or remove it, as needed.
+            this.sp_LoadNhanVienTableAdapter1.Fill(this.sHOPGIAYDataSet1.sp_LoadNhanVien);
             // TODO: This line of code loads data into the 'sHOPGIAYDataSet.sp_LoadNhanVien' table. You can move, or remove it, as needed.
             this.sp_LoadNhanVienTableAdapter.Fill(this.sHOPGIAYDataSet.sp_LoadNhanVien);
 

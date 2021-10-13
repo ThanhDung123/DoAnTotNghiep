@@ -43,6 +43,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.sp_LoadNhanVienTableAdapter = new ShopGiayTheThao.SHOPGIAYDataSetTableAdapters.sp_LoadNhanVienTableAdapter();
+            this.sHOPGIAYDataSet1 = new ShopGiayTheThao.SHOPGIAYDataSet1();
+            this.spLoadNhanVienBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.sp_LoadNhanVienTableAdapter1 = new ShopGiayTheThao.SHOPGIAYDataSet1TableAdapters.sp_LoadNhanVienTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.spLoadNhanVienBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sHOPGIAYDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spLoadNhanVienBindingSource)).BeginInit();
@@ -52,6 +55,8 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sHOPGIAYDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spLoadNhanVienBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // spLoadNhanVienBindingSource1
@@ -103,7 +108,7 @@
             // 
             this.rpv_NV.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet3";
-            reportDataSource1.Value = this.spLoadNhanVienBindingSource1;
+            reportDataSource1.Value = this.spLoadNhanVienBindingSource2;
             this.rpv_NV.LocalReport.DataSources.Add(reportDataSource1);
             this.rpv_NV.LocalReport.ReportEmbeddedResource = "ShopGiayTheThao.Report.Report2.rdlc";
             this.rpv_NV.Location = new System.Drawing.Point(70, 0);
@@ -164,6 +169,20 @@
             // 
             this.sp_LoadNhanVienTableAdapter.ClearBeforeFill = true;
             // 
+            // sHOPGIAYDataSet1
+            // 
+            this.sHOPGIAYDataSet1.DataSetName = "SHOPGIAYDataSet1";
+            this.sHOPGIAYDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // spLoadNhanVienBindingSource2
+            // 
+            this.spLoadNhanVienBindingSource2.DataMember = "sp_LoadNhanVien";
+            this.spLoadNhanVienBindingSource2.DataSource = this.sHOPGIAYDataSet1;
+            // 
+            // sp_LoadNhanVienTableAdapter1
+            // 
+            this.sp_LoadNhanVienTableAdapter1.ClearBeforeFill = true;
+            // 
             // frmBaoCao_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +206,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sHOPGIAYDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spLoadNhanVienBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,5 +227,8 @@
         private System.Windows.Forms.BindingSource spLoadNhanVienBindingSource;
         private SHOPGIAYDataSetTableAdapters.sp_LoadNhanVienTableAdapter sp_LoadNhanVienTableAdapter;
         private System.Windows.Forms.BindingSource spLoadNhanVienBindingSource1;
+        private SHOPGIAYDataSet1 sHOPGIAYDataSet1;
+        private System.Windows.Forms.BindingSource spLoadNhanVienBindingSource2;
+        private SHOPGIAYDataSet1TableAdapters.sp_LoadNhanVienTableAdapter sp_LoadNhanVienTableAdapter1;
     }
 }

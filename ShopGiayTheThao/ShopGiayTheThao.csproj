@@ -165,6 +165,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SHOPGIAYDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SHOPGIAYDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SHOPGIAYDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,6 +251,17 @@
     </None>
     <None Include="SHOPGIAYDataSet.xss">
       <DependentUpon>SHOPGIAYDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SHOPGIAYDataSet1.xsc">
+      <DependentUpon>SHOPGIAYDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SHOPGIAYDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SHOPGIAYDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SHOPGIAYDataSet1.xss">
+      <DependentUpon>SHOPGIAYDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
