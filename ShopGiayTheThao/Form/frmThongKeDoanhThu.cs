@@ -48,13 +48,14 @@ namespace ShopGiayTheThao.Form
         #endregion
 
         #region -BUTTONS--
-        private void btn_Thongke_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            
+            dtp_datefrom.Value = DateTime.Now;
+            dtp_dateto.Value = DateTime.Now;
+            gc_DoanhThu.DataSource = "";
         }
-        #endregion
 
-        private void btn_Thongke_Click_1(object sender, EventArgs e)
+        private void btn_Thongke_Click(object sender, EventArgs e)
         {
             sql = "EXEC dbo.sp_ThongKeDoanhThu @Datefrom = '" + dtp_datefrom.Value.ToString("yyyy/MM/dd") + "',@Dateto = '" + dtp_dateto.Value.ToString("yyyy/MM/dd") + "'";
             dt = Class.Functions.GetDataToTable(sql);
@@ -83,6 +84,20 @@ namespace ShopGiayTheThao.Form
             }
         }
 
+        private void btn_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        #endregion
+
+       
+
+     
+
+       
+
+       
 
        
     }
