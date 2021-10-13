@@ -154,5 +154,13 @@ namespace ShopGiayTheThao.Form
 
         #endregion
 
+        private void Btn_ThongKe_Click(object sender, EventArgs e)
+        {
+            frmThongKeDoanhThu f = new frmThongKeDoanhThu();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
     }
 }
