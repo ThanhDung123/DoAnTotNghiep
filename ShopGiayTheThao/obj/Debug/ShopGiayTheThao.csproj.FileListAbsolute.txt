@@ -106,3 +106,4 @@ C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.cspro
 C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe.licenses
 C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\RdlCompile.cache
 C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\RdlCompile.compiled
+C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThongKeDoanhThu.resources
