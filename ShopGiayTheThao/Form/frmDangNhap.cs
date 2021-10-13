@@ -45,7 +45,9 @@ namespace ShopGiayTheThao.Form
         private void btn_DN_Click(object sender, EventArgs e)
         {
 
-            #region --Mã hóa MK--
+            try
+            {
+                 #region --Mã hóa MK--
 
             MD5 mh = MD5.Create();
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(txt_matkhau.Text);
@@ -73,6 +75,12 @@ namespace ShopGiayTheThao.Form
             }
             else
                 MessageBox.Show("Đăng nhập thất bại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
 
         }
         #endregion
