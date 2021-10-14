@@ -427,6 +427,7 @@
             this.Name = "frmThongKeDoanhThu";
             this.Text = "frmThongKeDoanhThu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmThongKeDoanhThu_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);

@@ -328,6 +328,14 @@ namespace ShopGiayTheThao.Form
                 txt_GiamGia.Text = "0";
             }
 
+            foreach (CTHD  item in l_CTHD)
+            {
+                if (item.MaSanPham == SLE_SanPham.EditValue.ToString())
+                {
+                    MessageBox.Show("Sản Phẩm này đã thêm, vui lòng xóa và cập nhật lại số lượng !", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);                 
+                    return;
+                }
+            }
           
             l_CTHD.Add(new CTHD
             {
@@ -339,11 +347,7 @@ namespace ShopGiayTheThao.Form
                 GiamGia = txt_GiamGia.Text,
                 ThanhTien = txt_ThanhTien.Text
             });
-
-            
-
-
-           
+               
             gc_CTHoaDon.DataSource = l_CTHD;
             gc_CTHoaDon.RefreshDataSource();
             txt_GiamGia.Text = "";

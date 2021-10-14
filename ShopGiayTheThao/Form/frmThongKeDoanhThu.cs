@@ -8,9 +8,9 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using COMExcel = Microsoft.Office.Interop.Excel;
 using ShopGiayTheThao.Class;
+using System.IO;
 using OfficeOpenXml;
 using OfficeOpenXml.Style;
-using System.IO;
 
 namespace ShopGiayTheThao.Form
 {
@@ -174,7 +174,40 @@ namespace ShopGiayTheThao.Form
             }
         }
 
-       
+        private void frmThongKeDoanhThu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+
+            if (keyData == Keys.F1 && btn_Thongke.Enabled)
+            {
+                btn_Thongke_Click(btn_Thongke, EventArgs.Empty);
+                return true;
+            }
+ 
+            if (keyData == Keys.F2 && btn_Xuatexel.Enabled)
+            {
+                btn_Xuatexel_Click(btn_Xuatexel, EventArgs.Empty);
+                return true;
+            }
+
+            if (keyData == Keys.F3 && button1.Enabled)
+            {
+                button1_Click(button1, EventArgs.Empty);
+                return true;
+            }
+
+           
+
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
      
 
