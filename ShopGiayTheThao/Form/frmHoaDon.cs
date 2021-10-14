@@ -89,8 +89,25 @@ namespace ShopGiayTheThao.Form
 
         private void SLE_SanPham_EditValueChanged(object sender, EventArgs e)
         {
-            sql = "EXEC dbo.sp_Load_DonGia @maSP = '" + SLE_SanPham.EditValue + "'";
-            dt = Class.Functions.GetDataToTable(sql);
+            try
+            {
+                if (SLE_SanPham.Text == "")
+                {
+                    txt_SL.Text = "";
+                    txt_DonGia.Text = "";
+                    txt_ThanhTien.Text = "";
+                    txt_GiamGia.Text = "";
+                }
+
+                else
+                {
+                    txt_SL.Text = "";
+                    txt_GiamGia.Text = "";
+                    txt_ThanhTien.Text = "";
+                }
+
+                 sql = "EXEC dbo.sp_Load_DonGia @maSP = '" + SLE_SanPham.EditValue + "'";
+                 dt = Class.Functions.GetDataToTable(sql);
 
             if (dt.Rows.Count > 0)
             {
@@ -100,22 +117,22 @@ namespace ShopGiayTheThao.Form
                     TenSP = item["TenSanPham"].ToString();
                 }
             }
+            }
+            catch (Exception)
+            {
+                
+               
+            }
         }
 
         private void txt_SL_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_SL.Text))
+            try
+            {
+             if (string.IsNullOrEmpty(txt_SL.Text))
             {
                 txt_ThanhTien.Text = "";
-            }
-
-            //if (string.IsNullOrEmpty(SLE_SanPham.Text))
-            //{
-            //    MessageBox.Show("Chưa chọn sản phẩm ","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    txt_SL.Text = "";
-            //    txt_ThanhTien.Text = "";
-            //    return;
-            //}
+            }        
 
             if (!string.IsNullOrEmpty(txt_SL.Text))
             {
@@ -152,24 +169,21 @@ namespace ShopGiayTheThao.Form
                     txt_SL.Focus();
                 }
             }
+            }
+            catch (Exception)
+            {
+                
+                
+            }
            
            
         }
 
         private void txt_GiamGia_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(SLE_SanPham.Text))
+            try
             {
-                MessageBox.Show("Chưa chọn sản phẩm ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(txt_SL.Text)) 
-            {
-                MessageBox.Show("Chưa nhập số lượng  ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txt_SL.Focus();
-                return;
-            }
+       
             double tong = 0;
 
             double SL, DonGia, GiamGia;
@@ -191,6 +205,12 @@ namespace ShopGiayTheThao.Form
 
             tong = SL * DonGia - SL * DonGia * GiamGia / 100;
             txt_ThanhTien.Text = tong.ToString();
+            }
+            catch (Exception)
+            {
+                
+              
+            }
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -273,84 +293,113 @@ namespace ShopGiayTheThao.Form
 
         private void btn_TaoMoi_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(SLE_NhanVien.Text))
+            try
             {
-                MessageBox.Show("Nhân viên không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+                if (string.IsNullOrEmpty(SLE_NhanVien.Text))
+                {
+                    MessageBox.Show("Nhân viên không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
-            if (string.IsNullOrEmpty(SLE_MaKH.Text)) 
+                if (string.IsNullOrEmpty(SLE_MaKH.Text)) 
+                {
+                    MessageBox.Show("Khách Hàng không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                txt_MaHD.Text =Class.Functions.CreateKey("HDB");
+
+                sql = "EXEC dbo.sp_ThemHoaDon @maHD = '"+txt_MaHD.Text+"', @maNV = '"+SLE_NhanVien.EditValue+"', @ngayban = '"+dtp_NgayBan.Value.ToString("yyyy/MM/dd")+"', @maKH = '"+SLE_MaKH.EditValue+"', @TongTien = 0.0";
+                Class.Functions.RunSQL(sql);
+
+                dtp_NgayBan.Enabled = false;
+                SLE_MaKH.Enabled = false;
+                SLE_NhanVien.Enabled = false;
+            }
+            catch (Exception)
             {
-                MessageBox.Show("Khách Hàng không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
+                
+                throw;
             }
-
-            txt_MaHD.Text =Class.Functions.CreateKey("HDB");
-
-            sql = "EXEC dbo.sp_ThemHoaDon @maHD = '"+txt_MaHD.Text+"', @maNV = '"+SLE_NhanVien.EditValue+"', @ngayban = '"+dtp_NgayBan.Value.ToString("yyyy/MM/dd")+"', @maKH = '"+SLE_MaKH.EditValue+"', @TongTien = 0.0";
-            Class.Functions.RunSQL(sql);
-
-            dtp_NgayBan.Enabled = false;
-            SLE_MaKH.Enabled = false;
-            SLE_NhanVien.Enabled = false;
         }
 
         private void btn_them_sp_HD_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_MaHD.Text))
+            try
             {
-                MessageBox.Show("Bạn chưa tạo hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+                //if (string.IsNullOrEmpty(txt_MaHD.Text))
+                //{
+                //    MessageBox.Show("Bạn chưa tạo hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //    return;
+                //}
 
-            if (string.IsNullOrEmpty(SLE_SanPham.EditValue.ToString()))
-            {
-                MessageBox.Show("Không có sản phẩm nào để thêm ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(txt_SL.Text))
-            {
-                MessageBox.Show("Bạn chưa nhập số lượng","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (string.IsNullOrEmpty(txt_GiamGia.Text))
-            {
-                txt_GiamGia.Text = "0";
-            }
-
-            foreach (CTHD  item in l_CTHD)
-            {
-                if (item.MaSanPham == SLE_SanPham.EditValue.ToString())
+                if (string.IsNullOrEmpty(SLE_SanPham.EditValue.ToString()))
                 {
-                    MessageBox.Show("Sản Phẩm này đã thêm, vui lòng xóa và cập nhật lại số lượng !", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
+                    MessageBox.Show("Không có sản phẩm nào để thêm ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-            }
-          
-            l_CTHD.Add(new CTHD
-            {
-                MaHoaDon = txt_MaHD.Text,
-                MaSanPham = SLE_SanPham.EditValue.ToString(),
-                TenSanPham = TenSP,
-                SoLuong = txt_SL.Text,
-                DonGia = txt_DonGia.Text,
-                GiamGia = txt_GiamGia.Text,
-                ThanhTien = txt_ThanhTien.Text
-            });
-               
-            gc_CTHoaDon.DataSource = l_CTHD;
-            gc_CTHoaDon.RefreshDataSource();
-            txt_GiamGia.Text = "";
-            txt_SL.Text = "";
-            txt_ThanhTien.Text = "";
-            txt_GiamGia.Text = "";
-            txt_DonGia.Text = "";
-            SLE_ThuongHieu.EditValue = "";
+
+                if (string.IsNullOrEmpty(txt_SL.Text))
+                {
+                    MessageBox.Show("Bạn chưa nhập số lượng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(txt_GiamGia.Text))
+                {
+                    txt_GiamGia.Text = "0";
+                }
+
+                foreach (CTHD item in l_CTHD)
+                {
+                    if (item.MaSanPham == SLE_SanPham.EditValue.ToString())
+                    {
+                        MessageBox.Show("Sản Phẩm này đã thêm, vui lòng xóa và cập nhật lại số lượng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                }
+
+                //for (int i = 0; i < gv_CTHoaDon.DataRowCount; i++)
+                //{
+                //    if (gv_CTHoaDon.GetRowCellValue(i, "MaSanPham").Equals(SLE_SanPham.EditValue.ToString()))
+                //    {
+                //        //MessageBox.Show("Sản Phẩm này đã thêm, vui lòng xóa và cập nhật lại số lượng !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //        //return;
+                //        int SL = Convert.ToInt16(gv_CTHoaDon.GetRowCellValue(i, "SoLuong")) + Convert.ToInt16(txt_SL.Text);
+                //        gv_CTHoaDon.SetRowCellValue(i, "Soluong", SL);
+                //        return;
+                //    }
+                //}
+
+
+                l_CTHD.Add(new CTHD
+                {
+                    MaHoaDon = txt_MaHD.Text,
+                    MaSanPham = SLE_SanPham.EditValue.ToString(),
+                    TenSanPham = TenSP,
+                    SoLuong = txt_SL.Text,
+                    DonGia = txt_DonGia.Text,
+                    GiamGia = txt_GiamGia.Text,
+                    ThanhTien = txt_ThanhTien.Text
+                });
+
+                gc_CTHoaDon.DataSource = l_CTHD;
+                gc_CTHoaDon.RefreshDataSource();
+                txt_GiamGia.Text = "";
+                txt_SL.Text = "";
+                txt_ThanhTien.Text = "";
+                txt_GiamGia.Text = "";
+                txt_DonGia.Text = "";
+                SLE_ThuongHieu.EditValue = "";
 
            
+            }
+            catch (Exception)
+            {
+                
+              
+            }
+        
         }
 
         private void BE_del_Thuonghieu_Click(object sender, EventArgs e)
