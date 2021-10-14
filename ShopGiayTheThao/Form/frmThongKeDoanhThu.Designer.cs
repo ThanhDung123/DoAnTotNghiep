@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gc_DoanhThu = new DevExpress.XtraGrid.GridControl();
-            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gv_thongke = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn16 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -45,6 +45,7 @@
             this.repositoryItemButtonEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.btn_Xuatexel = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_Thongke = new System.Windows.Forms.Button();
@@ -63,7 +64,7 @@
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_DoanhThu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_thongke)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
@@ -117,7 +118,7 @@
             // 
             this.gc_DoanhThu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gc_DoanhThu.Location = new System.Drawing.Point(0, 0);
-            this.gc_DoanhThu.MainView = this.gridView3;
+            this.gc_DoanhThu.MainView = this.gv_thongke;
             this.gc_DoanhThu.Name = "gc_DoanhThu";
             this.gc_DoanhThu.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
@@ -125,35 +126,35 @@
             this.gc_DoanhThu.Size = new System.Drawing.Size(985, 336);
             this.gc_DoanhThu.TabIndex = 17;
             this.gc_DoanhThu.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView3,
+            this.gv_thongke,
             this.gridView4});
             // 
-            // gridView3
+            // gv_thongke
             // 
-            this.gridView3.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridView3.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
-            this.gridView3.Appearance.FooterPanel.Options.UseFont = true;
-            this.gridView3.Appearance.FooterPanel.Options.UseForeColor = true;
-            this.gridView3.Appearance.GroupPanel.Options.UseFont = true;
-            this.gridView3.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.gridView3.Appearance.Row.Options.UseFont = true;
-            this.gridView3.Appearance.Row.Options.UseTextOptions = true;
-            this.gridView3.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView3.AppearancePrint.HeaderPanel.Options.UseFont = true;
-            this.gridView3.AppearancePrint.Row.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.gridView3.AppearancePrint.Row.Options.UseFont = true;
-            this.gridView3.ColumnPanelRowHeight = 50;
-            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gv_thongke.Appearance.FooterPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gv_thongke.Appearance.FooterPanel.ForeColor = System.Drawing.Color.Red;
+            this.gv_thongke.Appearance.FooterPanel.Options.UseFont = true;
+            this.gv_thongke.Appearance.FooterPanel.Options.UseForeColor = true;
+            this.gv_thongke.Appearance.GroupPanel.Options.UseFont = true;
+            this.gv_thongke.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.gv_thongke.Appearance.Row.Options.UseFont = true;
+            this.gv_thongke.Appearance.Row.Options.UseTextOptions = true;
+            this.gv_thongke.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gv_thongke.AppearancePrint.HeaderPanel.Options.UseFont = true;
+            this.gv_thongke.AppearancePrint.Row.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.gv_thongke.AppearancePrint.Row.Options.UseFont = true;
+            this.gv_thongke.ColumnPanelRowHeight = 50;
+            this.gv_thongke.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn15,
             this.gridColumn16,
             this.gridColumn17,
             this.gridColumn18,
             this.gridColumn19});
-            this.gridView3.GridControl = this.gc_DoanhThu;
-            this.gridView3.Name = "gridView3";
-            this.gridView3.OptionsView.ShowFooter = true;
-            this.gridView3.OptionsView.ShowGroupPanel = false;
-            this.gridView3.RowHeight = 30;
+            this.gv_thongke.GridControl = this.gc_DoanhThu;
+            this.gv_thongke.Name = "gv_thongke";
+            this.gv_thongke.OptionsView.ShowFooter = true;
+            this.gv_thongke.OptionsView.ShowGroupPanel = false;
+            this.gv_thongke.RowHeight = 30;
             // 
             // gridColumn15
             // 
@@ -230,7 +231,7 @@
             // 
             this.repositoryItemButtonEdit1.AutoHeight = false;
             this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -238,7 +239,7 @@
             // 
             this.repositoryItemButtonEdit2.AutoHeight = false;
             this.repositoryItemButtonEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Ribbon_Info_32x32, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Ribbon_Info_32x32, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.repositoryItemButtonEdit2.Name = "repositoryItemButtonEdit2";
             this.repositoryItemButtonEdit2.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -249,6 +250,7 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.btn_Xuatexel);
             this.panel8.Controls.Add(this.btn_Thoat);
             this.panel8.Controls.Add(this.button1);
             this.panel8.Controls.Add(this.btn_Thongke);
@@ -262,6 +264,22 @@
             this.panel8.Size = new System.Drawing.Size(985, 100);
             this.panel8.TabIndex = 111;
             // 
+            // btn_Xuatexel
+            // 
+            this.btn_Xuatexel.BackColor = System.Drawing.Color.SeaGreen;
+            this.btn_Xuatexel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Xuatexel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Xuatexel.ForeColor = System.Drawing.Color.White;
+            this.btn_Xuatexel.Image = global::ShopGiayTheThao.Properties.Resources.printer_white_21;
+            this.btn_Xuatexel.Location = new System.Drawing.Point(627, 12);
+            this.btn_Xuatexel.Name = "btn_Xuatexel";
+            this.btn_Xuatexel.Size = new System.Drawing.Size(96, 76);
+            this.btn_Xuatexel.TabIndex = 117;
+            this.btn_Xuatexel.Text = "Xuất Excel (F2)";
+            this.btn_Xuatexel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_Xuatexel.UseVisualStyleBackColor = false;
+            this.btn_Xuatexel.Click += new System.EventHandler(this.btn_Xuatexel_Click);
+            // 
             // btn_Thoat
             // 
             this.btn_Thoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -269,9 +287,9 @@
             this.btn_Thoat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.ForeColor = System.Drawing.Color.White;
             this.btn_Thoat.Image = global::ShopGiayTheThao.Properties.Resources.Login;
-            this.btn_Thoat.Location = new System.Drawing.Point(833, 14);
+            this.btn_Thoat.Location = new System.Drawing.Point(833, 11);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(106, 73);
+            this.btn_Thoat.Size = new System.Drawing.Size(104, 76);
             this.btn_Thoat.TabIndex = 116;
             this.btn_Thoat.Text = "Thoát (ESC)";
             this.btn_Thoat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -285,11 +303,11 @@
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::ShopGiayTheThao.Properties.Resources.Refresh_32x32;
-            this.button1.Location = new System.Drawing.Point(708, 12);
+            this.button1.Location = new System.Drawing.Point(733, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 76);
             this.button1.TabIndex = 115;
-            this.button1.Text = "Làm Mới (F2)";
+            this.button1.Text = "Làm Mới (F3)";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -301,7 +319,7 @@
             this.btn_Thongke.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thongke.ForeColor = System.Drawing.Color.White;
             this.btn_Thongke.Image = global::ShopGiayTheThao.Properties.Resources.Zoom;
-            this.btn_Thongke.Location = new System.Drawing.Point(571, 12);
+            this.btn_Thongke.Location = new System.Drawing.Point(524, 11);
             this.btn_Thongke.Name = "btn_Thongke";
             this.btn_Thongke.Size = new System.Drawing.Size(96, 76);
             this.btn_Thongke.TabIndex = 114;
@@ -414,7 +432,7 @@
             this.panel7.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_DoanhThu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_thongke)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
@@ -442,7 +460,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private System.Windows.Forms.Panel panel3;
         private DevExpress.XtraGrid.GridControl gc_DoanhThu;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.Views.Grid.GridView gv_thongke;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
@@ -460,5 +478,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_Thoat;
+        private System.Windows.Forms.Button btn_Xuatexel;
     }
 }
