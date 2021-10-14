@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel3 = new System.Windows.Forms.Panel();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -40,7 +40,6 @@
             this.gv_CTHoaDon = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BE_del_Thuonghieu = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BE_edit_CTHD = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -51,7 +50,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_XuatHD = new System.Windows.Forms.Button();
-            this.btn_CN_CTHD = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -225,7 +223,6 @@
             this.gv_CTHoaDon.ColumnPanelRowHeight = 40;
             this.gv_CTHoaDon.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
-            this.gridColumn20,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn5,
@@ -255,31 +252,16 @@
             // 
             this.BE_del_Thuonghieu.AutoHeight = false;
             this.BE_del_Thuonghieu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.BE_del_Thuonghieu.Name = "BE_del_Thuonghieu";
             this.BE_del_Thuonghieu.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.BE_del_Thuonghieu.Click += new System.EventHandler(this.BE_del_Thuonghieu_Click);
-            // 
-            // gridColumn20
-            // 
-            this.gridColumn20.AppearanceCell.Options.UseTextOptions = true;
-            this.gridColumn20.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn20.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.gridColumn20.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn20.AppearanceHeader.Options.UseTextOptions = true;
-            this.gridColumn20.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridColumn20.Caption = "Chỉnh Sửa";
-            this.gridColumn20.ColumnEdit = this.BE_edit_CTHD;
-            this.gridColumn20.Name = "gridColumn20";
-            this.gridColumn20.Visible = true;
-            this.gridColumn20.VisibleIndex = 1;
-            this.gridColumn20.Width = 36;
             // 
             // BE_edit_CTHD
             // 
             this.BE_edit_CTHD.AutoHeight = false;
             this.BE_edit_CTHD.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Drafts_16x161, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Drafts_16x161, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject4, "", null, null, true)});
             this.BE_edit_CTHD.Name = "BE_edit_CTHD";
             this.BE_edit_CTHD.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.BE_edit_CTHD.Click += new System.EventHandler(this.BE_edit_CTHD_Click);
@@ -382,7 +364,6 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.btn_XuatHD);
-            this.panel4.Controls.Add(this.btn_CN_CTHD);
             this.panel4.Controls.Add(this.label24);
             this.panel4.Controls.Add(this.label23);
             this.panel4.Controls.Add(this.label22);
@@ -415,7 +396,7 @@
             this.btn_XuatHD.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_XuatHD.ForeColor = System.Drawing.Color.White;
             this.btn_XuatHD.Image = global::ShopGiayTheThao.Properties.Resources.Clipboard1;
-            this.btn_XuatHD.Location = new System.Drawing.Point(463, 73);
+            this.btn_XuatHD.Location = new System.Drawing.Point(364, 74);
             this.btn_XuatHD.Name = "btn_XuatHD";
             this.btn_XuatHD.Size = new System.Drawing.Size(102, 76);
             this.btn_XuatHD.TabIndex = 108;
@@ -423,22 +404,6 @@
             this.btn_XuatHD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btn_XuatHD.UseVisualStyleBackColor = false;
             this.btn_XuatHD.Click += new System.EventHandler(this.btn_XuatHD_Click);
-            // 
-            // btn_CN_CTHD
-            // 
-            this.btn_CN_CTHD.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.btn_CN_CTHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_CN_CTHD.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CN_CTHD.ForeColor = System.Drawing.Color.White;
-            this.btn_CN_CTHD.Image = global::ShopGiayTheThao.Properties.Resources.Refresh_32x32;
-            this.btn_CN_CTHD.Location = new System.Drawing.Point(360, 73);
-            this.btn_CN_CTHD.Name = "btn_CN_CTHD";
-            this.btn_CN_CTHD.Size = new System.Drawing.Size(97, 75);
-            this.btn_CN_CTHD.TabIndex = 49;
-            this.btn_CN_CTHD.Text = "Cập nhật (F4)";
-            this.btn_CN_CTHD.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btn_CN_CTHD.UseVisualStyleBackColor = false;
-            this.btn_CN_CTHD.Click += new System.EventHandler(this.btn_CN_CTHD_Click);
             // 
             // label24
             // 
@@ -565,7 +530,7 @@
             this.btn_Thoat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.ForeColor = System.Drawing.Color.White;
             this.btn_Thoat.Image = global::ShopGiayTheThao.Properties.Resources.Login;
-            this.btn_Thoat.Location = new System.Drawing.Point(571, 75);
+            this.btn_Thoat.Location = new System.Drawing.Point(475, 75);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(106, 73);
             this.btn_Thoat.TabIndex = 50;
@@ -1095,7 +1060,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gv_CTHoaDon;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit BE_del_Thuonghieu;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit BE_edit_CTHD;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
@@ -1105,7 +1069,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btn_CN_CTHD;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;

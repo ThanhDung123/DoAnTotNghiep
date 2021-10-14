@@ -165,6 +165,7 @@
             this.gridColumn6});
             this.gv_KhachHang.GridControl = this.gc_KhachHang;
             this.gv_KhachHang.Name = "gv_KhachHang";
+            this.gv_KhachHang.OptionsSelection.MultiSelect = true;
             this.gv_KhachHang.OptionsView.ShowGroupPanel = false;
             this.gv_KhachHang.RowHeight = 30;
             this.gv_KhachHang.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gv_KhachHang_RowClick);
@@ -203,6 +204,7 @@
             this.gridColumn2.Caption = "Mã Khách Hàng";
             this.gridColumn2.FieldName = "MaKhachHang";
             this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             this.gridColumn2.Width = 89;
@@ -216,6 +218,7 @@
             this.gridColumn3.Caption = "Tên Khách Hàng";
             this.gridColumn3.FieldName = "TenKhachHang";
             this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
             this.gridColumn3.Width = 222;
@@ -229,6 +232,7 @@
             this.gridColumn5.Caption = "Địa Chỉ";
             this.gridColumn5.FieldName = "DiaChi";
             this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
             this.gridColumn5.Width = 138;
@@ -242,6 +246,7 @@
             this.gridColumn6.Caption = "Điện Thoại";
             this.gridColumn6.FieldName = "DienThoai";
             this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
             this.gridColumn6.Width = 146;

@@ -214,11 +214,6 @@ namespace ShopGiayTheThao.Form
                 return true;
             }
 
-            if (keyData == Keys.F4 && btn_CN_CTHD.Enabled)
-            {
-                btn_CN_CTHD_Click(btn_CN_CTHD, EventArgs.Empty);
-                return true;
-            }
 
             if (keyData == Keys.F5 && btn_reset.Enabled)
             {
@@ -262,7 +257,6 @@ namespace ShopGiayTheThao.Form
             txt_TenKH.Text = "";
             txt_DiaChi.Text = "";
             txt_DT.Text = "";
-            SLE_NhanVien.EditValue = "";
 
             SLE_ThuongHieu.EditValue = "";
             txt_SL.Text = "";
@@ -274,9 +268,7 @@ namespace ShopGiayTheThao.Form
             l_CTHD.Clear();
             gc_CTHoaDon.DataSource = "";
 
-            dtp_NgayBan.Enabled = true;
             SLE_MaKH.Enabled = true;
-            SLE_NhanVien.Enabled = true;
         }
 
         private void btn_TaoMoi_Click(object sender, EventArgs e)
@@ -332,7 +324,8 @@ namespace ShopGiayTheThao.Form
             {
                 if (item.MaSanPham == SLE_SanPham.EditValue.ToString())
                 {
-                    MessageBox.Show("Sản Phẩm này đã thêm, vui lòng xóa và cập nhật lại số lượng !", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);                 
+                    MessageBox.Show("Sản Phẩm này đã thêm, vui lòng xóa và cập nhật lại số lượng !", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
                     return;
                 }
             }
