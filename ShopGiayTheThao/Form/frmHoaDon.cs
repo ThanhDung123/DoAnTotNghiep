@@ -327,11 +327,11 @@ namespace ShopGiayTheThao.Form
         {
             try
             {
-                //if (string.IsNullOrEmpty(txt_MaHD.Text))
-                //{
-                //    MessageBox.Show("Bạn chưa tạo hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //    return;
-                //}
+                if (string.IsNullOrEmpty(txt_MaHD.Text))
+                {
+                    MessageBox.Show("Bạn chưa tạo hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 if (string.IsNullOrEmpty(SLE_SanPham.EditValue.ToString()))
                 {
@@ -499,8 +499,10 @@ namespace ShopGiayTheThao.Form
 
         private void btn_XuatHD_Click(object sender, EventArgs e)
         {
-            frmTimKiemHD f = new frmTimKiemHD(taikhoan);
-            f.ShowDialog();
+            //frmTimKiemHD f = new frmTimKiemHD(taikhoan);
+            //f.ShowDialog();
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
         }
 
         #endregion
@@ -594,6 +596,46 @@ namespace ShopGiayTheThao.Form
 
   
         #endregion
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("HÓA ĐƠN BÁN", new Font("Arial", 30, FontStyle.Bold), Brushes.Red, new Point(250, 30));
+            e.Graphics.DrawString("Ngày: "+DateTime.Now,new Font ("Arial",16,FontStyle.Regular),Brushes.Black, new Point (15,100));
+            e.Graphics.DrawString("Nhân viên: " + SLE_NhanVien.Text, new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(15, 130));
+            e.Graphics.DrawString("Khách hàng: " + txt_TenKH.Text, new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(15, 160));
+            e.Graphics.DrawString("SĐT: " + txt_DT.Text, new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(15, 190));
+            e.Graphics.DrawString("Mã HĐ: " + txt_DT.Text, new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(15, 220));
+
+            e.Graphics.DrawString("D & L SHOP ", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(650, 100));
+            e.Graphics.DrawString("Hồ Chí Minh", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(650, 130));
+            e.Graphics.DrawString("SĐT: 012345678", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(650, 160));
+
+            e.Graphics.DrawString("----------------------------------------------------------------------------------------------------------", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(15, 290));
+            e.Graphics.DrawString("Tên SP ", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(15, 320));
+            e.Graphics.DrawString("Số lượng", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(360, 320));
+            e.Graphics.DrawString("Đơn giá", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(480, 320));
+            e.Graphics.DrawString("Giảm giá", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(590, 320));
+            e.Graphics.DrawString("Thành tiền", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(700, 320));
+            e.Graphics.DrawString("----------------------------------------------------------------------------------------------------------", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(15, 350));
+
+            int ypos = 380;
+            int tong = 0;
+            foreach (var item in l_CTHD)
+            {           
+                e.Graphics.DrawString(item.TenSanPham, new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(15, ypos));
+                e.Graphics.DrawString(item.SoLuong, new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(400, ypos));
+                e.Graphics.DrawString(item.DonGia, new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(480, ypos));
+                e.Graphics.DrawString(item.GiamGia, new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(630, ypos));
+                e.Graphics.DrawString(item.ThanhTien, new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(700, ypos));
+
+                ypos += 50;
+                tong+= Convert.ToInt32(item.ThanhTien);
+            }
+            e.Graphics.DrawString("----------------------------------------------------------------------------------------------------------", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(15, ypos));
+            e.Graphics.DrawString("Tổng tiền : "+ tong + "VND", new Font("Arial", 16, FontStyle.Bold), Brushes.Red, new Point(15, ypos+ 50));
+            e.Graphics.DrawString("Chữ ký ", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(600, ypos + 100));
+
+        }
 
         
 
