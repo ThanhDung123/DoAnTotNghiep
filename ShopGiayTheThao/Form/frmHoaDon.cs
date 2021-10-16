@@ -319,7 +319,7 @@ namespace ShopGiayTheThao.Form
             catch (Exception)
             {
                 
-                throw;
+            
             }
         }
 

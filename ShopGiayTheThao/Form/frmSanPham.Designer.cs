@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -60,8 +60,6 @@
             this.txt_GhiChu = new System.Windows.Forms.TextBox();
             this.cbo_MaTH = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.txt_Anh = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txt_DonGiaBan = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txt_DonGiaNhap = new System.Windows.Forms.TextBox();
@@ -73,6 +71,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_MaSP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txt_Anh = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -213,7 +212,7 @@
             // 
             this.BE_del_Thuonghieu.AutoHeight = false;
             this.BE_del_Thuonghieu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.BE_del_Thuonghieu.Name = "BE_del_Thuonghieu";
             this.BE_del_Thuonghieu.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.BE_del_Thuonghieu.Click += new System.EventHandler(this.BE_del_Thuonghieu_Click);
@@ -311,8 +310,6 @@
             this.gridColumn8.FieldName = "Anh";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.ReadOnly = true;
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 7;
             this.gridColumn8.Width = 77;
             // 
             // gridColumn9
@@ -331,14 +328,13 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.txt_Anh);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.btn_them_anh);
             this.panel4.Controls.Add(this.ptb_sp);
             this.panel4.Controls.Add(this.txt_GhiChu);
             this.panel4.Controls.Add(this.cbo_MaTH);
             this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.txt_Anh);
-            this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.txt_DonGiaBan);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.txt_DonGiaNhap);
@@ -371,6 +367,7 @@
             // btn_CN
             // 
             this.btn_CN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_CN.Enabled = false;
             this.btn_CN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CN.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CN.ForeColor = System.Drawing.Color.White;
@@ -403,6 +400,7 @@
             // btn_Luu
             // 
             this.btn_Luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_Luu.Enabled = false;
             this.btn_Luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Luu.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Luu.ForeColor = System.Drawing.Color.White;
@@ -419,6 +417,7 @@
             // btn_Sua
             // 
             this.btn_Sua.BackColor = System.Drawing.Color.Teal;
+            this.btn_Sua.Enabled = false;
             this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Sua.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.ForeColor = System.Drawing.Color.White;
@@ -454,7 +453,7 @@
             this.btn_them_anh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_them_anh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them_anh.ForeColor = System.Drawing.Color.White;
-            this.btn_them_anh.Location = new System.Drawing.Point(850, 32);
+            this.btn_them_anh.Location = new System.Drawing.Point(867, 79);
             this.btn_them_anh.Name = "btn_them_anh";
             this.btn_them_anh.Size = new System.Drawing.Size(100, 30);
             this.btn_them_anh.TabIndex = 44;
@@ -502,23 +501,6 @@
             this.label8.Size = new System.Drawing.Size(77, 19);
             this.label8.TabIndex = 48;
             this.label8.Text = "Ghi Chú :";
-            // 
-            // txt_Anh
-            // 
-            this.txt_Anh.Location = new System.Drawing.Point(506, 32);
-            this.txt_Anh.Name = "txt_Anh";
-            this.txt_Anh.Size = new System.Drawing.Size(338, 21);
-            this.txt_Anh.TabIndex = 42;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(423, 35);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 19);
-            this.label7.TabIndex = 46;
-            this.label7.Text = "Ảnh :";
             // 
             // txt_DonGiaBan
             // 
@@ -633,6 +615,15 @@
             this.label2.TabIndex = 35;
             this.label2.Text = "Mã Sản Phẩm :";
             // 
+            // txt_Anh
+            // 
+            this.txt_Anh.Location = new System.Drawing.Point(507, 30);
+            this.txt_Anh.Name = "txt_Anh";
+            this.txt_Anh.Size = new System.Drawing.Size(337, 29);
+            this.txt_Anh.TabIndex = 54;
+            this.txt_Anh.Text = "";
+            this.txt_Anh.Visible = false;
+            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -684,8 +675,6 @@
         private System.Windows.Forms.TextBox txt_GhiChu;
         private System.Windows.Forms.ComboBox cbo_MaTH;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txt_Anh;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_DonGiaBan;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_DonGiaNhap;
@@ -710,5 +699,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private System.Windows.Forms.RichTextBox txt_Anh;
     }
 }

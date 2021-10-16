@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using System.IO;
 
 namespace ShopGiayTheThao.Form
 {
@@ -17,6 +18,7 @@ namespace ShopGiayTheThao.Form
 
         string sql;
         DataTable dt;
+        string base64_image;
 
         List<SanPham> l_sanpham = new List<SanPham>();
         public class SanPham
@@ -53,6 +55,10 @@ namespace ShopGiayTheThao.Form
 
         private void gv_SanPham_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
+            try
+            {
+            ptb_sp.Visible = true;
+
             txt_MaSP.Text = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "MaSanPham").ToString();
             txt_TenSP.Text = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "TenSanPham").ToString();
             txt_SL.Text = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "SoLuong").ToString();
@@ -61,8 +67,8 @@ namespace ShopGiayTheThao.Form
             txt_Anh.Text = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "Anh").ToString();
             txt_GhiChu.Text = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "GhiChu").ToString();
             cbo_MaTH.Text = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "TenThuongHieu").ToString();
-            ptb_sp.ImageLocation = txt_Anh.Text;
-
+            ptb_sp.Image = Base64ToImage(txt_Anh.Text);
+             
 
             txt_TenSP.ReadOnly = true;
             txt_SL.ReadOnly = true;
@@ -73,9 +79,15 @@ namespace ShopGiayTheThao.Form
             txt_Anh.ReadOnly = true;
             cbo_MaTH.Enabled = false;
 
-            btn_CN.Enabled = false;
             btn_Luu.Enabled = false;
+            btn_Sua.Enabled = true;
             btn_them_anh.Enabled = false;
+            }
+            catch (Exception)
+            {
+                
+              
+            }
         }
 
         private void BE_del_Thuonghieu_Click(object sender, EventArgs e)
@@ -207,6 +219,15 @@ namespace ShopGiayTheThao.Form
             }
         }
 
+        public Image Base64ToImage(string base64String)
+        {
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            using (var ms = new MemoryStream(imageBytes, 0, imageBytes.Length))
+            {
+                Image image = Image.FromStream(ms, true);
+                return image;
+            }
+        }
         #endregion
 
         #region --BUTTONS--
@@ -217,12 +238,16 @@ namespace ShopGiayTheThao.Form
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
+            try
+            {
             txt_MaSP.Text = "";
             txt_TenSP.Text = "";
             txt_SL.Text = "0";
             txt_DonGiaNhap.Text = "0";
             txt_DonGiaBan.Text = "0";
             txt_GhiChu.Text = "";
+            txt_Anh.Text = "";
+            btn_Sua.Enabled = false; 
 
             txt_TenSP.ReadOnly = false;
             txt_SL.ReadOnly = false;
@@ -232,12 +257,21 @@ namespace ShopGiayTheThao.Form
             cbo_MaTH.Enabled = true;
             btn_them_anh.Enabled = true;
             btn_Luu.Enabled = true;
-            btn_CN.Enabled = false;
+
+            ptb_sp.Visible = false;
+            }
+            catch (Exception)
+            {
+                
+               
+            }
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
         {
 
+            try
+            {
             txt_TenSP.ReadOnly = false;
             txt_SL.ReadOnly = false;
             txt_DonGiaNhap.ReadOnly = false;
@@ -247,24 +281,42 @@ namespace ShopGiayTheThao.Form
             btn_them_anh.Enabled = true;
             btn_Luu.Enabled = false;
             btn_CN.Enabled = true;
+            }
+            catch (Exception)
+            {
+                
+               
+            }
         }
 
         private void btn_them_anh_Click(object sender, EventArgs e)
         {
+            try
+            {
             OpenFileDialog dlgOpen = new OpenFileDialog();
             dlgOpen.Filter = "Bitmap(*.bmp)|*.bmp|JPEG(*.JPG)|*.jpg|GIF(*.gif)|*.gif|All files(*.*)|*.*";
             dlgOpen.FilterIndex = 2;
             dlgOpen.Title = "Chọn ảnh minh hoạ cho sản phẩm";
             if (dlgOpen.ShowDialog() == DialogResult.OK)
             {
+                ptb_sp.Visible = true;
                 ptb_sp.Image = Image.FromFile(dlgOpen.FileName);
                 txt_Anh.Text = dlgOpen.FileName;
+
+                byte[] imagearr = System.IO.File.ReadAllBytes(dlgOpen.FileName);
+                 base64_image = Convert.ToBase64String(imagearr);
+            }
+            }
+            catch (Exception)
+            {
+                
+               
             }
         }
 
         private void btn_CN_Click(object sender, EventArgs e)
         {
-            try
+             try
             {
                 if (string.IsNullOrEmpty(txt_TenSP.Text))
                 {
@@ -291,7 +343,7 @@ namespace ShopGiayTheThao.Form
                     return;
                 }
 
-                sql = "dbo.sp_CapNhatSP @maSP='" + txt_MaSP.Text + "',@tenSP = N'" + txt_TenSP.Text + "',@thuonghieu = N'" + cbo_MaTH.SelectedValue.ToString() + "', @SL =" + txt_SL.Text + ",@DonGiaNhap =" + txt_DonGiaNhap.Text + ", @DonGiaBan =" + txt_DonGiaBan.Text + ", @Anh = '" + txt_Anh.Text + "', @GhiChu = N'" + txt_GhiChu.Text + "'";
+                sql = "dbo.sp_CapNhatSP @maSP='" + txt_MaSP.Text + "',@tenSP = N'" + txt_TenSP.Text + "',@thuonghieu = N'" + cbo_MaTH.SelectedValue.ToString() + "', @SL =" + txt_SL.Text + ",@DonGiaNhap =" + txt_DonGiaNhap.Text + ", @DonGiaBan =" + txt_DonGiaBan.Text + ", @Anh = N'" + base64_image + "', @GhiChu = N'" + txt_GhiChu.Text + "'";
                 Class.Functions.RunSQL(sql);
                 MessageBox.Show("Lưu Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -305,6 +357,8 @@ namespace ShopGiayTheThao.Form
                 txt_Anh.ReadOnly = true;
                 cbo_MaTH.Enabled = false;
                 btn_them_anh.Enabled = false;
+                btn_Sua.Enabled = false;
+                btn_CN.Enabled = false;
 
                 txt_MaSP.Text = "";
                 txt_TenSP.Text = "";
@@ -357,7 +411,7 @@ namespace ShopGiayTheThao.Form
 
                 if (dt.Rows[0]["SL"].ToString().Equals("0"))
                 {
-                    sql = "EXEC dbo.sp_ThemSP @tenSP = N'" + txt_TenSP.Text + "',@thuonghieu = N'" + cbo_MaTH.SelectedValue.ToString() + "', @SL =" + txt_SL.Text + ",@DonGiaNhap =" + txt_DonGiaNhap.Text + ", @DonGiaBan =" + txt_DonGiaBan.Text + ", @Anh = '" + txt_Anh.Text + "', @GhiChu = N'" + txt_GhiChu.Text + "'";
+                    sql = "EXEC dbo.sp_ThemSP @tenSP = N'" + txt_TenSP.Text + "',@thuonghieu = N'" + cbo_MaTH.SelectedValue.ToString() + "', @SL =" + txt_SL.Text + ",@DonGiaNhap =" + txt_DonGiaNhap.Text + ", @DonGiaBan =" + txt_DonGiaBan.Text + ", @Anh = N'" + base64_image + "', @GhiChu = N'" + txt_GhiChu.Text + "'";
                     Class.Functions.RunSQL(sql);
                     MessageBox.Show("Lưu Thành Công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txt_TenSP.ReadOnly = true;
