@@ -67,8 +67,8 @@ namespace ShopGiayTheThao.Form
             txt_Anh.Text = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "Anh").ToString();
             txt_GhiChu.Text = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "GhiChu").ToString();
             cbo_MaTH.Text = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "TenThuongHieu").ToString();
-            ptb_sp.Image = Base64ToImage(txt_Anh.Text);
-             
+            ptb_sp.Image = Base64ToImage(gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "Anh").ToString());
+            base64_image = gv_SanPham.GetRowCellValue(gv_SanPham.FocusedRowHandle, "Anh").ToString();
 
             txt_TenSP.ReadOnly = true;
             txt_SL.ReadOnly = true;
@@ -281,6 +281,7 @@ namespace ShopGiayTheThao.Form
             btn_them_anh.Enabled = true;
             btn_Luu.Enabled = false;
             btn_CN.Enabled = true;
+
             }
             catch (Exception)
             {
@@ -301,7 +302,6 @@ namespace ShopGiayTheThao.Form
             {
                 ptb_sp.Visible = true;
                 ptb_sp.Image = Image.FromFile(dlgOpen.FileName);
-                txt_Anh.Text = dlgOpen.FileName;
 
                 byte[] imagearr = System.IO.File.ReadAllBytes(dlgOpen.FileName);
                  base64_image = Convert.ToBase64String(imagearr);
@@ -367,7 +367,7 @@ namespace ShopGiayTheThao.Form
                 txt_DonGiaBan.Text = "";
                 txt_GhiChu.Text = "";
                 txt_Anh.Text = "";
-                ptb_sp.ImageLocation = "";
+                ptb_sp.Visible = false;
 
                 loadSP();
             }
@@ -446,6 +446,33 @@ namespace ShopGiayTheThao.Form
             }
         }
         #endregion
+
+        private void btn_timkiem_Click(object sender, EventArgs e)
+        {
+            sql = "EXEC dbo.sp_TimKiem @ten = N'" + txt_timkiem.Text + "',@type =2";
+            dt = Class.Functions.GetDataToTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                l_sanpham.Clear();
+                foreach (DataRow item in dt.Rows)
+                {
+                    l_sanpham.Add(new SanPham()
+                    {
+                        MaSanPham = item["MaSanPham"].ToString(),
+                        TenSanPham = item["TenSanPham"].ToString(),
+                        TenThuongHieu = item["TenThuongHieu"].ToString(),
+                        SoLuong = item["SoLuong"].ToString(),
+                        DonGiaNhap = item["DonGiaNhap"].ToString(),
+                        DonGiaBan = item["DonGiaBan"].ToString(),
+                        Anh = item["Anh"].ToString(),
+                        GhiChu = item["GhiChu"].ToString()
+
+                    });
+                }
+                gc_SanPham.DataSource = l_sanpham;
+                gc_SanPham.RefreshDataSource();
+            }
+        }
 
     }
 }

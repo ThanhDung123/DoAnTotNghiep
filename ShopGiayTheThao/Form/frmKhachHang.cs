@@ -60,6 +60,8 @@ namespace ShopGiayTheThao.Form
 
             tenkh_tmp = txt_TenKH.Text;
             sdt_tmp = txt_DT.Text;
+
+            btn_Sua.Enabled = true;
         }
 
         private void txt_DT_KeyPress(object sender, KeyPressEventArgs e)
@@ -152,7 +154,7 @@ namespace ShopGiayTheThao.Form
             txt_DT.ReadOnly = false;
 
             btn_Luu.Enabled = true;
-            btn_CN.Enabled = false;
+           
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
@@ -162,7 +164,7 @@ namespace ShopGiayTheThao.Form
             txt_DT.ReadOnly = false;
 
             btn_CN.Enabled = true;
-            btn_Luu.Enabled = false;
+           
         }
 
         private void btn_CN_Click(object sender, EventArgs e)
@@ -201,6 +203,8 @@ namespace ShopGiayTheThao.Form
                 txt_TenKH.ReadOnly = true;
                 txt_DiaChi.ReadOnly = true;
                 txt_DT.ReadOnly = true;
+                btn_Sua.Enabled = false;
+                btn_CN.Enabled = false;
 
                 LoadKH();
 
@@ -255,7 +259,7 @@ namespace ShopGiayTheThao.Form
 
 
                     LoadKH();
-
+                    btn_Luu.Enabled = false;
                 }
                 else
                 {
@@ -276,7 +280,7 @@ namespace ShopGiayTheThao.Form
 
         public void LoadKH()
         {
-            sql = "EXEC dbo.sp_LoadKhachHang";
+            sql = "EXEC dbo.sp_load_KH_Report";
             dt = Class.Functions.GetDataToTable(sql);
             if (dt.Rows.Count > 0)
             {
@@ -297,6 +301,36 @@ namespace ShopGiayTheThao.Form
         }
 
         #endregion
+
+        private void btn_timkiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sql = "EXEC dbo.sp_TimKiem @ten = N'" + txt_timkiem.Text + "',@type = 3";
+                dt = Class.Functions.GetDataToTable(sql);
+                if (dt.Rows.Count > 0)
+                {
+                    L_KhachHang.Clear();
+                    foreach (DataRow item in dt.Rows)
+                    {
+                        L_KhachHang.Add(new KhachHang()
+                        {
+                            MaKhachHang = item["MaKhachHang"].ToString(),
+                            TenKhachHang = item["TenKhachHang"].ToString(),
+                            DiaChi = item["DiaChi"].ToString(),
+                            DienThoai = item["DienThoai"].ToString()
+                        });
+                    };
+                    gc_KhachHang.DataSource = L_KhachHang;
+                    gc_KhachHang.RefreshDataSource();
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
 
     }
 }

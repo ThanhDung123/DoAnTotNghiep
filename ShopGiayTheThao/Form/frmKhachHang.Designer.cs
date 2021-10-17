@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +45,8 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_timkiem = new System.Windows.Forms.Button();
+            this.txt_timkiem = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btn_CN = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
@@ -80,14 +82,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(943, 94);
+            this.panel1.Size = new System.Drawing.Size(1241, 94);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = global::ShopGiayTheThao.Properties.Resources.Capture1;
-            this.pictureBox1.Location = new System.Drawing.Point(389, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(687, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(554, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -112,7 +114,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 94);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(943, 443);
+            this.panel2.Size = new System.Drawing.Size(1241, 443);
             this.panel2.TabIndex = 1;
             // 
             // panel5
@@ -121,7 +123,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 177);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(943, 266);
+            this.panel5.Size = new System.Drawing.Size(1241, 266);
             this.panel5.TabIndex = 3;
             // 
             // groupBox1
@@ -131,7 +133,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(943, 266);
+            this.groupBox1.Size = new System.Drawing.Size(1241, 266);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin chi tiết";
@@ -144,7 +146,7 @@
             this.gc_KhachHang.Name = "gc_KhachHang";
             this.gc_KhachHang.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.BE_del_Thuonghieu});
-            this.gc_KhachHang.Size = new System.Drawing.Size(937, 241);
+            this.gc_KhachHang.Size = new System.Drawing.Size(1235, 241);
             this.gc_KhachHang.TabIndex = 5;
             this.gc_KhachHang.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gv_KhachHang,
@@ -187,7 +189,7 @@
             // 
             this.BE_del_Thuonghieu.AutoHeight = false;
             this.BE_del_Thuonghieu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
             this.BE_del_Thuonghieu.Name = "BE_del_Thuonghieu";
             this.BE_del_Thuonghieu.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.BE_del_Thuonghieu.Click += new System.EventHandler(this.BE_del_Thuonghieu_Click);
@@ -258,6 +260,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btn_timkiem);
+            this.panel3.Controls.Add(this.txt_timkiem);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.txt_DT);
             this.panel3.Controls.Add(this.txt_DiaChi);
@@ -270,8 +274,32 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(943, 177);
+            this.panel3.Size = new System.Drawing.Size(1241, 177);
             this.panel3.TabIndex = 2;
+            // 
+            // btn_timkiem
+            // 
+            this.btn_timkiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_timkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_timkiem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_timkiem.ForeColor = System.Drawing.Color.White;
+            this.btn_timkiem.Image = global::ShopGiayTheThao.Properties.Resources.Login;
+            this.btn_timkiem.Location = new System.Drawing.Point(1136, 39);
+            this.btn_timkiem.Name = "btn_timkiem";
+            this.btn_timkiem.Size = new System.Drawing.Size(93, 32);
+            this.btn_timkiem.TabIndex = 40;
+            this.btn_timkiem.Text = "Tìm kiếm ";
+            this.btn_timkiem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_timkiem.UseVisualStyleBackColor = false;
+            this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
+            // 
+            // txt_timkiem
+            // 
+            this.txt_timkiem.Location = new System.Drawing.Point(887, 6);
+            this.txt_timkiem.Multiline = true;
+            this.txt_timkiem.Name = "txt_timkiem";
+            this.txt_timkiem.Size = new System.Drawing.Size(342, 30);
+            this.txt_timkiem.TabIndex = 39;
             // 
             // panel4
             // 
@@ -280,19 +308,20 @@
             this.panel4.Controls.Add(this.btn_Luu);
             this.panel4.Controls.Add(this.btn_Sua);
             this.panel4.Controls.Add(this.btn_Them);
-            this.panel4.Location = new System.Drawing.Point(82, 72);
+            this.panel4.Location = new System.Drawing.Point(204, 78);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(779, 92);
+            this.panel4.Size = new System.Drawing.Size(550, 85);
             this.panel4.TabIndex = 38;
             // 
             // btn_CN
             // 
             this.btn_CN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_CN.Enabled = false;
             this.btn_CN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CN.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CN.ForeColor = System.Drawing.Color.White;
             this.btn_CN.Image = global::ShopGiayTheThao.Properties.Resources.Refresh_32x32;
-            this.btn_CN.Location = new System.Drawing.Point(447, 13);
+            this.btn_CN.Location = new System.Drawing.Point(328, 13);
             this.btn_CN.Name = "btn_CN";
             this.btn_CN.Size = new System.Drawing.Size(102, 70);
             this.btn_CN.TabIndex = 39;
@@ -308,7 +337,7 @@
             this.btn_Thoat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.ForeColor = System.Drawing.Color.White;
             this.btn_Thoat.Image = global::ShopGiayTheThao.Properties.Resources.Login;
-            this.btn_Thoat.Location = new System.Drawing.Point(554, 13);
+            this.btn_Thoat.Location = new System.Drawing.Point(435, 13);
             this.btn_Thoat.Name = "btn_Thoat";
             this.btn_Thoat.Size = new System.Drawing.Size(102, 70);
             this.btn_Thoat.TabIndex = 40;
@@ -324,7 +353,7 @@
             this.btn_Luu.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Luu.ForeColor = System.Drawing.Color.White;
             this.btn_Luu.Image = global::ShopGiayTheThao.Properties.Resources.Apply;
-            this.btn_Luu.Location = new System.Drawing.Point(235, 13);
+            this.btn_Luu.Location = new System.Drawing.Point(116, 13);
             this.btn_Luu.Name = "btn_Luu";
             this.btn_Luu.Size = new System.Drawing.Size(102, 70);
             this.btn_Luu.TabIndex = 37;
@@ -336,11 +365,12 @@
             // btn_Sua
             // 
             this.btn_Sua.BackColor = System.Drawing.Color.Teal;
+            this.btn_Sua.Enabled = false;
             this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Sua.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.ForeColor = System.Drawing.Color.White;
             this.btn_Sua.Image = global::ShopGiayTheThao.Properties.Resources.Maintenance;
-            this.btn_Sua.Location = new System.Drawing.Point(341, 13);
+            this.btn_Sua.Location = new System.Drawing.Point(222, 13);
             this.btn_Sua.Name = "btn_Sua";
             this.btn_Sua.Size = new System.Drawing.Size(102, 70);
             this.btn_Sua.TabIndex = 38;
@@ -356,7 +386,7 @@
             this.btn_Them.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.ForeColor = System.Drawing.Color.White;
             this.btn_Them.Image = global::ShopGiayTheThao.Properties.Resources.Add_32x32;
-            this.btn_Them.Location = new System.Drawing.Point(129, 13);
+            this.btn_Them.Location = new System.Drawing.Point(8, 13);
             this.btn_Them.Name = "btn_Them";
             this.btn_Them.Size = new System.Drawing.Size(102, 70);
             this.btn_Them.TabIndex = 36;
@@ -411,7 +441,7 @@
             // txt_TenKH
             // 
             this.txt_TenKH.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenKH.Location = new System.Drawing.Point(245, 37);
+            this.txt_TenKH.Location = new System.Drawing.Point(204, 39);
             this.txt_TenKH.Multiline = true;
             this.txt_TenKH.Name = "txt_TenKH";
             this.txt_TenKH.ReadOnly = true;
@@ -422,7 +452,7 @@
             // txt_MaKH
             // 
             this.txt_MaKH.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MaKH.Location = new System.Drawing.Point(245, 3);
+            this.txt_MaKH.Location = new System.Drawing.Point(204, 5);
             this.txt_MaKH.Multiline = true;
             this.txt_MaKH.Name = "txt_MaKH";
             this.txt_MaKH.ReadOnly = true;
@@ -434,7 +464,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(72, 50);
+            this.label3.Location = new System.Drawing.Point(31, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(136, 19);
             this.label3.TabIndex = 31;
@@ -444,7 +474,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 12);
+            this.label2.Location = new System.Drawing.Point(32, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 19);
             this.label2.TabIndex = 30;
@@ -454,7 +484,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 537);
+            this.ClientSize = new System.Drawing.Size(1241, 537);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -512,5 +542,7 @@
         private System.Windows.Forms.TextBox txt_MaKH;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_timkiem;
+        private System.Windows.Forms.Button btn_timkiem;
     }
 }

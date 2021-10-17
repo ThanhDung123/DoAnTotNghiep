@@ -52,8 +52,7 @@ namespace ShopGiayTheThao
             txt_maTH.ReadOnly = true;
             txt_TenTH.ReadOnly = true;
 
-            btn_CN.Enabled = false;
-            btn_Luu.Enabled = false;
+            btn_Sua.Enabled = true;
 
             tmp = txt_TenTH.Text;
 
@@ -141,7 +140,6 @@ namespace ShopGiayTheThao
             txt_TenTH.Text = "";
             txt_TenTH.ReadOnly = false;
 
-            btn_CN.Enabled = false;
             btn_Luu.Enabled = true;
         }
 
@@ -167,6 +165,8 @@ namespace ShopGiayTheThao
                     txt_TenTH.Text = "";
                     txt_TenTH.ReadOnly = true;
                     LoadData();
+
+                    btn_Luu.Enabled = false;
                 }
                 else
                 {
@@ -206,17 +206,44 @@ namespace ShopGiayTheThao
                 txt_maTH.Text = "";
                 txt_TenTH.ReadOnly = true;
                 LoadData();
+
+                btn_Sua.Enabled = false;
+                btn_CN.Enabled = false;
             }
             catch (Exception s)
             {
 
                 MessageBox.Show("Lỗi Cập Nhật: " + s.ToString());
             }
-
-
-
         }
+        private void btn_timkiem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                sql = "EXEC dbo.sp_TimKiem @ten = N'" + txt_timkiem.Text + "',@type = 1";
+                dt = Class.Functions.GetDataToTable(sql);
+                if (dt.Rows.Count > 0)
+                {
+                    l_thuonghieu.Clear();
+                    foreach (DataRow item in dt.Rows)
+                    {
+                        l_thuonghieu.Add(new ThuongHieu()
+                        {
+                            MaThuongHieu = item["MaThuongHieu"].ToString(),
+                            TenThuongHieu = item["TenThuongHieu"].ToString(),
 
+                        });
+                    }
+                    gc_thuonghieu.DataSource = l_thuonghieu;
+                    gc_thuonghieu.RefreshDataSource();
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
         #endregion
 
         #region --FUNCTIONS--
@@ -246,6 +273,6 @@ namespace ShopGiayTheThao
 
         #endregion
 
-
+      
     }
 }

@@ -41,6 +41,8 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_timkiem = new System.Windows.Forms.Button();
+            this.txt_timkiem = new System.Windows.Forms.TextBox();
             this.txt_TenTH = new System.Windows.Forms.TextBox();
             this.btn_Thoat = new System.Windows.Forms.Button();
             this.btn_Luu = new System.Windows.Forms.Button();
@@ -198,6 +200,8 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btn_timkiem);
+            this.panel3.Controls.Add(this.txt_timkiem);
             this.panel3.Controls.Add(this.txt_TenTH);
             this.panel3.Controls.Add(this.btn_Thoat);
             this.panel3.Controls.Add(this.btn_Luu);
@@ -213,10 +217,34 @@
             this.panel3.Size = new System.Drawing.Size(969, 124);
             this.panel3.TabIndex = 5;
             // 
+            // btn_timkiem
+            // 
+            this.btn_timkiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_timkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_timkiem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_timkiem.ForeColor = System.Drawing.Color.White;
+            this.btn_timkiem.Image = global::ShopGiayTheThao.Properties.Resources.Login;
+            this.btn_timkiem.Location = new System.Drawing.Point(853, 19);
+            this.btn_timkiem.Name = "btn_timkiem";
+            this.btn_timkiem.Size = new System.Drawing.Size(93, 32);
+            this.btn_timkiem.TabIndex = 24;
+            this.btn_timkiem.Text = "Tìm kiếm ";
+            this.btn_timkiem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_timkiem.UseVisualStyleBackColor = false;
+            this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
+            // 
+            // txt_timkiem
+            // 
+            this.txt_timkiem.Location = new System.Drawing.Point(433, 19);
+            this.txt_timkiem.Multiline = true;
+            this.txt_timkiem.Name = "txt_timkiem";
+            this.txt_timkiem.Size = new System.Drawing.Size(399, 30);
+            this.txt_timkiem.TabIndex = 23;
+            // 
             // txt_TenTH
             // 
             this.txt_TenTH.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenTH.Location = new System.Drawing.Point(166, 57);
+            this.txt_TenTH.Location = new System.Drawing.Point(166, 81);
             this.txt_TenTH.Multiline = true;
             this.txt_TenTH.Name = "txt_TenTH";
             this.txt_TenTH.ReadOnly = true;
@@ -231,9 +259,9 @@
             this.btn_Thoat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Thoat.ForeColor = System.Drawing.Color.White;
             this.btn_Thoat.Image = global::ShopGiayTheThao.Properties.Resources.Login;
-            this.btn_Thoat.Location = new System.Drawing.Point(852, 28);
+            this.btn_Thoat.Location = new System.Drawing.Point(853, 56);
             this.btn_Thoat.Name = "btn_Thoat";
-            this.btn_Thoat.Size = new System.Drawing.Size(102, 70);
+            this.btn_Thoat.Size = new System.Drawing.Size(93, 67);
             this.btn_Thoat.TabIndex = 22;
             this.btn_Thoat.Text = "Thoát (ESC)";
             this.btn_Thoat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -243,13 +271,14 @@
             // btn_Luu
             // 
             this.btn_Luu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_Luu.Enabled = false;
             this.btn_Luu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Luu.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Luu.ForeColor = System.Drawing.Color.White;
             this.btn_Luu.Image = global::ShopGiayTheThao.Properties.Resources.Apply;
-            this.btn_Luu.Location = new System.Drawing.Point(536, 27);
+            this.btn_Luu.Location = new System.Drawing.Point(537, 55);
             this.btn_Luu.Name = "btn_Luu";
-            this.btn_Luu.Size = new System.Drawing.Size(102, 70);
+            this.btn_Luu.Size = new System.Drawing.Size(93, 67);
             this.btn_Luu.TabIndex = 19;
             this.btn_Luu.Text = "Lưu (F2)";
             this.btn_Luu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -259,13 +288,14 @@
             // btn_CN
             // 
             this.btn_CN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_CN.Enabled = false;
             this.btn_CN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_CN.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_CN.ForeColor = System.Drawing.Color.White;
             this.btn_CN.Image = global::ShopGiayTheThao.Properties.Resources.Refresh_32x32;
-            this.btn_CN.Location = new System.Drawing.Point(746, 28);
+            this.btn_CN.Location = new System.Drawing.Point(747, 56);
             this.btn_CN.Name = "btn_CN";
-            this.btn_CN.Size = new System.Drawing.Size(102, 70);
+            this.btn_CN.Size = new System.Drawing.Size(93, 67);
             this.btn_CN.TabIndex = 21;
             this.btn_CN.Text = "Cập Nhật (F4)";
             this.btn_CN.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -275,13 +305,14 @@
             // btn_Sua
             // 
             this.btn_Sua.BackColor = System.Drawing.Color.Teal;
+            this.btn_Sua.Enabled = false;
             this.btn_Sua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Sua.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Sua.ForeColor = System.Drawing.Color.White;
             this.btn_Sua.Image = global::ShopGiayTheThao.Properties.Resources.Maintenance;
-            this.btn_Sua.Location = new System.Drawing.Point(641, 28);
+            this.btn_Sua.Location = new System.Drawing.Point(642, 56);
             this.btn_Sua.Name = "btn_Sua";
-            this.btn_Sua.Size = new System.Drawing.Size(102, 70);
+            this.btn_Sua.Size = new System.Drawing.Size(93, 67);
             this.btn_Sua.TabIndex = 20;
             this.btn_Sua.Text = "Sửa (F3)";
             this.btn_Sua.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -295,9 +326,9 @@
             this.btn_Them.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Them.ForeColor = System.Drawing.Color.White;
             this.btn_Them.Image = global::ShopGiayTheThao.Properties.Resources.Add_32x32;
-            this.btn_Them.Location = new System.Drawing.Point(432, 27);
+            this.btn_Them.Location = new System.Drawing.Point(433, 55);
             this.btn_Them.Name = "btn_Them";
-            this.btn_Them.Size = new System.Drawing.Size(102, 70);
+            this.btn_Them.Size = new System.Drawing.Size(93, 67);
             this.btn_Them.TabIndex = 18;
             this.btn_Them.Text = "Thêm (F1)";
             this.btn_Them.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -307,7 +338,7 @@
             // txt_maTH
             // 
             this.txt_maTH.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_maTH.Location = new System.Drawing.Point(166, 16);
+            this.txt_maTH.Location = new System.Drawing.Point(166, 40);
             this.txt_maTH.Multiline = true;
             this.txt_maTH.Name = "txt_maTH";
             this.txt_maTH.ReadOnly = true;
@@ -319,7 +350,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 68);
+            this.label3.Location = new System.Drawing.Point(15, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(145, 19);
             this.label3.TabIndex = 15;
@@ -329,7 +360,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 30);
+            this.label2.Location = new System.Drawing.Point(16, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 19);
             this.label2.TabIndex = 14;
@@ -386,6 +417,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txt_TenTH;
+        private System.Windows.Forms.TextBox txt_timkiem;
+        private System.Windows.Forms.Button btn_timkiem;
     }
 }
 

@@ -72,7 +72,7 @@ namespace ShopGiayTheThao.Form
 
             tennv_tmp = txt_TenNV.Text;
             sdt_tmp = txt_DT.Text;
-
+            btn_Sua.Enabled = true;
 
         }
 
@@ -213,6 +213,7 @@ namespace ShopGiayTheThao.Form
                     ReadOnly();
 
                     loadDataNV();
+                    btn_Luu.Enabled = false;
                 }
                 else
                 {
@@ -266,7 +267,8 @@ namespace ShopGiayTheThao.Form
             txt_DT.Text = "";
             txt_MaNV.Text = "";
             ReadOnly();
-
+            btn_Sua.Enabled = false;
+            btn_CN.Enabled = false;
             loadDataNV();
         }
 
@@ -326,6 +328,30 @@ namespace ShopGiayTheThao.Form
             }
         }
         #endregion
+
+        private void btn_timkiem_Click(object sender, EventArgs e)
+        {
+            sql = "EXEC dbo.sp_TimKiem @ten = N'" + txt_timkiem.Text + "',@type =4";
+            dt = Class.Functions.GetDataToTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                l_NV.Clear();
+                foreach (DataRow item in dt.Rows)
+                {
+                    l_NV.Add(new NhanVien()
+                    {
+                        MaNhanVien = item["MaNhanVien"].ToString(),
+                        TenNhanVien = item["TenNhanVien"].ToString(),
+                        GioiTinh = item["GioiTinh"].ToString(),
+                        NgaySinh = item["NgaySinh"].ToString(),
+                        DiaChi = item["DiaChi"].ToString(),
+                        DienThoai = item["DienThoai"].ToString(),
+                    });
+                };
+                gc_NhanVien.DataSource = l_NV;
+                gc_NhanVien.RefreshDataSource();
+            }
+        }
 
 
     }

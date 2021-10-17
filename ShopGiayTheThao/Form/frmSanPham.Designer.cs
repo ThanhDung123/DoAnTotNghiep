@@ -49,6 +49,9 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btn_timkiem = new System.Windows.Forms.Button();
+            this.txt_timkiem = new System.Windows.Forms.TextBox();
+            this.txt_Anh = new System.Windows.Forms.RichTextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btn_CN = new System.Windows.Forms.Button();
             this.btn_Thoat = new System.Windows.Forms.Button();
@@ -71,7 +74,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_MaSP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_Anh = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -323,11 +325,13 @@
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 8;
+            this.gridColumn9.VisibleIndex = 7;
             this.gridColumn9.Width = 92;
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btn_timkiem);
+            this.panel4.Controls.Add(this.txt_timkiem);
             this.panel4.Controls.Add(this.txt_Anh);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.btn_them_anh);
@@ -351,6 +355,39 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1221, 230);
             this.panel4.TabIndex = 0;
+            // 
+            // btn_timkiem
+            // 
+            this.btn_timkiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btn_timkiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_timkiem.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_timkiem.ForeColor = System.Drawing.Color.White;
+            this.btn_timkiem.Image = global::ShopGiayTheThao.Properties.Resources.Login;
+            this.btn_timkiem.Location = new System.Drawing.Point(867, 15);
+            this.btn_timkiem.Name = "btn_timkiem";
+            this.btn_timkiem.Size = new System.Drawing.Size(100, 32);
+            this.btn_timkiem.TabIndex = 56;
+            this.btn_timkiem.Text = "Tìm kiếm ";
+            this.btn_timkiem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_timkiem.UseVisualStyleBackColor = false;
+            this.btn_timkiem.Click += new System.EventHandler(this.btn_timkiem_Click);
+            // 
+            // txt_timkiem
+            // 
+            this.txt_timkiem.Location = new System.Drawing.Point(507, 15);
+            this.txt_timkiem.Multiline = true;
+            this.txt_timkiem.Name = "txt_timkiem";
+            this.txt_timkiem.Size = new System.Drawing.Size(337, 30);
+            this.txt_timkiem.TabIndex = 55;
+            // 
+            // txt_Anh
+            // 
+            this.txt_Anh.Location = new System.Drawing.Point(867, 54);
+            this.txt_Anh.Name = "txt_Anh";
+            this.txt_Anh.Size = new System.Drawing.Size(61, 18);
+            this.txt_Anh.TabIndex = 54;
+            this.txt_Anh.Text = "";
+            this.txt_Anh.Visible = false;
             // 
             // panel6
             // 
@@ -453,7 +490,7 @@
             this.btn_them_anh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_them_anh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_them_anh.ForeColor = System.Drawing.Color.White;
-            this.btn_them_anh.Location = new System.Drawing.Point(867, 79);
+            this.btn_them_anh.Location = new System.Drawing.Point(867, 92);
             this.btn_them_anh.Name = "btn_them_anh";
             this.btn_them_anh.Size = new System.Drawing.Size(100, 30);
             this.btn_them_anh.TabIndex = 44;
@@ -615,15 +652,6 @@
             this.label2.TabIndex = 35;
             this.label2.Text = "Mã Sản Phẩm :";
             // 
-            // txt_Anh
-            // 
-            this.txt_Anh.Location = new System.Drawing.Point(507, 30);
-            this.txt_Anh.Name = "txt_Anh";
-            this.txt_Anh.Size = new System.Drawing.Size(337, 29);
-            this.txt_Anh.TabIndex = 54;
-            this.txt_Anh.Text = "";
-            this.txt_Anh.Visible = false;
-            // 
             // frmSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -700,5 +728,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private System.Windows.Forms.RichTextBox txt_Anh;
+        private System.Windows.Forms.TextBox txt_timkiem;
+        private System.Windows.Forms.Button btn_timkiem;
     }
 }
