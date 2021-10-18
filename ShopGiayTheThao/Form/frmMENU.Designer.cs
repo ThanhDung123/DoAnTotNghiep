@@ -167,7 +167,7 @@
             this.Btn_ThongKe.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_ThongKe.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Btn_ThongKe.Image = global::ShopGiayTheThao.Properties.Resources.Boxplot1;
-            this.Btn_ThongKe.Location = new System.Drawing.Point(603, 39);
+            this.Btn_ThongKe.Location = new System.Drawing.Point(766, 39);
             this.Btn_ThongKe.Name = "Btn_ThongKe";
             this.Btn_ThongKe.Size = new System.Drawing.Size(109, 79);
             this.Btn_ThongKe.TabIndex = 14;
@@ -199,7 +199,7 @@
             this.btn_DangXuat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
             this.btn_DangXuat.Image = global::ShopGiayTheThao.Properties.Resources.Login;
-            this.btn_DangXuat.Location = new System.Drawing.Point(800, 39);
+            this.btn_DangXuat.Location = new System.Drawing.Point(933, 39);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(111, 79);
             this.btn_DangXuat.TabIndex = 13;
@@ -215,11 +215,11 @@
             this.btn_BaoCao.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_BaoCao.ForeColor = System.Drawing.Color.White;
             this.btn_BaoCao.Image = global::ShopGiayTheThao.Properties.Resources.Align_justify;
-            this.btn_BaoCao.Location = new System.Drawing.Point(414, 39);
+            this.btn_BaoCao.Location = new System.Drawing.Point(409, 39);
             this.btn_BaoCao.Name = "btn_BaoCao";
             this.btn_BaoCao.Size = new System.Drawing.Size(109, 79);
             this.btn_BaoCao.TabIndex = 11;
-            this.btn_BaoCao.Text = "Báo Cáo";
+            this.btn_BaoCao.Text = "Báo Cáo Sản Phẩm";
             this.btn_BaoCao.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btn_BaoCao.UseVisualStyleBackColor = false;
             this.btn_BaoCao.Click += new System.EventHandler(this.btn_BaoCao_Click);

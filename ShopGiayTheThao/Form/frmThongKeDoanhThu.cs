@@ -139,14 +139,14 @@ namespace ShopGiayTheThao.Form
 
                             #region Style
                             //broder all
-                            var row = curentWorkSheet.SelectedRange["A2:F2"];
+                            var row = curentWorkSheet.SelectedRange["A2:E2"];
                             row.Style.Border.Top.Style = ExcelBorderStyle.Thin;
                             row.Style.Border.Left.Style = ExcelBorderStyle.Thin;
                             row.Style.Border.Right.Style = ExcelBorderStyle.Thin;
                             row.Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
                             row.AutoFitColumns();
 
-                            curentWorkSheet.SelectedRange["A2:F2"].Style.Font.Bold = true;
+                            curentWorkSheet.SelectedRange["A2:E2"].Style.Font.Bold = true;
                             #endregion
 
                             #region Content

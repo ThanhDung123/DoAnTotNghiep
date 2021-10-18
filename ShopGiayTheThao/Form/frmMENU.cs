@@ -115,8 +115,10 @@ namespace ShopGiayTheThao.Form
 
         private void btn_BaoCao_Click(object sender, EventArgs e)
         {
-            frmMenu_LoaiBaoCao f = new frmMenu_LoaiBaoCao();
+            frmBaoCaoSP f = new frmBaoCaoSP();
+            this.Hide();
             f.ShowDialog();
+            this.Show();
         }
 
         private void btn_taikhoan_Click(object sender, EventArgs e)

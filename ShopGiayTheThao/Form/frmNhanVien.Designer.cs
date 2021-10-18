@@ -444,7 +444,6 @@
             this.btn_Sua.Text = "Sửa (F3)";
             this.btn_Sua.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btn_Sua.UseVisualStyleBackColor = false;
-            this.btn_Sua.Visible = false;
             this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
             // btn_Them

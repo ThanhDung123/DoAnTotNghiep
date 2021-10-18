@@ -65,6 +65,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class\Functions.cs" />
+    <Compile Include="Form\frmBaoCaoSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\frmBaoCaoSP.Designer.cs">
+      <DependentUpon>frmBaoCaoSP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SHOPGIAYDataSet1.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\frmBaoCaoSP.resx">
+      <DependentUpon>frmBaoCaoSP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
