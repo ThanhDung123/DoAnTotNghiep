@@ -167,7 +167,7 @@
             this.Btn_ThongKe.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_ThongKe.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Btn_ThongKe.Image = global::ShopGiayTheThao.Properties.Resources.Boxplot1;
-            this.Btn_ThongKe.Location = new System.Drawing.Point(766, 39);
+            this.Btn_ThongKe.Location = new System.Drawing.Point(589, 39);
             this.Btn_ThongKe.Name = "Btn_ThongKe";
             this.Btn_ThongKe.Size = new System.Drawing.Size(109, 79);
             this.Btn_ThongKe.TabIndex = 14;
@@ -199,7 +199,7 @@
             this.btn_DangXuat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
             this.btn_DangXuat.Image = global::ShopGiayTheThao.Properties.Resources.Login;
-            this.btn_DangXuat.Location = new System.Drawing.Point(933, 39);
+            this.btn_DangXuat.Location = new System.Drawing.Point(765, 39);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(111, 79);
             this.btn_DangXuat.TabIndex = 13;

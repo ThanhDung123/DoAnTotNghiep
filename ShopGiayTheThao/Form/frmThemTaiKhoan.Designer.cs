@@ -214,6 +214,7 @@
             // 
             // cbo_loaiTK
             // 
+            this.cbo_loaiTK.Enabled = false;
             this.cbo_loaiTK.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_loaiTK.FormattingEnabled = true;
             this.cbo_loaiTK.Location = new System.Drawing.Point(273, 333);

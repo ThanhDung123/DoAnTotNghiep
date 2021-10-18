@@ -511,7 +511,7 @@ namespace ShopGiayTheThao.Form
 
         void load_SLE_NV()
         {
-            sql = "EXEC dbo.sp_LoadNhanVien";
+            sql = "EXEC dbo.[sp_LoadNhanVienBanHang]";
             dt = Class.Functions.GetDataToTable(sql);
 
             SLE_NhanVien.Properties.DataSource = dt;
