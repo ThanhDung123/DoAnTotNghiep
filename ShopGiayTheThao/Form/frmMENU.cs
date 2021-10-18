@@ -165,6 +165,14 @@ namespace ShopGiayTheThao.Form
 
         #endregion
 
+        private void btn_BCNV_Click(object sender, EventArgs e)
+        {
+            frmBaoCaoNV f = new frmBaoCaoNV();
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
        
 
     }

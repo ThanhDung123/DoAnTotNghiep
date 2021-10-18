@@ -14,15 +14,7 @@ namespace ShopGiayTheThao.Form
 {
     public partial class frmBaoCaoSP : DevExpress.XtraEditors.XtraForm
     {
-        public frmBaoCaoSP()
-        {
-            InitializeComponent();
-        }
-
-        private void frmBaoCaoSP_Load(object sender, EventArgs e)
-        {
-            loadLoaiBC();
-        }
+       
 
         #region VARIABLES
         string sql = "";
@@ -59,7 +51,15 @@ namespace ShopGiayTheThao.Form
      
       
         #region EVENTS
-        
+        public frmBaoCaoSP()
+        {
+            InitializeComponent();
+        }
+
+        private void frmBaoCaoSP_Load(object sender, EventArgs e)
+        {
+            loadLoaiBC();
+        }
         #endregion
 
         #region BUTTONS

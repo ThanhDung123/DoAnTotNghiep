@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -36,22 +36,22 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.gc_SanPham = new DevExpress.XtraGrid.GridControl();
             this.gv_SanPham = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.BE_del_Thuonghieu = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.BE_del_Thuonghieu = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.SLE_LoaiBaoCao = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btn_Xuatexel = new System.Windows.Forms.Button();
-            this.btn_Thoat = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_Thongke = new System.Windows.Forms.Button();
             this.dtp_dateto = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.dtp_datefrom = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
+            this.btn_Xuatexel = new System.Windows.Forms.Button();
+            this.btn_Thoat = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Thongke = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SLE_LoaiBaoCao = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn15 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -143,14 +143,6 @@
             this.gv_SanPham.OptionsView.ShowGroupPanel = false;
             this.gv_SanPham.RowHeight = 30;
             // 
-            // BE_del_Thuonghieu
-            // 
-            this.BE_del_Thuonghieu.AutoHeight = false;
-            this.BE_del_Thuonghieu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject11, "", null, null, true)});
-            this.BE_del_Thuonghieu.Name = "BE_del_Thuonghieu";
-            this.BE_del_Thuonghieu.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
             // gridColumn2
             // 
             this.gridColumn2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
@@ -162,7 +154,7 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.VisibleIndex = 0;
             this.gridColumn2.Width = 53;
             // 
             // gridColumn3
@@ -176,8 +168,16 @@
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.VisibleIndex = 1;
             this.gridColumn3.Width = 108;
+            // 
+            // BE_del_Thuonghieu
+            // 
+            this.BE_del_Thuonghieu.AutoHeight = false;
+            this.BE_del_Thuonghieu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.BE_del_Thuonghieu.Name = "BE_del_Thuonghieu";
+            this.BE_del_Thuonghieu.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
             // panel3
             // 
@@ -197,56 +197,41 @@
             this.panel3.Size = new System.Drawing.Size(1126, 112);
             this.panel3.TabIndex = 0;
             // 
-            // label2
+            // dtp_dateto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 19);
-            this.label2.TabIndex = 36;
-            this.label2.Text = "Loại Báo Cáo :";
+            this.dtp_dateto.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_dateto.Location = new System.Drawing.Point(458, 56);
+            this.dtp_dateto.Name = "dtp_dateto";
+            this.dtp_dateto.Size = new System.Drawing.Size(213, 26);
+            this.dtp_dateto.TabIndex = 124;
             // 
-            // SLE_LoaiBaoCao
+            // label4
             // 
-            this.SLE_LoaiBaoCao.Location = new System.Drawing.Point(152, 16);
-            this.SLE_LoaiBaoCao.Name = "SLE_LoaiBaoCao";
-            this.SLE_LoaiBaoCao.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SLE_LoaiBaoCao.Properties.Appearance.Options.UseFont = true;
-            this.SLE_LoaiBaoCao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.SLE_LoaiBaoCao.Properties.View = this.searchLookUpEdit1View;
-            this.SLE_LoaiBaoCao.Size = new System.Drawing.Size(346, 26);
-            this.SLE_LoaiBaoCao.TabIndex = 35;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(371, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(89, 19);
+            this.label4.TabIndex = 125;
+            this.label4.Text = "Đến Ngày :";
             // 
-            // searchLookUpEdit1View
+            // dtp_datefrom
             // 
-            this.searchLookUpEdit1View.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchLookUpEdit1View.Appearance.Row.Options.UseFont = true;
-            this.searchLookUpEdit1View.AppearancePrint.Row.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.searchLookUpEdit1View.AppearancePrint.Row.Options.UseFont = true;
-            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn15});
-            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
-            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.dtp_datefrom.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_datefrom.Location = new System.Drawing.Point(152, 56);
+            this.dtp_datefrom.Name = "dtp_datefrom";
+            this.dtp_datefrom.Size = new System.Drawing.Size(213, 26);
+            this.dtp_datefrom.TabIndex = 122;
             // 
-            // gridColumn15
+            // label5
             // 
-            this.gridColumn15.AppearanceHeader.BorderColor = System.Drawing.Color.Transparent;
-            this.gridColumn15.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
-            this.gridColumn15.AppearanceHeader.ForeColor = System.Drawing.Color.SlateGray;
-            this.gridColumn15.AppearanceHeader.Options.UseBorderColor = true;
-            this.gridColumn15.AppearanceHeader.Options.UseFont = true;
-            this.gridColumn15.AppearanceHeader.Options.UseForeColor = true;
-            this.gridColumn15.Caption = "Loại báo cáo";
-            this.gridColumn15.FieldName = "text";
-            this.gridColumn15.ImageAlignment = System.Drawing.StringAlignment.Center;
-            this.gridColumn15.Name = "gridColumn15";
-            this.gridColumn15.Visible = true;
-            this.gridColumn15.VisibleIndex = 0;
-            this.gridColumn15.Width = 476;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(34, 61);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 19);
+            this.label5.TabIndex = 123;
+            this.label5.Text = "Từ Ngày :";
             // 
             // btn_Xuatexel
             // 
@@ -312,41 +297,56 @@
             this.btn_Thongke.UseVisualStyleBackColor = false;
             this.btn_Thongke.Click += new System.EventHandler(this.btn_Thongke_Click);
             // 
-            // dtp_dateto
+            // label2
             // 
-            this.dtp_dateto.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_dateto.Location = new System.Drawing.Point(488, 57);
-            this.dtp_dateto.Name = "dtp_dateto";
-            this.dtp_dateto.Size = new System.Drawing.Size(200, 26);
-            this.dtp_dateto.TabIndex = 124;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(34, 19);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(112, 19);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Loại Báo Cáo :";
             // 
-            // label4
+            // SLE_LoaiBaoCao
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(383, 63);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 19);
-            this.label4.TabIndex = 125;
-            this.label4.Text = "Đến Ngày :";
+            this.SLE_LoaiBaoCao.Location = new System.Drawing.Point(152, 16);
+            this.SLE_LoaiBaoCao.Name = "SLE_LoaiBaoCao";
+            this.SLE_LoaiBaoCao.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SLE_LoaiBaoCao.Properties.Appearance.Options.UseFont = true;
+            this.SLE_LoaiBaoCao.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.SLE_LoaiBaoCao.Properties.View = this.searchLookUpEdit1View;
+            this.SLE_LoaiBaoCao.Size = new System.Drawing.Size(519, 26);
+            this.SLE_LoaiBaoCao.TabIndex = 35;
             // 
-            // dtp_datefrom
+            // searchLookUpEdit1View
             // 
-            this.dtp_datefrom.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtp_datefrom.Location = new System.Drawing.Point(152, 56);
-            this.dtp_datefrom.Name = "dtp_datefrom";
-            this.dtp_datefrom.Size = new System.Drawing.Size(200, 26);
-            this.dtp_datefrom.TabIndex = 122;
+            this.searchLookUpEdit1View.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchLookUpEdit1View.Appearance.Row.Options.UseFont = true;
+            this.searchLookUpEdit1View.AppearancePrint.Row.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.searchLookUpEdit1View.AppearancePrint.Row.Options.UseFont = true;
+            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn15});
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // label5
+            // gridColumn15
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(34, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 19);
-            this.label5.TabIndex = 123;
-            this.label5.Text = "Từ Ngày :";
+            this.gridColumn15.AppearanceHeader.BorderColor = System.Drawing.Color.Transparent;
+            this.gridColumn15.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
+            this.gridColumn15.AppearanceHeader.ForeColor = System.Drawing.Color.SlateGray;
+            this.gridColumn15.AppearanceHeader.Options.UseBorderColor = true;
+            this.gridColumn15.AppearanceHeader.Options.UseFont = true;
+            this.gridColumn15.AppearanceHeader.Options.UseForeColor = true;
+            this.gridColumn15.Caption = "Loại báo cáo";
+            this.gridColumn15.FieldName = "text";
+            this.gridColumn15.ImageAlignment = System.Drawing.StringAlignment.Center;
+            this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.Visible = true;
+            this.gridColumn15.VisibleIndex = 0;
+            this.gridColumn15.Width = 476;
             // 
             // frmBaoCaoSP
             // 

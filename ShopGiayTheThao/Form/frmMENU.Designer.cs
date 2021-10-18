@@ -57,6 +57,7 @@
             this.btn_SanPham = new System.Windows.Forms.Button();
             this.btn_NhanVien = new System.Windows.Forms.Button();
             this.btn_ThuongHieu = new System.Windows.Forms.Button();
+            this.btn_BCNV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -149,6 +150,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.Controls.Add(this.btn_BCNV);
             this.panel1.Controls.Add(this.Btn_ThongKe);
             this.panel1.Controls.Add(this.btn_ThongTinCN);
             this.panel1.Controls.Add(this.btn_DangXuat);
@@ -167,7 +169,7 @@
             this.Btn_ThongKe.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_ThongKe.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Btn_ThongKe.Image = global::ShopGiayTheThao.Properties.Resources.Boxplot1;
-            this.Btn_ThongKe.Location = new System.Drawing.Point(589, 39);
+            this.Btn_ThongKe.Location = new System.Drawing.Point(742, 39);
             this.Btn_ThongKe.Name = "Btn_ThongKe";
             this.Btn_ThongKe.Size = new System.Drawing.Size(109, 79);
             this.Btn_ThongKe.TabIndex = 14;
@@ -199,7 +201,7 @@
             this.btn_DangXuat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangXuat.ForeColor = System.Drawing.Color.White;
             this.btn_DangXuat.Image = global::ShopGiayTheThao.Properties.Resources.Login;
-            this.btn_DangXuat.Location = new System.Drawing.Point(765, 39);
+            this.btn_DangXuat.Location = new System.Drawing.Point(907, 39);
             this.btn_DangXuat.Name = "btn_DangXuat";
             this.btn_DangXuat.Size = new System.Drawing.Size(111, 79);
             this.btn_DangXuat.TabIndex = 13;
@@ -454,6 +456,22 @@
             this.btn_ThuongHieu.UseVisualStyleBackColor = false;
             this.btn_ThuongHieu.Click += new System.EventHandler(this.btn_ThuongHieu_Click);
             // 
+            // btn_BCNV
+            // 
+            this.btn_BCNV.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btn_BCNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BCNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BCNV.ForeColor = System.Drawing.Color.White;
+            this.btn_BCNV.Image = global::ShopGiayTheThao.Properties.Resources.Align_justify;
+            this.btn_BCNV.Location = new System.Drawing.Point(573, 39);
+            this.btn_BCNV.Name = "btn_BCNV";
+            this.btn_BCNV.Size = new System.Drawing.Size(109, 79);
+            this.btn_BCNV.TabIndex = 15;
+            this.btn_BCNV.Text = "Báo Cáo Nhân Viên";
+            this.btn_BCNV.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_BCNV.UseVisualStyleBackColor = false;
+            this.btn_BCNV.Click += new System.EventHandler(this.btn_BCNV_Click);
+            // 
             // frmMENU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,5 +536,6 @@
         private System.Windows.Forms.Button btn_ThuongHieu;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button Btn_ThongKe;
+        private System.Windows.Forms.Button btn_BCNV;
     }
 }
