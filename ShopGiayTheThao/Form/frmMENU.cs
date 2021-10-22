@@ -123,8 +123,10 @@ namespace ShopGiayTheThao.Form
 
         private void btn_taikhoan_Click(object sender, EventArgs e)
         {
-            frmThemTaiKhoan f = new frmThemTaiKhoan();
+            frmTaiKhoan f = new frmTaiKhoan();
+            this.Hide();
             f.ShowDialog();
+            this.Show();
 
         }
         private void Btn_ThongKe_Click(object sender, EventArgs e)

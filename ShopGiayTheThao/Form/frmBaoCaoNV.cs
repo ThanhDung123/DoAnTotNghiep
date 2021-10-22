@@ -45,6 +45,36 @@ namespace ShopGiayTheThao.Form
         {
             loadLoaiBC();
         }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+
+            if (keyData == Keys.F1 && btn_Thongke.Enabled)
+            {
+                btn_Thongke_Click(btn_Thongke, EventArgs.Empty);
+                return true;
+            }
+
+            if (keyData == Keys.F2 && btn_Xuatexel.Enabled)
+            {
+                btn_Xuatexel_Click(btn_Xuatexel, EventArgs.Empty);
+                return true;
+            }
+
+            if (keyData == Keys.F3 && btn_LamMoi.Enabled)
+            {
+                btn_LamMoi_Click(btn_LamMoi, EventArgs.Empty);
+                return true;
+            }
+
+
+
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
         #endregion
 
         #region functions

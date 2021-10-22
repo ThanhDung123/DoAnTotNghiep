@@ -47,8 +47,6 @@ namespace ShopGiayTheThao.Form
         }
 
         #endregion
-
-     
       
         #region EVENTS
         public frmBaoCaoSP()
@@ -59,6 +57,36 @@ namespace ShopGiayTheThao.Form
         private void frmBaoCaoSP_Load(object sender, EventArgs e)
         {
             loadLoaiBC();
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+
+            if (keyData == Keys.F1 && btn_Thongke.Enabled)
+            {
+                btn_Thongke_Click(btn_Thongke, EventArgs.Empty);
+                return true;
+            }
+
+            if (keyData == Keys.F2 && btn_Xuatexel.Enabled)
+            {
+                btn_Xuatexel_Click(btn_Xuatexel, EventArgs.Empty);
+                return true;
+            }
+
+            if (keyData == Keys.F3 && button1.Enabled)
+            {
+                button1_Click(button1, EventArgs.Empty);
+                return true;
+            }
+
+
+
+            if (keyData == Keys.Escape)
+            {
+                this.Close();
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
         #endregion
 
@@ -137,9 +165,6 @@ namespace ShopGiayTheThao.Form
 
             }
         }
-
-        #endregion
-
         private void btn_Xuatexel_Click(object sender, EventArgs e)
         {
             try
@@ -176,7 +201,7 @@ namespace ShopGiayTheThao.Form
 
                             curentWorkSheet.Cells[2, 1].Value = "Mã sản phẩm";
                             curentWorkSheet.Cells[2, 2].Value = "Tên sản phẩm";
-                           
+
                             curentWorkSheet.SelectedRange["A2:F2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                             #endregion
 
@@ -197,7 +222,7 @@ namespace ShopGiayTheThao.Form
                             for (int i = 0; i < dt.Rows.Count; i++)
                             {
                                 curentWorkSheet.Cells[start + i, 1].Value = dt.Rows[i]["MaSanPham"].ToString();
-                                curentWorkSheet.Cells[start + i, 2].Value = dt.Rows[i]["TenSanPham"].ToString();                      
+                                curentWorkSheet.Cells[start + i, 2].Value = dt.Rows[i]["TenSanPham"].ToString();
                             }
                             #endregion
                             var newFile = new FileInfo(saveFile.FileName);
@@ -213,5 +238,8 @@ namespace ShopGiayTheThao.Form
                 MessageBox.Show("Lỗi Xuất Execl", "Thông báo");
             }
         }
+        #endregion
+
+       
     }
 }

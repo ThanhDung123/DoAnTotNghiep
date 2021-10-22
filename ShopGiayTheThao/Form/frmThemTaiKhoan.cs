@@ -84,34 +84,42 @@ namespace ShopGiayTheThao.Form
                     return;
                 }
 
-                #region --Mã hóa MK--
-
-                MD5 mh = MD5.Create();
-                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(txt_matkhau.Text);
-                byte[] hash = mh.ComputeHash(inputBytes);
-                StringBuilder sb = new StringBuilder();
-
-                for (int i = 0; i < hash.Length; i++)
-                {
-                    sb.Append(hash[i].ToString("X2"));
-                }
-
-                #endregion
-
-
-
-                sql = "EXEC dbo.sp_ThemTaiKhoan @taikhoan = '" + txt_taikhoan.Text + "',@matkhau = '" + sb + "',@manhanvien = " + SLE_nhanvien.EditValue + " ,@loaitaikhoan = " + cbo_loaiTK.SelectedValue;
+                sql = "EXEC dbo.CheckTrungTen @type = 5,@ten = N'" + SLE_nhanvien.EditValue  + "'";
                 dt = Class.Functions.GetDataToTable(sql);
-                if (dt.Rows.Count > 0)
-                {
-                    MessageBox.Show("Thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_taikhoan.Text = "";
-                    txt_matkhau.Text = "";
-                    txt_matkhau2.Text = "";
-                    SLE_nhanvien.EditValue = "";
-                    cbo_loaiTK.SelectedValue = 1;
-                }
 
+                if (dt.Rows[0]["SL"].ToString().Equals("0"))
+                {
+                    #region --Mã hóa MK--
+
+                    MD5 mh = MD5.Create();
+                    byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(txt_matkhau.Text);
+                    byte[] hash = mh.ComputeHash(inputBytes);
+                    StringBuilder sb = new StringBuilder();
+
+                    for (int i = 0; i < hash.Length; i++)
+                    {
+                        sb.Append(hash[i].ToString("X2"));
+                    }
+
+                    #endregion
+
+                    sql = "EXEC dbo.sp_ThemTaiKhoan @taikhoan = '" + txt_taikhoan.Text + "',@matkhau = '" + sb + "',@manhanvien = " + SLE_nhanvien.EditValue + " ,@loaitaikhoan = " + cbo_loaiTK.SelectedValue;
+                    dt = Class.Functions.GetDataToTable(sql);
+                    if (dt.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txt_taikhoan.Text = "";
+                        txt_matkhau.Text = "";
+                        txt_matkhau2.Text = "";
+                        SLE_nhanvien.EditValue = "";
+                        cbo_loaiTK.SelectedValue = 1;
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Nhân viên này đã có tài khoản ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {

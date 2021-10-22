@@ -250,22 +250,30 @@ namespace ShopGiayTheThao
 
         private void LoadData()
         {
-            sql = "EXEC dbo.sp_LoadThuongHieu";
-            dt = Class.Functions.GetDataToTable(sql);
-            if (dt.Rows.Count > 0)
+            try
             {
-                l_thuonghieu.Clear();
-                foreach (DataRow item in dt.Rows)
+                sql = "EXEC dbo.sp_LoadThuongHieu";
+                dt = Class.Functions.GetDataToTable(sql);
+                if (dt.Rows.Count > 0)
                 {
-                    l_thuonghieu.Add(new ThuongHieu()
+                    l_thuonghieu.Clear();
+                    foreach (DataRow item in dt.Rows)
                     {
-                        MaThuongHieu = item["MaThuongHieu"].ToString(),
-                        TenThuongHieu = item["TenThuongHieu"].ToString(),
+                        l_thuonghieu.Add(new ThuongHieu()
+                        {
+                            MaThuongHieu = item["MaThuongHieu"].ToString(),
+                            TenThuongHieu = item["TenThuongHieu"].ToString(),
 
-                    });
+                        });
+                    }
+                    gc_thuonghieu.DataSource = l_thuonghieu;
+                    gc_thuonghieu.RefreshDataSource();
                 }
-                gc_thuonghieu.DataSource = l_thuonghieu;
-                gc_thuonghieu.RefreshDataSource();
+            }
+            catch (Exception)
+            {
+                
+          
             }
 
 
