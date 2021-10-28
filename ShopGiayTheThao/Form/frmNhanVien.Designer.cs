@@ -152,7 +152,6 @@
             // gv_NhanVien
             // 
             this.gv_NhanVien.Appearance.ColumnFilterButton.Font = new System.Drawing.Font("Tahoma", 9.75F);
-            this.gv_NhanVien.Appearance.ColumnFilterButton.Options.UseFont = true;
             this.gv_NhanVien.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F);
             this.gv_NhanVien.Appearance.Row.Options.UseFont = true;
             this.gv_NhanVien.Appearance.Row.Options.UseTextOptions = true;
@@ -170,6 +169,7 @@
             this.gv_NhanVien.Name = "gv_NhanVien";
             this.gv_NhanVien.OptionsBehavior.ReadOnly = true;
             this.gv_NhanVien.OptionsSelection.MultiSelect = true;
+            this.gv_NhanVien.OptionsView.ShowGroupPanel = false;
             this.gv_NhanVien.RowHeight = 30;
             this.gv_NhanVien.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gv_NhanVien_RowClick);
             // 

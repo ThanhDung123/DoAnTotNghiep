@@ -167,6 +167,7 @@ namespace ShopGiayTheThao
                     LoadData();
 
                     btn_Luu.Enabled = false;
+                    btn_Sua.Enabled = false;
                 }
                 else
                 {

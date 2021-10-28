@@ -107,7 +107,6 @@ C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.exe.l
 C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\RdlCompile.cache
 C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\RdlCompile.compiled
 C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmThongKeDoanhThu.resources
-C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\bin\Debug\EPPlus.dll
 C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmBaoCaoSP.resources
 C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmBaoCaoNV.resources
 C:\Users\Thanh Dung\Desktop\DATN\ShopGiayTheThao\obj\Debug\ShopGiayTheThao.Form.frmTaiKhoan.resources

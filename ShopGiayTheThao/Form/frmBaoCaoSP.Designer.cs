@@ -357,7 +357,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmBaoCaoSP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmBaoCaoSP";
+            this.Text = "Báo Cáo Sản Phẩm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmBaoCaoSP_Load);
             this.panel1.ResumeLayout(false);

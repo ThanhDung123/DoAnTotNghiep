@@ -430,7 +430,9 @@ namespace ShopGiayTheThao.Form
                     txt_DonGiaBan.Text = "";
                     txt_GhiChu.Text = "";
                     txt_Anh.Text = "";
-
+                    ptb_sp.Visible = false;
+                    btn_Luu.Enabled = false;
+                    btn_Sua.Enabled = false;
                     loadSP();
                 }
                 else

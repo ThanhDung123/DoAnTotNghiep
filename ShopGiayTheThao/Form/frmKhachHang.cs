@@ -260,6 +260,7 @@ namespace ShopGiayTheThao.Form
 
                     LoadKH();
                     btn_Luu.Enabled = false;
+                    btn_Sua.Enabled = false;
                 }
                 else
                 {

@@ -425,7 +425,7 @@
             this.ClientSize = new System.Drawing.Size(985, 517);
             this.Controls.Add(this.panel1);
             this.Name = "frmThongKeDoanhThu";
-            this.Text = "frmThongKeDoanhThu";
+            this.Text = "Thống Kê Doanh Thu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmThongKeDoanhThu_Load);
             this.panel1.ResumeLayout(false);
