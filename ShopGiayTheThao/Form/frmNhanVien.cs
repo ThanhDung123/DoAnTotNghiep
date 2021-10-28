@@ -192,10 +192,11 @@ namespace ShopGiayTheThao.Form
                     MessageBox.Show("Ngày sinh không được lớn hơn ngày hiện tại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
-                if (string.IsNullOrEmpty(txt_DT.Text))
+                if (string.IsNullOrEmpty(txt_DT.Text) || (txt_DT.Text.Length < 10 || txt_DT.Text.Length > 11))
                 {
-                    MessageBox.Show("Bạn phải nhập số điện thoại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txt_TenNV.Focus();
+                    MessageBox.Show("SDT không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txt_DT.Text = sdt_tmp;
+                    txt_DT.Focus();
                     return;
                 }
                 sql = "EXEC dbo.CheckTrungTen @type = 3,@ten = N'" + txt_DT.Text + "'";

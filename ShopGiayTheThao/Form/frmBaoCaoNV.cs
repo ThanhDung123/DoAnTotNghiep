@@ -150,6 +150,7 @@ namespace ShopGiayTheThao.Form
                     {
                         gc_NangXuatNV.DataSource = "";
                         gc_SanPham.RefreshDataSource();
+                        MessageBox.Show("Không có thông tin nào được tìm thấy ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
@@ -169,7 +170,7 @@ namespace ShopGiayTheThao.Form
                 {
                     if (gv_SanPham.RowCount == 0)
                     {
-                        MessageBox.Show("Chưa có thông tin ", "Thông báo");
+                        MessageBox.Show("Chưa có thông tin ", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                     SaveFileDialog saveFile = new SaveFileDialog
@@ -227,14 +228,14 @@ namespace ShopGiayTheThao.Form
                                 package.SaveAs(newFile);
                             }
                         }
-                        MessageBox.Show("Xuất thành công ", "Thông báo");
+                        MessageBox.Show("Xuất thành công ", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }
                 }
                 if (SLE_LoaiBaoCao.EditValue.Equals(2))
                 {
                     if (gv_SanPham.RowCount == 0)
                     {
-                        MessageBox.Show("Chưa có thông tin ", "Thông báo");
+                        MessageBox.Show("Chưa có thông tin ", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
                     SaveFileDialog saveFile = new SaveFileDialog
@@ -294,14 +295,14 @@ namespace ShopGiayTheThao.Form
                                 package.SaveAs(newFile);
                             }
                         }
-                        MessageBox.Show("Xuất thành công ", "Thông báo");
+                        MessageBox.Show("Xuất thành công ", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     }
                 }
 
             }
             catch (Exception)
             {
-                MessageBox.Show("Lỗi Xuất Execl", "Thông báo");
+                MessageBox.Show("Lỗi Xuất Execl", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
 

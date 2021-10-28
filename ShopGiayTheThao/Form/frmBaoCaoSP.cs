@@ -128,7 +128,7 @@ namespace ShopGiayTheThao.Form
                     }
                     else
                     {
-                        MessageBox.Show("Không có sản phẩm nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Không có thông tin nào được tìm thấy ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         gc_SanPham.DataSource = "";
                         gc_SanPham.RefreshDataSource();
                     }
@@ -155,6 +155,7 @@ namespace ShopGiayTheThao.Form
                     {
                         gc_SanPham.DataSource = "";
                         gc_SanPham.RefreshDataSource();
+                        MessageBox.Show("Không có thông tin nào được tìm thấy ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
 
@@ -171,7 +172,7 @@ namespace ShopGiayTheThao.Form
             {
                 if (gv_SanPham.RowCount == 0)
                 {
-                    MessageBox.Show("Chưa có thông tin ", "Thông báo");
+                    MessageBox.Show("Chưa có thông tin ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 SaveFileDialog saveFile = new SaveFileDialog
@@ -230,12 +231,12 @@ namespace ShopGiayTheThao.Form
                         }
                     }
 
-                    MessageBox.Show("Xuất thành công ", "Thông báo");
+                    MessageBox.Show("Xuất thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Lỗi Xuất Execl", "Thông báo");
+                MessageBox.Show("Lỗi Xuất Execl", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         #endregion
