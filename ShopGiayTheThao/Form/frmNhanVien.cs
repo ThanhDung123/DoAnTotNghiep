@@ -212,7 +212,8 @@ namespace ShopGiayTheThao.Form
                     txt_DT.Text = "";
                     txt_MaNV.Text = "";
                     ReadOnly();
-
+                    rdb_nu.Checked = false;
+                    rdbs_nam.Checked = false;
                     loadDataNV();
                     btn_Luu.Enabled = false;
                 }
@@ -268,6 +269,8 @@ namespace ShopGiayTheThao.Form
             txt_DT.Text = "";
             txt_MaNV.Text = "";
             ReadOnly();
+            rdb_nu.Checked = false;
+            rdbs_nam.Checked = false;
             btn_Sua.Enabled = false;
             btn_CN.Enabled = false;
             loadDataNV();
