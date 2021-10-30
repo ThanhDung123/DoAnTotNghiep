@@ -232,6 +232,7 @@ namespace ShopGiayTheThao.Form
                     }
 
                     MessageBox.Show("Xuất thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    button1_Click(button1, EventArgs.Empty);
                 }
             }
             catch (Exception)

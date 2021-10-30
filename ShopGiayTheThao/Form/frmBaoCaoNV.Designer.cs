@@ -44,7 +44,7 @@
             this.BE_del_Thuonghieu = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.gc_NangXuatNV = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gv_NXNV = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -74,7 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BE_del_Thuonghieu)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gc_NangXuatNV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_NXNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SLE_LoaiBaoCao.Properties)).BeginInit();
@@ -224,30 +224,30 @@
             // 
             this.gc_NangXuatNV.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gc_NangXuatNV.Location = new System.Drawing.Point(0, 0);
-            this.gc_NangXuatNV.MainView = this.gridView1;
+            this.gc_NangXuatNV.MainView = this.gv_NXNV;
             this.gc_NangXuatNV.Name = "gc_NangXuatNV";
             this.gc_NangXuatNV.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1});
             this.gc_NangXuatNV.Size = new System.Drawing.Size(1153, 316);
             this.gc_NangXuatNV.TabIndex = 6;
             this.gc_NangXuatNV.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gv_NXNV});
             // 
-            // gridView1
+            // gv_NXNV
             // 
-            this.gridView1.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.gridView1.Appearance.Row.Options.UseFont = true;
-            this.gridView1.Appearance.Row.Options.UseTextOptions = true;
-            this.gridView1.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.gridView1.ColumnPanelRowHeight = 40;
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gv_NXNV.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.gv_NXNV.Appearance.Row.Options.UseFont = true;
+            this.gv_NXNV.Appearance.Row.Options.UseTextOptions = true;
+            this.gv_NXNV.Appearance.Row.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.gv_NXNV.ColumnPanelRowHeight = 40;
+            this.gv_NXNV.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn4,
             this.gridColumn5});
-            this.gridView1.GridControl = this.gc_NangXuatNV;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            this.gridView1.RowHeight = 30;
+            this.gv_NXNV.GridControl = this.gc_NangXuatNV;
+            this.gv_NXNV.Name = "gv_NXNV";
+            this.gv_NXNV.OptionsView.ShowGroupPanel = false;
+            this.gv_NXNV.RowHeight = 30;
             // 
             // gridColumn1
             // 
@@ -491,7 +491,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BE_del_Thuonghieu)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gc_NangXuatNV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gv_NXNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -530,7 +530,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit BE_del_Thuonghieu;
         private DevExpress.XtraGrid.GridControl gc_NangXuatNV;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gv_NXNV;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;

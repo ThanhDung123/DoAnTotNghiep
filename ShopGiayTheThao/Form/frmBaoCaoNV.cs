@@ -229,11 +229,12 @@ namespace ShopGiayTheThao.Form
                             }
                         }
                         MessageBox.Show("Xuất thành công ", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        btn_LamMoi_Click(btn_LamMoi, EventArgs.Empty);
                     }
                 }
                 if (SLE_LoaiBaoCao.EditValue.Equals(2))
                 {
-                    if (gv_SanPham.RowCount == 0)
+                    if (gv_NXNV.RowCount == 0)
                     {
                         MessageBox.Show("Chưa có thông tin ", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
@@ -242,7 +243,7 @@ namespace ShopGiayTheThao.Form
                     {
                         InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments),
                         Filter = @"(*.XLSX)|*.xlsx",
-                        FileName = "BaoCaoNV"
+                        FileName = "BaoCaoNXNV"
                     };
 
                     if (saveFile.ShowDialog() == DialogResult.OK)
@@ -258,7 +259,7 @@ namespace ShopGiayTheThao.Form
 
                                 var row1 = curentWorkSheet.SelectedRange["A1:C1"];
                                 row1.Merge = true;
-                                row1.Value = "Báo Cáo Nhân Viên";
+                                row1.Value = "Báo Cáo Năng Xuất Nhân Viên";
                                 row1.Style.Font.Size = 12;
                                 row1.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                                 row1.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
@@ -296,6 +297,7 @@ namespace ShopGiayTheThao.Form
                             }
                         }
                         MessageBox.Show("Xuất thành công ", "Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        btn_LamMoi_Click(btn_LamMoi, EventArgs.Empty);
                     }
                 }
 
