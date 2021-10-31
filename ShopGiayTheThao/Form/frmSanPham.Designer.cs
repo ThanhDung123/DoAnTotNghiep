@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -74,6 +74,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txt_MaSP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
@@ -214,7 +216,7 @@
             // 
             this.BE_del_Thuonghieu.AutoHeight = false;
             this.BE_del_Thuonghieu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
             this.BE_del_Thuonghieu.Name = "BE_del_Thuonghieu";
             this.BE_del_Thuonghieu.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.BE_del_Thuonghieu.Click += new System.EventHandler(this.BE_del_Thuonghieu_Click);
@@ -330,6 +332,8 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.btn_timkiem);
             this.panel4.Controls.Add(this.txt_timkiem);
             this.panel4.Controls.Add(this.txt_Anh);
@@ -524,7 +528,7 @@
             this.cbo_MaTH.FormattingEnabled = true;
             this.cbo_MaTH.IntegralHeight = false;
             this.cbo_MaTH.ItemHeight = 16;
-            this.cbo_MaTH.Location = new System.Drawing.Point(182, 92);
+            this.cbo_MaTH.Location = new System.Drawing.Point(150, 88);
             this.cbo_MaTH.Name = "cbo_MaTH";
             this.cbo_MaTH.Size = new System.Drawing.Size(225, 24);
             this.cbo_MaTH.TabIndex = 49;
@@ -542,7 +546,7 @@
             // txt_DonGiaBan
             // 
             this.txt_DonGiaBan.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DonGiaBan.Location = new System.Drawing.Point(180, 192);
+            this.txt_DonGiaBan.Location = new System.Drawing.Point(148, 188);
             this.txt_DonGiaBan.Multiline = true;
             this.txt_DonGiaBan.Name = "txt_DonGiaBan";
             this.txt_DonGiaBan.ReadOnly = true;
@@ -554,7 +558,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(43, 194);
+            this.label6.Location = new System.Drawing.Point(11, 190);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 19);
             this.label6.TabIndex = 44;
@@ -563,7 +567,7 @@
             // txt_DonGiaNhap
             // 
             this.txt_DonGiaNhap.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_DonGiaNhap.Location = new System.Drawing.Point(182, 157);
+            this.txt_DonGiaNhap.Location = new System.Drawing.Point(150, 153);
             this.txt_DonGiaNhap.Multiline = true;
             this.txt_DonGiaNhap.Name = "txt_DonGiaNhap";
             this.txt_DonGiaNhap.ReadOnly = true;
@@ -575,7 +579,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(43, 161);
+            this.label5.Location = new System.Drawing.Point(11, 157);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 19);
             this.label5.TabIndex = 42;
@@ -584,7 +588,7 @@
             // txt_SL
             // 
             this.txt_SL.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SL.Location = new System.Drawing.Point(182, 119);
+            this.txt_SL.Location = new System.Drawing.Point(150, 115);
             this.txt_SL.Multiline = true;
             this.txt_SL.Name = "txt_SL";
             this.txt_SL.ReadOnly = true;
@@ -596,7 +600,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(41, 125);
+            this.label4.Location = new System.Drawing.Point(9, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 19);
             this.label4.TabIndex = 40;
@@ -606,7 +610,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(36, 90);
+            this.label3.Location = new System.Drawing.Point(4, 86);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 19);
             this.label3.TabIndex = 39;
@@ -615,7 +619,7 @@
             // txt_TenSP
             // 
             this.txt_TenSP.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenSP.Location = new System.Drawing.Point(180, 54);
+            this.txt_TenSP.Location = new System.Drawing.Point(148, 50);
             this.txt_TenSP.Multiline = true;
             this.txt_TenSP.Name = "txt_TenSP";
             this.txt_TenSP.ReadOnly = true;
@@ -626,7 +630,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(35, 60);
+            this.label1.Location = new System.Drawing.Point(3, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 19);
             this.label1.TabIndex = 37;
@@ -635,7 +639,7 @@
             // txt_MaSP
             // 
             this.txt_MaSP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_MaSP.Location = new System.Drawing.Point(181, 15);
+            this.txt_MaSP.Location = new System.Drawing.Point(149, 11);
             this.txt_MaSP.Multiline = true;
             this.txt_MaSP.Name = "txt_MaSP";
             this.txt_MaSP.ReadOnly = true;
@@ -646,11 +650,31 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(36, 30);
+            this.label2.Location = new System.Drawing.Point(4, 26);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 19);
             this.label2.TabIndex = 35;
             this.label2.Text = "Mã Sản Phẩm :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(377, 161);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 19);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "VND";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(377, 194);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 19);
+            this.label10.TabIndex = 58;
+            this.label10.Text = "VND";
             // 
             // frmSanPham
             // 
@@ -730,5 +754,7 @@
         private System.Windows.Forms.RichTextBox txt_Anh;
         private System.Windows.Forms.TextBox txt_timkiem;
         private System.Windows.Forms.Button btn_timkiem;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label7;
     }
 }

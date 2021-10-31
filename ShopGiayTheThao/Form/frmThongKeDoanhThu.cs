@@ -121,14 +121,14 @@ namespace ShopGiayTheThao.Form
                             ExcelWorksheet curentWorkSheet = workBook.Worksheets.Add("DATA");
                             curentWorkSheet.SelectedRange["A1:F900"].Clear();
 
-                            var row = curentWorkSheet.SelectedRange["A1:F1"];
+                            var row = curentWorkSheet.SelectedRange["A1:E1"];
                             row.Merge = true;
                             row.Value = "Cửa Hàng Dụng Cụ Thể Thao DL SHOP";
                             row.Style.Font.Size = 14;
                             row.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                             row.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                            var row2 = curentWorkSheet.SelectedRange["A2:F2"];
+                            var row2 = curentWorkSheet.SelectedRange["A2:E2"];
                             row2.Merge = true;
                             row2.Value = "Nhân viên :";
                             row2.Style.Font.Size = 12;
@@ -136,7 +136,7 @@ namespace ShopGiayTheThao.Form
                             row2.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                             curentWorkSheet.SelectedRange["A2:F2"].Style.Font.Italic = true;
 
-                            var row3 = curentWorkSheet.SelectedRange["A3:F3"];
+                            var row3 = curentWorkSheet.SelectedRange["A3:E3"];
                             row3.Merge = true;
                             row3.Value = "Ngày: " + DateTime.Now.Date.ToString("yyyy/MM/dd");
                             row3.Style.Font.Size = 12;
@@ -144,28 +144,28 @@ namespace ShopGiayTheThao.Form
                             row3.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
                             curentWorkSheet.SelectedRange["A3:F3"].Style.Font.Italic = true;
 
-                            var row1 = curentWorkSheet.SelectedRange["A4:F4"];
+                            var row1 = curentWorkSheet.SelectedRange["A4:E4"];
                             row1.Merge = true;
                             row1.Value = "BÁO CÁO DOANH THU";
                             row1.Style.Font.Size = 14;
                             row1.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                             row1.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
 
-                            var row6 = curentWorkSheet.SelectedRange["A5:F5"];
+                            var row6 = curentWorkSheet.SelectedRange["A5:E5"];
                             row6.Merge = true;
                             row6.Value = "Từ ngày: " + dtp_datefrom.Value.ToString("yyyy/MM/dd");
                             row6.Style.Font.Size = 12;
                             row6.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
                             row6.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
-                            curentWorkSheet.SelectedRange["A5:F5"].Style.Font.Italic = true;
+                            curentWorkSheet.SelectedRange["A5:E5"].Style.Font.Italic = true;
 
-                            var row7 = curentWorkSheet.SelectedRange["A6:F6"];
+                            var row7 = curentWorkSheet.SelectedRange["A6:E6"];
                             row7.Merge = true;
                             row7.Value = "Đến ngày: " + dtp_dateto.Value.ToString("yyyy/MM/dd");
                             row7.Style.Font.Size = 12;
                             row7.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
                             row7.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
-                            curentWorkSheet.SelectedRange["A6:F6"].Style.Font.Italic = true;
+                            curentWorkSheet.SelectedRange["A6:E6"].Style.Font.Italic = true;
 
                             curentWorkSheet.Cells[7, 1].Value = "Mã hóa đơn";
                             curentWorkSheet.Cells[7, 2].Value = "Tên nhân viên";
@@ -173,7 +173,7 @@ namespace ShopGiayTheThao.Form
                             curentWorkSheet.Cells[7, 4].Value = "Ngày Bán";
                             curentWorkSheet.Cells[7, 5].Value = "Tổng Tiền";
 
-                            curentWorkSheet.SelectedRange["A7:F7"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                            curentWorkSheet.SelectedRange["A7:E7"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                             #endregion
 
                             #region Style
@@ -202,6 +202,14 @@ namespace ShopGiayTheThao.Form
                                 tong += Convert.ToInt32(dt.Rows[i]["TongTien"].ToString());
                                 line++;
                             }
+                            int linee = line - 1;
+                            var row10 = curentWorkSheet.SelectedRange["A8:E"+linee];
+                            row10.Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                            row10.Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                            row10.Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                            row10.Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                            row10.AutoFitColumns();
+
                             curentWorkSheet.Cells[line + 1, 5].Value = "Tổng: " + tong + " VND";
                             curentWorkSheet.Cells[line + 2, 5].Value = "Chữ ký";
                             #endregion
