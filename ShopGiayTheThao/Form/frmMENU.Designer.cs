@@ -36,6 +36,7 @@
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_BCNV = new System.Windows.Forms.Button();
             this.Btn_ThongKe = new System.Windows.Forms.Button();
             this.btn_ThongTinCN = new System.Windows.Forms.Button();
             this.btn_DangXuat = new System.Windows.Forms.Button();
@@ -57,7 +58,6 @@
             this.btn_SanPham = new System.Windows.Forms.Button();
             this.btn_NhanVien = new System.Windows.Forms.Button();
             this.btn_ThuongHieu = new System.Windows.Forms.Button();
-            this.btn_BCNV = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -162,6 +162,22 @@
             this.panel1.Size = new System.Drawing.Size(1113, 262);
             this.panel1.TabIndex = 0;
             // 
+            // btn_BCNV
+            // 
+            this.btn_BCNV.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btn_BCNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_BCNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_BCNV.ForeColor = System.Drawing.Color.White;
+            this.btn_BCNV.Image = global::ShopGiayTheThao.Properties.Resources.Align_justify;
+            this.btn_BCNV.Location = new System.Drawing.Point(573, 39);
+            this.btn_BCNV.Name = "btn_BCNV";
+            this.btn_BCNV.Size = new System.Drawing.Size(109, 79);
+            this.btn_BCNV.TabIndex = 15;
+            this.btn_BCNV.Text = "Báo Cáo Nhân Viên";
+            this.btn_BCNV.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.btn_BCNV.UseVisualStyleBackColor = false;
+            this.btn_BCNV.Click += new System.EventHandler(this.btn_BCNV_Click);
+            // 
             // Btn_ThongKe
             // 
             this.Btn_ThongKe.BackColor = System.Drawing.Color.Blue;
@@ -173,7 +189,7 @@
             this.Btn_ThongKe.Name = "Btn_ThongKe";
             this.Btn_ThongKe.Size = new System.Drawing.Size(109, 79);
             this.Btn_ThongKe.TabIndex = 14;
-            this.Btn_ThongKe.Text = "Thống Kê Doanh Thu";
+            this.Btn_ThongKe.Text = "Báo Cáo Danh Thu";
             this.Btn_ThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.Btn_ThongKe.UseVisualStyleBackColor = false;
             this.Btn_ThongKe.Click += new System.EventHandler(this.Btn_ThongKe_Click);
@@ -455,22 +471,6 @@
             this.btn_ThuongHieu.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.btn_ThuongHieu.UseVisualStyleBackColor = false;
             this.btn_ThuongHieu.Click += new System.EventHandler(this.btn_ThuongHieu_Click);
-            // 
-            // btn_BCNV
-            // 
-            this.btn_BCNV.BackColor = System.Drawing.Color.DarkOliveGreen;
-            this.btn_BCNV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_BCNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_BCNV.ForeColor = System.Drawing.Color.White;
-            this.btn_BCNV.Image = global::ShopGiayTheThao.Properties.Resources.Align_justify;
-            this.btn_BCNV.Location = new System.Drawing.Point(573, 39);
-            this.btn_BCNV.Name = "btn_BCNV";
-            this.btn_BCNV.Size = new System.Drawing.Size(109, 79);
-            this.btn_BCNV.TabIndex = 15;
-            this.btn_BCNV.Text = "Báo Cáo Nhân Viên";
-            this.btn_BCNV.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btn_BCNV.UseVisualStyleBackColor = false;
-            this.btn_BCNV.Click += new System.EventHandler(this.btn_BCNV_Click);
             // 
             // frmMENU
             // 
