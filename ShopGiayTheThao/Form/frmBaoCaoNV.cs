@@ -78,6 +78,18 @@ namespace ShopGiayTheThao.Form
             }
             return base.ProcessCmdKey(ref msg, keyData);
         }
+
+        private void SLE_LoaiBaoCao_TextChanged(object sender, EventArgs e)
+        {
+            if (SLE_LoaiBaoCao.EditValue.Equals(1))
+            {
+                gc_NangXuatNV.DataSource = "";
+
+            }
+            else
+                gc_SanPham.DataSource = "";
+
+        }
         #endregion
 
         #region functions
@@ -416,6 +428,7 @@ namespace ShopGiayTheThao.Form
             this.Close();
         }
         #endregion
+    
   }
 
      

@@ -26,6 +26,14 @@ namespace ShopGiayTheThao.Form
             public string MaSanPham { get; set; }
             public string TenSanPham { get; set; }
         }
+
+        List<SanPham2> l_sanpham2= new List<SanPham2>();
+        public class SanPham2
+        {
+            public string MaSanPham { get; set; }
+            public string TenSanPham { get; set; }
+            public string SoLuong { get; set; }
+        }
         #endregion
 
         #region FUNCTIONS
@@ -57,6 +65,46 @@ namespace ShopGiayTheThao.Form
         private void frmBaoCaoSP_Load(object sender, EventArgs e)
         {
             loadLoaiBC();
+        }
+
+        private void SLE_LoaiBaoCao_TextChanged(object sender, EventArgs e)
+        {
+            if (SLE_LoaiBaoCao.EditValue.Equals(2))
+            {
+                lblsl.Visible = true;
+                nmrSL.Visible = true;
+
+                dtp_datefrom.Enabled = false;
+                dtp_dateto.Enabled = false;
+
+                gc_SanPham.DataSource = "";
+                gc_sp3.DataSource = "";
+            }
+
+            if (SLE_LoaiBaoCao.EditValue.Equals(3))
+            {
+                dtp_datefrom.Enabled = true;
+                dtp_dateto.Enabled = true;
+
+                lblsl.Visible = false;
+                nmrSL.Visible = false;
+
+                gc_SanPham.DataSource = "";
+                gc_sp2.DataSource = "";
+            }
+
+            if (SLE_LoaiBaoCao.EditValue.Equals(1))
+            {
+                dtp_datefrom.Enabled = false;
+                dtp_dateto.Enabled = false;
+
+                lblsl.Visible = false;
+                nmrSL.Visible = false;
+
+                gc_sp2.DataSource = "";
+                gc_sp3.DataSource = "";
+
+            }
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -97,6 +145,8 @@ namespace ShopGiayTheThao.Form
             dtp_datefrom.Value = DateTime.Now;
             dtp_dateto.Value = DateTime.Now;
             gc_SanPham.DataSource = "";
+            gc_sp2.DataSource = "";
+            gc_sp3.DataSource = "";
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)
@@ -108,6 +158,33 @@ namespace ShopGiayTheThao.Form
         {
             try
             {
+                if (SLE_LoaiBaoCao.EditValue.Equals(1))
+                {
+                    sql = "EXEC dbo.[sp.BaoCaoSP] @type =" + SLE_LoaiBaoCao.EditValue + ",@sl = " + nmrSL.Value;
+                    dt = Class.Functions.GetDataToTable(sql);
+                    if (dt.Rows.Count > 0)
+                    {
+                        l_sanpham.Clear();
+                        foreach (DataRow item in dt.Rows)
+                        {
+                            l_sanpham.Add(new SanPham()
+                            {
+                                MaSanPham = item["MaSanPham"].ToString(),
+                                TenSanPham = item["TenSanPham"].ToString()
+                            });
+                        }
+                        gc_SanPham.DataSource = l_sanpham;
+                        gc_SanPham.RefreshDataSource();
+                        tabControl1.SelectedTab = tabPage1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có thông tin nào được tìm thấy ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        gc_sp3.DataSource = "";
+                        gc_sp3.RefreshDataSource();
+                    }
+                }
+
                 if (SLE_LoaiBaoCao.EditValue.Equals(3))
                 {
                     sql = "EXEC dbo.sp_SPBantrongthang @datefrom = '" + dtp_datefrom.Value.ToString("yyyy/MM/dd") + "',@dateto = '" + dtp_dateto.Value.ToString("yyyy/MM/dd") + "'";
@@ -123,38 +200,43 @@ namespace ShopGiayTheThao.Form
                                 TenSanPham = item["TenSanPham"].ToString()
                             });
                         }
-                        gc_SanPham.DataSource = l_sanpham;
-                        gc_SanPham.RefreshDataSource();
+
+                        gc_sp3.DataSource = l_sanpham;
+                        gc_sp3.RefreshDataSource();
+                        tabControl1.SelectedTab = tabPage3;
                     }
                     else
                     {
                         MessageBox.Show("Không có thông tin nào được tìm thấy ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        gc_SanPham.DataSource = "";
-                        gc_SanPham.RefreshDataSource();
+                        gc_sp3.DataSource = "";
+                        gc_sp3.RefreshDataSource();
                     }
                 }
-                else
+
+                if (SLE_LoaiBaoCao.EditValue.Equals(2))
                 {
-                    sql = "EXEC dbo.[sp.BaoCaoSP] @type =" + SLE_LoaiBaoCao.EditValue;
+                    sql = "EXEC dbo.[sp.BaoCaoSP] @type =" +SLE_LoaiBaoCao.EditValue+",@sl = "+ nmrSL.Value;
                     dt = Class.Functions.GetDataToTable(sql);
                     if (dt.Rows.Count > 0)
                     {
-                        l_sanpham.Clear();
+                        l_sanpham2.Clear();
                         foreach (DataRow item in dt.Rows)
                         {
-                            l_sanpham.Add(new SanPham()
+                            l_sanpham2.Add(new SanPham2()
                             {
                                 MaSanPham = item["MaSanPham"].ToString(),
-                                TenSanPham = item["TenSanPham"].ToString()
+                                TenSanPham = item["TenSanPham"].ToString(),
+                                SoLuong = item["SoLuong"].ToString()
                             });
                         }
-                        gc_SanPham.DataSource = l_sanpham;
-                        gc_SanPham.RefreshDataSource();
+                        gc_sp2.DataSource = l_sanpham2;
+                        gc_sp2.RefreshDataSource();
+                        tabControl1.SelectedTab = tabPage2;
                     }
                     else
                     {
-                        gc_SanPham.DataSource = "";
-                        gc_SanPham.RefreshDataSource();
+                        gc_sp2.DataSource = "";
+                        gc_sp2.RefreshDataSource();
                         MessageBox.Show("Không có thông tin nào được tìm thấy ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -232,6 +314,8 @@ namespace ShopGiayTheThao.Form
                     }
 
                     MessageBox.Show("Xuất thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lblsl.Visible = true;
+                    nmrSL.Visible = true;
                     button1_Click(button1, EventArgs.Empty);
                 }
             }
@@ -241,7 +325,6 @@ namespace ShopGiayTheThao.Form
             }
         }
         #endregion
-
        
     }
 }
