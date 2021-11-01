@@ -147,6 +147,8 @@ namespace ShopGiayTheThao.Form
             gc_SanPham.DataSource = "";
             gc_sp2.DataSource = "";
             gc_sp3.DataSource = "";
+            lblsl.Visible = false;
+            nmrSL.Visible = false;
         }
 
         private void btn_Thoat_Click(object sender, EventArgs e)
@@ -252,73 +254,325 @@ namespace ShopGiayTheThao.Form
         {
             try
             {
-                if (gv_SanPham.RowCount == 0)
+                if (SLE_LoaiBaoCao.EditValue.Equals(1))
                 {
-                    MessageBox.Show("Chưa có thông tin ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                SaveFileDialog saveFile = new SaveFileDialog
-                {
-                    InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments),
-                    Filter = @"(*.XLSX)|*.xlsx",
-                    FileName = "BaoCaoSP"
-                };
-
-                if (saveFile.ShowDialog() == DialogResult.OK)
-                {
-                    using (var package = new ExcelPackage())
+                    if (gv_SanPham.RowCount == 0)
                     {
-                        ExcelWorkbook workBook = package.Workbook;
-                        if (workBook != null)
+                        MessageBox.Show("Chưa có thông tin ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    SaveFileDialog saveFile = new SaveFileDialog
+                    {
+                        InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments),
+                        Filter = @"(*.XLSX)|*.xlsx",
+                        FileName = "BaoCaoDSSP"
+                    };
+
+                    if (saveFile.ShowDialog() == DialogResult.OK)
+                    {
+                        using (var package = new ExcelPackage())
                         {
-                            #region set header
-                            ExcelWorksheet curentWorkSheet = workBook.Worksheets.Add("DATA");
-                            curentWorkSheet.SelectedRange["A1:F900"].Clear();
-
-                            var row1 = curentWorkSheet.SelectedRange["A1:B1"];
-                            row1.Merge = true;
-                            row1.Value = "Báo Cáo Sản Phẩm";
-                            row1.Style.Font.Size = 12;
-                            row1.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                            row1.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
-
-                            curentWorkSheet.Cells[2, 1].Value = "Mã sản phẩm";
-                            curentWorkSheet.Cells[2, 2].Value = "Tên sản phẩm";
-
-                            curentWorkSheet.SelectedRange["A2:F2"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
-                            #endregion
-
-                            #region Style
-                            //broder all
-                            var row = curentWorkSheet.SelectedRange["A2:B2"];
-                            row.Style.Border.Top.Style = ExcelBorderStyle.Thin;
-                            row.Style.Border.Left.Style = ExcelBorderStyle.Thin;
-                            row.Style.Border.Right.Style = ExcelBorderStyle.Thin;
-                            row.Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
-                            row.AutoFitColumns();
-
-                            curentWorkSheet.SelectedRange["A2:B2"].Style.Font.Bold = true;
-                            #endregion
-
-                            #region Content
-                            int start = 3;
-                            for (int i = 0; i < dt.Rows.Count; i++)
+                            ExcelWorkbook workBook = package.Workbook;
+                            if (workBook != null)
                             {
-                                curentWorkSheet.Cells[start + i, 1].Value = dt.Rows[i]["MaSanPham"].ToString();
-                                curentWorkSheet.Cells[start + i, 2].Value = dt.Rows[i]["TenSanPham"].ToString();
+                                #region set header
+                                ExcelWorksheet curentWorkSheet = workBook.Worksheets.Add("DATA");
+                                curentWorkSheet.SelectedRange["A1:F900"].Clear();
+
+                                var row = curentWorkSheet.SelectedRange["A1:B1"];
+                                row.Merge = true;
+                                row.Value = "Cửa Hàng Dụng Cụ Thể Thao DL SHOP";
+                                row.Style.Font.Size = 14;
+                                row.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                                row.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
+                                var row2 = curentWorkSheet.SelectedRange["A2:B2"];
+                                row2.Merge = true;
+                                row2.Value = "Nhân viên :";
+                                row2.Style.Font.Size = 12;
+                                row2.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                                row2.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                                curentWorkSheet.SelectedRange["A2:B2"].Style.Font.Italic = true;
+
+                                var row3 = curentWorkSheet.SelectedRange["A3:B3"];
+                                row3.Merge = true;
+                                row3.Value = "Ngày: " + DateTime.Now.Date.ToString("yyyy/MM/dd");
+                                row3.Style.Font.Size = 12;
+                                row3.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                                row3.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                                curentWorkSheet.SelectedRange["A3:E3"].Style.Font.Italic = true;
+
+                                var row1 = curentWorkSheet.SelectedRange["A4:B4"];
+                                row1.Merge = true;
+                                row1.Value = "Báo Cáo Danh Sách Sản Phẩm";
+                                row1.Style.Font.Size = 12;
+                                row1.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                                row1.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
+                                curentWorkSheet.Cells[5, 1].Value = "Mã sản phẩm";
+                                curentWorkSheet.Cells[5, 2].Value = "Tên sản phẩm";
+
+                                curentWorkSheet.SelectedRange["A5:B5"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                                #endregion
+
+                                #region Style
+                                //broder all
+                                var row9 = curentWorkSheet.SelectedRange["A5:B5"];
+                                row9.Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                                row9.Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                                row9.Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                                row9.Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                                row9.AutoFitColumns();
+
+                                curentWorkSheet.SelectedRange["A5:B5"].Style.Font.Bold = true;
+                                #endregion
+
+                                #region Content
+                                int start = 6;
+                                int line = 6;
+                                for (int i = 0; i < dt.Rows.Count; i++)
+                                {
+                                    curentWorkSheet.Cells[start + i, 1].Value = dt.Rows[i]["MaSanPham"].ToString();
+                                    curentWorkSheet.Cells[start + i, 2].Value = dt.Rows[i]["TenSanPham"].ToString();
+                                    line++;
+                                }
+                                int linee = line - 1;
+                                var row10 = curentWorkSheet.SelectedRange["A6:B" + linee];
+                                row10.Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                                row10.Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                                row10.Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                                row10.Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                                row10.AutoFitColumns();
+
+                                curentWorkSheet.Cells[line + 2, 2].Value = "Chữ ký";
+                                #endregion
+                                var newFile = new FileInfo(saveFile.FileName);
+                                package.SaveAs(newFile);
                             }
-                            #endregion
-                            var newFile = new FileInfo(saveFile.FileName);
-                            package.SaveAs(newFile);
+                        }
+
+                        MessageBox.Show("Xuất thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        button1_Click(button1, EventArgs.Empty);
+                    }
+                } 
+                if (SLE_LoaiBaoCao.EditValue.Equals(2))
+                {
+                    if (gv_sp2.RowCount == 0)
+                        {
+                            MessageBox.Show("Chưa có thông tin ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                        SaveFileDialog saveFile = new SaveFileDialog
+                        {
+                            InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments),
+                            Filter = @"(*.XLSX)|*.xlsx",
+                            FileName = "BaoCaoSLSP"
+                        };
+
+                        if (saveFile.ShowDialog() == DialogResult.OK)
+                        {
+                            using (var package = new ExcelPackage())
+                            {
+                                ExcelWorkbook workBook = package.Workbook;
+                                if (workBook != null)
+                                {
+                                    #region set header
+                                    ExcelWorksheet curentWorkSheet = workBook.Worksheets.Add("DATA");
+                                    curentWorkSheet.SelectedRange["A1:F900"].Clear();
+
+                                    var row = curentWorkSheet.SelectedRange["A1:C1"];
+                                    row.Merge = true;
+                                    row.Value = "Cửa Hàng Dụng Cụ Thể Thao DL SHOP";
+                                    row.Style.Font.Size = 14;
+                                    row.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                                    row.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
+                                    var row2 = curentWorkSheet.SelectedRange["A2:C2"];
+                                    row2.Merge = true;
+                                    row2.Value = "Nhân viên :";
+                                    row2.Style.Font.Size = 12;
+                                    row2.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                                    row2.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                                    curentWorkSheet.SelectedRange["A2:C2"].Style.Font.Italic = true;
+
+                                    var row3 = curentWorkSheet.SelectedRange["A3:C3"];
+                                    row3.Merge = true;
+                                    row3.Value = "Ngày: " + DateTime.Now.Date.ToString("yyyy/MM/dd");
+                                    row3.Style.Font.Size = 12;
+                                    row3.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                                    row3.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                                    curentWorkSheet.SelectedRange["A3:C3"].Style.Font.Italic = true;
+
+                                    var row1 = curentWorkSheet.SelectedRange["A4:C4"];
+                                    row1.Merge = true;
+                                    row1.Value = "Báo Cáo Sản Phẩm Sắp Hết";
+                                    row1.Style.Font.Size = 12;
+                                    row1.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                                    row1.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
+                                    curentWorkSheet.Cells[5, 1].Value = "Mã sản phẩm";
+                                    curentWorkSheet.Cells[5, 2].Value = "Tên sản phẩm";
+                                    curentWorkSheet.Cells[5, 3].Value = "Số lượng";
+
+                                    curentWorkSheet.SelectedRange["A5:C5"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                                    #endregion
+
+                                    #region Style
+                                    //broder all
+                                    var row9 = curentWorkSheet.SelectedRange["A5:C5"];
+                                    row9.Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                                    row9.Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                                    row9.Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                                    row9.Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                                    row9.AutoFitColumns();
+
+                                    curentWorkSheet.SelectedRange["A5:C5"].Style.Font.Bold = true;
+                                    #endregion
+
+                                    #region Content
+                                    int start = 6;
+                                    int line = 6;
+                                    for (int i = 0; i < dt.Rows.Count; i++)
+                                    {
+                                        curentWorkSheet.Cells[start + i, 1].Value = dt.Rows[i]["MaSanPham"].ToString();
+                                        curentWorkSheet.Cells[start + i, 2].Value = dt.Rows[i]["TenSanPham"].ToString();
+                                        curentWorkSheet.Cells[start + i, 3].Value = dt.Rows[i]["SoLuong"].ToString();
+                                        line++;
+                                    }
+                                    int linee = line - 1;
+                                    var row10 = curentWorkSheet.SelectedRange["A6:C" + linee];
+                                    row10.Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                                    row10.Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                                    row10.Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                                    row10.Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                                    row10.AutoFitColumns();
+
+                                    curentWorkSheet.Cells[line + 2, 3].Value = "Chữ ký";
+                                    #endregion
+                                    var newFile = new FileInfo(saveFile.FileName);
+                                    package.SaveAs(newFile);
+                                }
+                            }
+                            MessageBox.Show("Xuất thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            button1_Click(button1, EventArgs.Empty);
                         }
                     }
+                if (SLE_LoaiBaoCao.EditValue.Equals(3))
+                {
+                    if (gv_sp3.RowCount == 0)
+                    {
+                        MessageBox.Show("Chưa có thông tin ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
+                    }
+                    SaveFileDialog saveFile = new SaveFileDialog
+                    {
+                        InitialDirectory = Convert.ToString(Environment.SpecialFolder.MyDocuments),
+                        Filter = @"(*.XLSX)|*.xlsx",
+                        FileName = "BaoCaoSP_BanTrongThang"
+                    };
 
-                    MessageBox.Show("Xuất thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    lblsl.Visible = true;
-                    nmrSL.Visible = true;
-                    button1_Click(button1, EventArgs.Empty);
+                    if (saveFile.ShowDialog() == DialogResult.OK)
+                    {
+                        using (var package = new ExcelPackage())
+                        {
+                            ExcelWorkbook workBook = package.Workbook;
+                            if (workBook != null)
+                            {
+                                #region set header
+                                ExcelWorksheet curentWorkSheet = workBook.Worksheets.Add("DATA");
+                                curentWorkSheet.SelectedRange["A1:F900"].Clear();
+
+                                var row = curentWorkSheet.SelectedRange["A1:B1"];
+                                row.Merge = true;
+                                row.Value = "Cửa Hàng Dụng Cụ Thể Thao DL SHOP";
+                                row.Style.Font.Size = 14;
+                                row.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                                row.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
+                                var row2 = curentWorkSheet.SelectedRange["A2:B2"];
+                                row2.Merge = true;
+                                row2.Value = "Nhân viên :";
+                                row2.Style.Font.Size = 12;
+                                row2.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                                row2.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                                curentWorkSheet.SelectedRange["A2:F2"].Style.Font.Italic = true;
+
+                                var row3 = curentWorkSheet.SelectedRange["A3:B3"];
+                                row3.Merge = true;
+                                row3.Value = "Ngày: " + DateTime.Now.Date.ToString("yyyy/MM/dd");
+                                row3.Style.Font.Size = 12;
+                                row3.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                                row3.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                                curentWorkSheet.SelectedRange["A3:B3"].Style.Font.Italic = true;
+
+                                var row1 = curentWorkSheet.SelectedRange["A4:B4"];
+                                row1.Merge = true;
+                                row1.Value = "Báo Cáo Sản Phẩm Bán Được";
+                                row1.Style.Font.Size = 12;
+                                row1.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                                row1.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
+                                var row5 = curentWorkSheet.SelectedRange["A5:B5"];
+                                row5.Merge = true;
+                                row5.Value = "Từ ngày: " + dtp_datefrom.Value.ToString("yyyy/MM/dd");
+                                row5.Style.Font.Size = 12;
+                                row5.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                                row5.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
+                                var row6 = curentWorkSheet.SelectedRange["A6:B6"];
+                                row6.Merge = true;
+                                row6.Value = "Đến Ngày: " + dtp_dateto.Value.ToString("yyyy/MM/dd");
+                                row6.Style.Font.Size = 12;
+                                row6.Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                                row6.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+
+                                curentWorkSheet.Cells[7, 1].Value = "Mã Sản Phẩm";
+                                curentWorkSheet.Cells[7, 2].Value = "Tên Sản Phẩm";
+
+                                #endregion
+
+                                #region Style
+                                //broder all
+                                var row9 = curentWorkSheet.SelectedRange["A7:B7"];
+                                row9.Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                                row9.Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                                row9.Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                                row9.Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                                row9.AutoFitColumns();
+
+                                #endregion
+
+                                #region Content
+                                int start = 8;
+                                int line = 8;
+                                for (int i = 0; i < dt.Rows.Count; i++)
+                                {
+                                    curentWorkSheet.Cells[start + i, 1].Value = dt.Rows[i]["MaSanPham"].ToString();
+                                    curentWorkSheet.Cells[start + i, 2].Value = dt.Rows[i]["TenSanPham"].ToString();
+                                    line++;
+                                }
+                                int linee = line - 1;
+                                var row10 = curentWorkSheet.SelectedRange["A8:B" + linee];
+                                row10.Style.Border.Top.Style = ExcelBorderStyle.Thin;
+                                row10.Style.Border.Left.Style = ExcelBorderStyle.Thin;
+                                row10.Style.Border.Right.Style = ExcelBorderStyle.Thin;
+                                row10.Style.Border.Bottom.Style = ExcelBorderStyle.Thin;
+                                row10.Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                                row10.AutoFitColumns();
+
+
+                                curentWorkSheet.Cells[line + 1, 2].Value = "Chữ ký";
+                                #endregion
+                                var newFile = new FileInfo(saveFile.FileName);
+                                package.SaveAs(newFile);
+                            }
+                        }
+                        MessageBox.Show("Xuất thành công ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        button1_Click(button1, EventArgs.Empty);
+
+                    }
                 }
-            }
+                }
             catch (Exception)
             {
                 MessageBox.Show("Lỗi Xuất Execl", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
