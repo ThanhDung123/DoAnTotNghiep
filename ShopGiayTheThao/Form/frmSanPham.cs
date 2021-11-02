@@ -433,6 +433,7 @@ namespace ShopGiayTheThao.Form
                     ptb_sp.Visible = false;
                     btn_Luu.Enabled = false;
                     btn_Sua.Enabled = false;
+                    btn_them_anh.Enabled = false;
                     loadSP();
                 }
                 else
