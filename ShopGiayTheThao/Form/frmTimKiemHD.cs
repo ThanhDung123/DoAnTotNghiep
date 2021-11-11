@@ -143,6 +143,8 @@ namespace ShopGiayTheThao.Form
                 }
                 gc_TimHD.DataSource = l_HD_search;
                 gc_TimHD.RefreshDataSource();
+
+                xtraTabControl1.SelectedTabPage = xtraTabPage1;
             }
             else
             {
@@ -153,8 +155,6 @@ namespace ShopGiayTheThao.Form
         private void BE_Xem_CTHD_Click(object sender, EventArgs e)
         {
             txt_MaHD_search.Text = gv_timHD.GetRowCellValue(gv_timHD.FocusedRowHandle, "MaHoaDon").ToString();
-
-            xtraTabControl1.SelectedTabPage = xtraTabPage2;
 
             sql = "EXEC dbo.sp_Xem_CTHD @maHD = '" + txt_MaHD_search.Text + "'";
             dt = Class.Functions.GetDataToTable(sql);
@@ -176,6 +176,8 @@ namespace ShopGiayTheThao.Form
                     });
                     gc_CTHoaDon_search.DataSource = l_CTHD_search;
                     gc_CTHoaDon_search.RefreshDataSource();
+
+                    xtraTabControl1.SelectedTabPage = xtraTabPage2;
 
                 }
             }
@@ -310,6 +312,7 @@ namespace ShopGiayTheThao.Form
 
             txt_MaHD_search.Text = "";
             dtp_ngay.Value = DateTime.Now;
+            xtraTabControl1.SelectedTabPage = xtraTabPage1;
         }
 
         private void BE_del_HD_Click(object sender, EventArgs e)

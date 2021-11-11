@@ -249,7 +249,7 @@
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 21;
+            this.gridColumn1.Width = 22;
             // 
             // BE_del_Thuonghieu
             // 
@@ -272,7 +272,7 @@
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 88;
+            this.gridColumn2.Width = 65;
             // 
             // gridColumn3
             // 
@@ -286,7 +286,7 @@
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 192;
+            this.gridColumn3.Width = 195;
             // 
             // gridColumn5
             // 
@@ -301,7 +301,7 @@
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 60;
+            this.gridColumn5.Width = 57;
             // 
             // gridColumn7
             // 
@@ -315,7 +315,7 @@
             this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 4;
-            this.gridColumn7.Width = 56;
+            this.gridColumn7.Width = 60;
             // 
             // gridColumn8
             // 
@@ -329,7 +329,7 @@
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 5;
-            this.gridColumn8.Width = 35;
+            this.gridColumn8.Width = 60;
             // 
             // gridColumn9
             // 
@@ -345,7 +345,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ThanhTien", "Tổng tiền = {0:} VND")});
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 6;
-            this.gridColumn9.Width = 142;
+            this.gridColumn9.Width = 171;
             // 
             // BE_edit_CTHD
             // 

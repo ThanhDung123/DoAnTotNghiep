@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,6 +49,7 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txt_TenSP = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btn_timkiem = new System.Windows.Forms.Button();
@@ -72,7 +73,6 @@
             this.txt_SL = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_TenSP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_MaSP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -216,7 +216,7 @@
             // 
             this.BE_del_Thuonghieu.AutoHeight = false;
             this.BE_del_Thuonghieu.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, global::ShopGiayTheThao.Properties.Resources.Recycle_bin, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject3, "", null, null, true)});
             this.BE_del_Thuonghieu.Name = "BE_del_Thuonghieu";
             this.BE_del_Thuonghieu.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.BE_del_Thuonghieu.Click += new System.EventHandler(this.BE_del_Thuonghieu_Click);
@@ -333,6 +333,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.txt_TenSP);
             this.panel4.Controls.Add(this.label10);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.btn_timkiem);
@@ -351,7 +352,6 @@
             this.panel4.Controls.Add(this.txt_SL);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.txt_TenSP);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.txt_MaSP);
             this.panel4.Controls.Add(this.label2);
@@ -360,6 +360,16 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1221, 230);
             this.panel4.TabIndex = 0;
+            // 
+            // txt_TenSP
+            // 
+            this.txt_TenSP.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TenSP.Location = new System.Drawing.Point(149, 49);
+            this.txt_TenSP.Multiline = true;
+            this.txt_TenSP.Name = "txt_TenSP";
+            this.txt_TenSP.ReadOnly = true;
+            this.txt_TenSP.Size = new System.Drawing.Size(227, 33);
+            this.txt_TenSP.TabIndex = 59;
             // 
             // label10
             // 
@@ -545,13 +555,13 @@
             // cbo_MaTH
             // 
             this.cbo_MaTH.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_MaTH.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_MaTH.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbo_MaTH.FormattingEnabled = true;
             this.cbo_MaTH.IntegralHeight = false;
-            this.cbo_MaTH.ItemHeight = 16;
-            this.cbo_MaTH.Location = new System.Drawing.Point(150, 88);
+            this.cbo_MaTH.ItemHeight = 18;
+            this.cbo_MaTH.Location = new System.Drawing.Point(150, 86);
             this.cbo_MaTH.Name = "cbo_MaTH";
-            this.cbo_MaTH.Size = new System.Drawing.Size(225, 24);
+            this.cbo_MaTH.Size = new System.Drawing.Size(225, 26);
             this.cbo_MaTH.TabIndex = 49;
             // 
             // label8
@@ -631,27 +641,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 86);
+            this.label3.Location = new System.Drawing.Point(8, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 19);
+            this.label3.Size = new System.Drawing.Size(90, 19);
             this.label3.TabIndex = 39;
-            this.label3.Text = "Mã Thương Hiệu :";
-            // 
-            // txt_TenSP
-            // 
-            this.txt_TenSP.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_TenSP.Location = new System.Drawing.Point(148, 50);
-            this.txt_TenSP.Multiline = true;
-            this.txt_TenSP.Name = "txt_TenSP";
-            this.txt_TenSP.ReadOnly = true;
-            this.txt_TenSP.Size = new System.Drawing.Size(229, 32);
-            this.txt_TenSP.TabIndex = 37;
+            this.label3.Text = "Danh Mục :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 56);
+            this.label1.Location = new System.Drawing.Point(7, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 19);
             this.label1.TabIndex = 37;
@@ -671,7 +671,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(4, 26);
+            this.label2.Location = new System.Drawing.Point(8, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 19);
             this.label2.TabIndex = 35;
@@ -735,7 +735,6 @@
         private System.Windows.Forms.TextBox txt_SL;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_TenSP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_MaSP;
         private System.Windows.Forms.Label label2;
@@ -757,5 +756,6 @@
         private System.Windows.Forms.Button btn_timkiem;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_TenSP;
     }
 }
