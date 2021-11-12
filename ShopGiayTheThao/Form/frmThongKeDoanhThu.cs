@@ -60,7 +60,9 @@ namespace ShopGiayTheThao.Form
 
         private void btn_Thongke_Click(object sender, EventArgs e)
         {
-            sql = "EXEC dbo.sp_ThongKeDoanhThu @Datefrom = '" + dtp_datefrom.Value.ToString("yyyy/MM/dd") + "',@Dateto = '" + dtp_dateto.Value.ToString("yyyy/MM/dd") + "'";
+            try
+            {
+                  sql = "EXEC dbo.sp_ThongKeDoanhThu @Datefrom = '" + dtp_datefrom.Value.ToString("yyyy/MM/dd") + "',@Dateto = '" + dtp_dateto.Value.ToString("yyyy/MM/dd") + "'";
             dt = Class.Functions.GetDataToTable(sql);
 
             if (dt.Rows.Count > 0)
@@ -84,6 +86,12 @@ namespace ShopGiayTheThao.Form
             else
             {
                 MessageBox.Show("Không có hóa đơn nào được tìm thấy ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            }
+            catch (Exception)
+            {
+                
+               
             }
         }
 

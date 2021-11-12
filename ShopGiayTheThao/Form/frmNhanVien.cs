@@ -149,7 +149,9 @@ namespace ShopGiayTheThao.Form
         #region --BUTTONS--
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
-            sql = "EXEC dbo.sp_TimKiem @ten = N'" + txt_timkiem.Text + "',@type =4";
+            try
+            {
+                 sql = "EXEC dbo.sp_TimKiem @ten = N'" + txt_timkiem.Text + "',@type =4";
             dt = Class.Functions.GetDataToTable(sql);
             if (dt.Rows.Count > 0)
             {
@@ -168,6 +170,12 @@ namespace ShopGiayTheThao.Form
                 };
                 gc_NhanVien.DataSource = l_NV;
                 gc_NhanVien.RefreshDataSource();
+            }
+            }
+            catch (Exception)
+            {
+                
+               
             }
         }
 
@@ -210,9 +218,9 @@ namespace ShopGiayTheThao.Form
                     txt_TenNV.Focus();
                     return;
                 }
-                if (dtp_NgaySinh.Value > DateTime.Now)
+                if (dtp_NgaySinh.Value > DateTime.Now || dtp_NgaySinh.Value == DateTime.Now)
                 {
-                    MessageBox.Show("Ngày sinh không được lớn hơn ngày hiện tại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Ngày sinh phải nhỏ hơn ngày hiện tại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
                 if (string.IsNullOrEmpty(txt_DT.Text) || (txt_DT.Text.Length < 10 || txt_DT.Text.Length > 11))
@@ -256,18 +264,19 @@ namespace ShopGiayTheThao.Form
         private void btn_CN_Click(object sender, EventArgs e)
         {
 
-
-            if (string.IsNullOrEmpty(txt_MaNV.Text))
+            try
+            {
+                 if (string.IsNullOrEmpty(txt_MaNV.Text))
             {
                 MessageBox.Show("Chọn dòng dữ liệu để cập nhật", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txt_TenNV.Focus();
                 return;
             }
-            if (dtp_NgaySinh.Value > DateTime.Now)
-            {
-                MessageBox.Show("Ngày sinh không được lớn hơn ngày hiện tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
+                 if (dtp_NgaySinh.Value > DateTime.Now || dtp_NgaySinh.Value == DateTime.Now)
+                 {
+                     MessageBox.Show("Ngày sinh phải nhỏ hơn ngày hiện tại ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                     return;
+                 }
             if (string.IsNullOrEmpty(txt_TenNV.Text))
             {
                 MessageBox.Show("Tên Nhân Viên không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -297,6 +306,13 @@ namespace ShopGiayTheThao.Form
             btn_Sua.Enabled = false;
             btn_CN.Enabled = false;
             loadDataNV();
+            }
+            catch (Exception)
+            {
+                
+               
+            }
+           
         }
 
         #endregion

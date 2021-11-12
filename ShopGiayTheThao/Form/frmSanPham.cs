@@ -452,7 +452,9 @@ namespace ShopGiayTheThao.Form
 
         private void btn_timkiem_Click(object sender, EventArgs e)
         {
-            sql = "EXEC dbo.sp_TimKiem @ten = N'" + txt_timkiem.Text + "',@type =2";
+            try
+            {
+                 sql = "EXEC dbo.sp_TimKiem @ten = N'" + txt_timkiem.Text + "',@type =2";
             dt = Class.Functions.GetDataToTable(sql);
             if (dt.Rows.Count > 0)
             {
@@ -474,6 +476,12 @@ namespace ShopGiayTheThao.Form
                 }
                 gc_SanPham.DataSource = l_sanpham;
                 gc_SanPham.RefreshDataSource();
+            }
+            }
+            catch (Exception)
+            {
+                
+               
             }
         }
 

@@ -271,24 +271,32 @@ namespace ShopGiayTheThao.Form
 
         private void btn_reset_Click(object sender, EventArgs e)
         {
-            txt_MaHD.Text = "";
-            dtp_NgayBan.Value = DateTime.Now;
-            SLE_MaKH.EditValue = "";
-            txt_TenKH.Text = "";
-            txt_DiaChi.Text = "";
-            txt_DT.Text = "";
+            try
+            {
+                txt_MaHD.Text = "";
+                dtp_NgayBan.Value = DateTime.Now;
+                SLE_MaKH.EditValue = "";
+                txt_TenKH.Text = "";
+                txt_DiaChi.Text = "";
+                txt_DT.Text = "";
 
-            SLE_ThuongHieu.EditValue = "";
-            txt_SL.Text = "";
-            SLE_SanPham.EditValue = "";
-            txt_GiamGia.Text = "";
-            txt_DonGia.Text = "";
-            txt_ThanhTien.Text = "";
+                SLE_ThuongHieu.EditValue = "";
+                txt_SL.Text = "";
+                SLE_SanPham.EditValue = "";
+                txt_GiamGia.Text = "";
+                txt_DonGia.Text = "";
+                txt_ThanhTien.Text = "";
 
-            l_CTHD.Clear();
-            gc_CTHoaDon.DataSource = "";
+                l_CTHD.Clear();
+                gc_CTHoaDon.DataSource = "";
 
-            SLE_MaKH.Enabled = true;
+                SLE_MaKH.Enabled = true;
+            }
+            catch (Exception)
+            {
+                
+               
+            }
         }
 
         private void btn_TaoMoi_Click(object sender, EventArgs e)
@@ -499,10 +507,16 @@ namespace ShopGiayTheThao.Form
 
         private void btn_XuatHD_Click(object sender, EventArgs e)
         {
-            //frmTimKiemHD f = new frmTimKiemHD(taikhoan);
-            //f.ShowDialog();
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+            try
+            {
+                 printPreviewDialog1.Document = printDocument1;
+                 printPreviewDialog1.ShowDialog();
+            }
+            catch (Exception)
+            {
+                
+               
+            }
         }
 
         #endregion
@@ -604,7 +618,7 @@ namespace ShopGiayTheThao.Form
             e.Graphics.DrawString("Nhân viên: " + SLE_NhanVien.Text, new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(15, 130));
             e.Graphics.DrawString("Khách hàng: " + txt_TenKH.Text, new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(15, 160));
             e.Graphics.DrawString("SĐT: " + txt_DT.Text, new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(15, 190));
-            e.Graphics.DrawString("Mã HĐ: " + txt_DT.Text, new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(15, 220));
+            e.Graphics.DrawString("Mã HĐ: " + txt_MaHD.Text, new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(15, 220));
 
             e.Graphics.DrawString("D & L SHOP ", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(650, 100));
             e.Graphics.DrawString("Hồ Chí Minh", new Font("Arial", 16, FontStyle.Regular), Brushes.Blue, new Point(650, 130));

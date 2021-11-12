@@ -124,7 +124,9 @@ namespace ShopGiayTheThao.Form
 
         private void btn_TimKiem_Click(object sender, EventArgs e)
         {
-            sql = "EXEC dbo.sp_TimHD @maHD = N'" + txt_MaHD_search.Text + "',@ngaylap = '" + dtp_ngay.Value.ToString("yyyy/MM/dd")+ "'";
+            try
+            {
+                 sql = "EXEC dbo.sp_TimHD @maHD = N'" + txt_MaHD_search.Text + "',@ngaylap = '" + dtp_ngay.Value.ToString("yyyy/MM/dd")+ "'";
             dt = Class.Functions.GetDataToTable(sql);
 
             if (dt.Rows.Count > 0)
@@ -150,11 +152,19 @@ namespace ShopGiayTheThao.Form
             {
                 MessageBox.Show("Không có hóa đơn nào được tìm thấy ","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            }
+            catch (Exception)
+            {
+                
+               
+            }
         }
 
         private void BE_Xem_CTHD_Click(object sender, EventArgs e)
         {
-            txt_MaHD_search.Text = gv_timHD.GetRowCellValue(gv_timHD.FocusedRowHandle, "MaHoaDon").ToString();
+            try
+            {
+                 txt_MaHD_search.Text = gv_timHD.GetRowCellValue(gv_timHD.FocusedRowHandle, "MaHoaDon").ToString();
 
             sql = "EXEC dbo.sp_Xem_CTHD @maHD = '" + txt_MaHD_search.Text + "'";
             dt = Class.Functions.GetDataToTable(sql);
@@ -181,11 +191,20 @@ namespace ShopGiayTheThao.Form
 
                 }
             }
+            }
+            catch (Exception)
+            {
+                
+               
+            }
+
         }
 
         private void btn_inHD_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_MaHD_search.Text))
+            try
+            {
+                 if (string.IsNullOrEmpty(txt_MaHD_search.Text))
             {
                 MessageBox.Show("Chưa chọn hóa đơn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -303,6 +322,12 @@ namespace ShopGiayTheThao.Form
 
             exSheet.Name = "CTHĐ";
             exApp.Visible = true;
+            }
+            catch (Exception)
+            {
+                
+               
+            }
         }
 
         private void btn_reset_Click(object sender, EventArgs e)
