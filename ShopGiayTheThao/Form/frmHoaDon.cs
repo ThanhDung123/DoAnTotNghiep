@@ -72,6 +72,7 @@ namespace ShopGiayTheThao.Form
         private void SLE_ThuongHieu_EditValueChanged(object sender, EventArgs e)
         {
             load_SLE_SP();
+            pictureBox2.Visible = false;
         }
 
         private void SLE_MaKH_EditValueChanged(object sender, EventArgs e)
@@ -115,8 +116,10 @@ namespace ShopGiayTheThao.Form
                 {
                     txt_DonGia.Text = item["DonGiaBan"].ToString();
                     TenSP = item["TenSanPham"].ToString();
+                    pictureBox2.Image = Base64ToImage(item["Anh"].ToString());                   
                 }
             }
+            pictureBox2.Visible = true;
             }
             catch (Exception)
             {
@@ -286,6 +289,7 @@ namespace ShopGiayTheThao.Form
                 txt_GiamGia.Text = "";
                 txt_DonGia.Text = "";
                 txt_ThanhTien.Text = "";
+                pictureBox2.Visible = false;
 
                 l_CTHD.Clear();
                 gc_CTHoaDon.DataSource = "";
@@ -399,6 +403,7 @@ namespace ShopGiayTheThao.Form
                 txt_GiamGia.Text = "";
                 txt_DonGia.Text = "";
                 SLE_ThuongHieu.EditValue = "";
+                pictureBox2.Visible = false;
 
            
             }
@@ -608,7 +613,15 @@ namespace ShopGiayTheThao.Form
             }
         }
 
-  
+        public Image Base64ToImage(string base64String)
+        {
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            using (var ms = new MemoryStream(imageBytes, 0, imageBytes.Length))
+            {
+                Image image = Image.FromStream(ms, true);
+                return image;
+            }
+        }
         #endregion
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
