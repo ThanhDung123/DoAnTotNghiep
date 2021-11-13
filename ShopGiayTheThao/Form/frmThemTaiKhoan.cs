@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 
 namespace ShopGiayTheThao.Form
 {
@@ -162,8 +163,60 @@ namespace ShopGiayTheThao.Form
 
         #endregion
 
-      
+        private void SLE_nhanvien_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string str = "";
+                string manhanvien ="";
 
+                sql = "EXEC dbo.sp_Load_thongtin_canhan @manv = '"+SLE_nhanvien.EditValue+"'";
+                dt = Class.Functions.GetDataToTable(sql);
+                if (dt.Rows.Count > 0)
+                {
+                    foreach (DataRow item in dt.Rows)
+                    {
+                        str = item["TenNhanVien"].ToString();
+                        manhanvien = item["MaNhanVien"].ToString();
+                    }
+                    int strr = str.LastIndexOf(' ');
+                    txt_taikhoan.Text = ConvertToUnSign(str.Substring(strr + 1)) + manhanvien;
+                }
+                
+            }
+            catch (Exception)
+            {
+                
+               
+            }
+        }
+
+
+        public static string ConvertToUnSign(string text)
+        {
+            for (int i = 33; i < 48; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+
+            for (int i = 58; i < 65; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+
+            for (int i = 91; i < 97; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+            for (int i = 123; i < 127; i++)
+            {
+                text = text.Replace(((char)i).ToString(), "");
+            }
+            text = text.Replace(" ", "-");
+            Regex regex = new Regex(@"\p{IsCombiningDiacriticalMarks}+");
+            string strFormD = text.Normalize(System.Text.NormalizationForm.FormD);
+            return regex.Replace(strFormD, String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D');
+        }
        
     }
 }

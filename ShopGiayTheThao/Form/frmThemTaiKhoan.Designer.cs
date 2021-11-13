@@ -107,6 +107,7 @@
             this.txt_taikhoan.Location = new System.Drawing.Point(273, 205);
             this.txt_taikhoan.Multiline = true;
             this.txt_taikhoan.Name = "txt_taikhoan";
+            this.txt_taikhoan.ReadOnly = true;
             this.txt_taikhoan.Size = new System.Drawing.Size(227, 32);
             this.txt_taikhoan.TabIndex = 2;
             // 
@@ -184,6 +185,7 @@
             this.SLE_nhanvien.Properties.View = this.searchLookUpEdit1View;
             this.SLE_nhanvien.Size = new System.Drawing.Size(227, 28);
             this.SLE_nhanvien.TabIndex = 1;
+            this.SLE_nhanvien.EditValueChanged += new System.EventHandler(this.SLE_nhanvien_EditValueChanged);
             // 
             // searchLookUpEdit1View
             // 
